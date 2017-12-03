@@ -1,0 +1,26 @@
+./03_unix2/concur.cmo: ./02_extlib/log.cmi ./03_unix2/concur.cmi 
+./03_unix2/concur.cmx: ./02_extlib/log.cmx ./03_unix2/concur.cmi 
+./03_unix2/cdk_passwd_lexers.cmo: ./03_unix2/cdk_passwd_parsers.cmi 
+./03_unix2/cdk_passwd_lexers.cmx: ./03_unix2/cdk_passwd_parsers.cmx 
+./03_unix2/cdk_passwd_parsers.cmo: ./03_unix2/cdk_passwd_parsers.cmi 
+./03_unix2/cdk_passwd_parsers.cmx: ./03_unix2/cdk_passwd_parsers.cmi 
+./03_unix2/passwd.cmo: ./02_extlib/filename2.cmi \
+    ./03_unix2/cdk_passwd_parsers.cmi ./03_unix2/cdk_passwd_lexers.cmo \
+    ./03_unix2/passwd.cmi 
+./03_unix2/passwd.cmx: ./02_extlib/filename2.cmx \
+    ./03_unix2/cdk_passwd_parsers.cmx ./03_unix2/cdk_passwd_lexers.cmx \
+    ./03_unix2/passwd.cmi 
+./03_unix2/unix2.cmo: ./02_extlib/sys2.cmi ./02_extlib/printexc2.cmi \
+    ./02_extlib/filename2.cmi ./03_unix2/unix2.cmi 
+./03_unix2/unix2.cmx: ./02_extlib/sys2.cmx ./02_extlib/printexc2.cmx \
+    ./02_extlib/filename2.cmx ./03_unix2/unix2.cmi 
+./03_unix2/pty.cmo: ./03_unix2/concur.cmi ./03_unix2/pty.cmi 
+./03_unix2/pty.cmx: ./03_unix2/concur.cmx ./03_unix2/pty.cmi 
+./03_unix2/glob.cmo: ./03_unix2/glob.cmi 
+./03_unix2/glob.cmx: ./03_unix2/glob.cmi 
+./03_unix2/wordexp.cmo: ./03_unix2/wordexp.cmi 
+./03_unix2/wordexp.cmx: ./03_unix2/wordexp.cmi 
+./03_unix2/fnmatch.cmo: ./03_unix2/fnmatch.cmi 
+./03_unix2/fnmatch.cmx: ./03_unix2/fnmatch.cmi 
+./03_unix2/utils.cmo: ./03_unix2/cdk_passwd_lexers.cmo 
+./03_unix2/utils.cmx: ./03_unix2/cdk_passwd_lexers.cmx 

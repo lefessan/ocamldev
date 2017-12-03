@@ -1,0 +1,154 @@
+./04_xlib/xdebug.cmo: ./04_xlib/xdebug.cmi 
+./04_xlib/xdebug.cmx: ./04_xlib/xdebug.cmi 
+./04_xlib/xA.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xA.cmi 
+./04_xlib/xA.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xA.cmi 
+./04_xlib/xfifo.cmo: ./04_xlib/xfifo.cmi 
+./04_xlib/xfifo.cmx: ./04_xlib/xfifo.cmi 
+./04_xlib/xequeue.cmo: ./04_xlib/xfifo.cmi ./04_xlib/xequeue.cmi 
+./04_xlib/xequeue.cmx: ./04_xlib/xfifo.cmx ./04_xlib/xequeue.cmi 
+./04_xlib/jeton.cmo: ./03_unix2/concur.cmi ./04_xlib/jeton.cmi 
+./04_xlib/jeton.cmx: ./03_unix2/concur.cmx ./04_xlib/jeton.cmi 
+./04_xlib/xtypes.cmo: ./04_xlib/xfifo.cmi ./04_xlib/xequeue.cmi \
+    ./03_unix2/concur.cmi ./04_xlib/xtypes.cmi 
+./04_xlib/xtypes.cmx: ./04_xlib/xfifo.cmx ./04_xlib/xequeue.cmx \
+    ./03_unix2/concur.cmx ./04_xlib/xtypes.cmi 
+./04_xlib/wintbl.cmo: ./04_xlib/xtypes.cmi ./04_xlib/wintbl.cmi 
+./04_xlib/wintbl.cmx: ./04_xlib/xtypes.cmx ./04_xlib/wintbl.cmi 
+./04_xlib/xbuffer.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xfifo.cmi \
+    ./04_xlib/xequeue.cmi ./04_xlib/xbuffer.cmi 
+./04_xlib/xbuffer.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xfifo.cmx \
+    ./04_xlib/xequeue.cmx ./04_xlib/xbuffer.cmi 
+./04_xlib/xauth.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xauth.cmi 
+./04_xlib/xauth.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xauth.cmi 
+./04_xlib/ll_trans.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xauth.cmi \
+    ./03_unix2/concur.cmi ./04_xlib/ll_trans.cmi 
+./04_xlib/ll_trans.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xauth.cmx \
+    ./03_unix2/concur.cmx ./04_xlib/ll_trans.cmi 
+./04_xlib/conv_event.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xbuffer.cmi \
+    ./04_xlib/conv_event.cmi 
+./04_xlib/conv_event.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xbuffer.cmx \
+    ./04_xlib/conv_event.cmi 
+./04_xlib/shbuf.cmo: ./04_xlib/xbuffer.cmi ./04_xlib/shbuf.cmi 
+./04_xlib/shbuf.cmx: ./04_xlib/xbuffer.cmx ./04_xlib/shbuf.cmi 
+./04_xlib/display.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xfifo.cmi \
+    ./04_xlib/xequeue.cmi ./04_xlib/xdebug.cmi ./04_xlib/xbuffer.cmi \
+    ./04_xlib/shbuf.cmi ./04_xlib/ll_trans.cmi ./04_xlib/jeton.cmi \
+    ./04_xlib/conv_event.cmi ./03_unix2/concur.cmi ./04_xlib/display.cmi 
+./04_xlib/display.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xfifo.cmx \
+    ./04_xlib/xequeue.cmx ./04_xlib/xdebug.cmx ./04_xlib/xbuffer.cmx \
+    ./04_xlib/shbuf.cmx ./04_xlib/ll_trans.cmx ./04_xlib/jeton.cmx \
+    ./04_xlib/conv_event.cmx ./03_unix2/concur.cmx ./04_xlib/display.cmi 
+./04_xlib/xproto.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xbuffer.cmi \
+    ./04_xlib/display.cmi ./04_xlib/conv_event.cmi ./04_xlib/xproto.cmi 
+./04_xlib/xproto.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xbuffer.cmx \
+    ./04_xlib/display.cmx ./04_xlib/conv_event.cmx ./04_xlib/xproto.cmi 
+./04_xlib/x.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xproto.cmi \
+    ./04_xlib/xbuffer.cmi ./04_xlib/jeton.cmi ./04_xlib/display.cmi \
+    ./04_xlib/x.cmi 
+./04_xlib/x.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xproto.cmx \
+    ./04_xlib/xbuffer.cmx ./04_xlib/jeton.cmx ./04_xlib/display.cmx \
+    ./04_xlib/x.cmi 
+./04_xlib/xsync.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xproto.cmi \
+    ./04_xlib/xbuffer.cmi ./04_xlib/x.cmi ./04_xlib/jeton.cmi \
+    ./04_xlib/display.cmi ./04_xlib/xsync.cmi 
+./04_xlib/xsync.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xproto.cmx \
+    ./04_xlib/xbuffer.cmx ./04_xlib/x.cmx ./04_xlib/jeton.cmx \
+    ./04_xlib/display.cmx ./04_xlib/xsync.cmi 
+./04_xlib/xasync.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xproto.cmi \
+    ./04_xlib/xbuffer.cmi ./04_xlib/jeton.cmi ./04_xlib/display.cmi \
+    ./04_xlib/xasync.cmi 
+./04_xlib/xasync.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xproto.cmx \
+    ./04_xlib/xbuffer.cmx ./04_xlib/jeton.cmx ./04_xlib/display.cmx \
+    ./04_xlib/xasync.cmi 
+./04_xlib/xC.cmo: ./04_xlib/xC.cmi 
+./04_xlib/xC.cmx: ./04_xlib/xC.cmi 
+./04_xlib/keyBind.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xK.cmo ./04_xlib/x.cmi \
+    ./04_xlib/keyBind.cmi 
+./04_xlib/keyBind.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xK.cmx ./04_xlib/x.cmx \
+    ./04_xlib/keyBind.cmi 
+./04_xlib/xlib.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xequeue.cmi \
+    ./04_xlib/xasync.cmi ./04_xlib/x.cmi ./04_xlib/display.cmi \
+    ./03_unix2/concur.cmi ./04_xlib/xlib.cmi 
+./04_xlib/xlib.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xequeue.cmx \
+    ./04_xlib/xasync.cmx ./04_xlib/x.cmx ./04_xlib/display.cmx \
+    ./03_unix2/concur.cmx ./04_xlib/xlib.cmi 
+./04_xlib/xtext.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xtext.cmi 
+./04_xlib/xtext.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xtext.cmi 
+./04_xlib/icccm.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xbuffer.cmi ./04_xlib/xA.cmi ./04_xlib/x.cmi \
+    ./04_xlib/icccm.cmi 
+./04_xlib/icccm.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xbuffer.cmx ./04_xlib/xA.cmx ./04_xlib/x.cmx \
+    ./04_xlib/icccm.cmi 
+./04_xlib/zpixmap.cmo: ./04_xlib/xtypes.cmi ./04_xlib/x.cmi \
+    ./04_xlib/zpixmap.cmi 
+./04_xlib/zpixmap.cmx: ./04_xlib/xtypes.cmx ./04_xlib/x.cmx \
+    ./04_xlib/zpixmap.cmi 
+./04_xlib/shape.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xproto.cmi \
+    ./04_xlib/xbuffer.cmi ./04_xlib/x.cmi ./04_xlib/jeton.cmi \
+    ./04_xlib/display.cmi ./04_xlib/conv_event.cmi ./04_xlib/shape.cmi 
+./04_xlib/shape.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xproto.cmx \
+    ./04_xlib/xbuffer.cmx ./04_xlib/x.cmx ./04_xlib/jeton.cmx \
+    ./04_xlib/display.cmx ./04_xlib/conv_event.cmx ./04_xlib/shape.cmi 
+./04_xlib/xmu.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/x.cmi \
+    ./04_xlib/xmu.cmi 
+./04_xlib/xmu.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/x.cmx \
+    ./04_xlib/xmu.cmi 
+./04_xlib/eloop.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/wintbl.cmi ./03_unix2/concur.cmi ./04_xlib/eloop.cmi 
+./04_xlib/eloop.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/wintbl.cmx ./03_unix2/concur.cmx ./04_xlib/eloop.cmi 
+./04_xlib/selection.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/x.cmi ./03_unix2/concur.cmi ./04_xlib/selection.cmi 
+./04_xlib/selection.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/x.cmx ./03_unix2/concur.cmx ./04_xlib/selection.cmi 
+./04_xlib/xterm.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xsync.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/xC.cmi ./04_xlib/xA.cmi ./04_xlib/x.cmi \
+    ./04_xlib/selection.cmi ./04_xlib/keyBind.cmi ./04_xlib/icccm.cmi \
+    ./04_xlib/eloop.cmi ./04_xlib/xterm.cmi 
+./04_xlib/xterm.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xsync.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/xC.cmx ./04_xlib/xA.cmx ./04_xlib/x.cmx \
+    ./04_xlib/selection.cmx ./04_xlib/keyBind.cmx ./04_xlib/icccm.cmx \
+    ./04_xlib/eloop.cmx ./04_xlib/xterm.cmi 
+./04_xlib/xpm.cmo: ./04_xlib/zpixmap.cmi ./04_xlib/xtypes.cmi ./04_xlib/x.cmi \
+    ./04_xlib/xpm.cmi 
+./04_xlib/xpm.cmx: ./04_xlib/zpixmap.cmx ./04_xlib/xtypes.cmx ./04_xlib/x.cmx \
+    ./04_xlib/xpm.cmi 
+./04_xlib/xGraphics.cmo: ./04_xlib/zpixmap.cmi ./04_xlib/xtypes.cmi \
+    ./04_xlib/xtext.cmi ./04_xlib/xsync.cmi ./04_xlib/xpm.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/x.cmi ./04_xlib/keyBind.cmi \
+    ./04_xlib/icccm.cmi ./04_xlib/eloop.cmi ./04_xlib/xGraphics.cmi 
+./04_xlib/xGraphics.cmx: ./04_xlib/zpixmap.cmx ./04_xlib/xtypes.cmx \
+    ./04_xlib/xtext.cmx ./04_xlib/xsync.cmx ./04_xlib/xpm.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/x.cmx ./04_xlib/keyBind.cmx \
+    ./04_xlib/icccm.cmx ./04_xlib/eloop.cmx ./04_xlib/xGraphics.cmi 
+./04_xlib/xrm.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/xA.cmi \
+    ./04_xlib/xrm.cmi 
+./04_xlib/xrm.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/xA.cmx \
+    ./04_xlib/xrm.cmi 
+./04_xlib/xA.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/jeton.cmi: ./03_unix2/concur.cmi 
+./04_xlib/xtypes.cmi: ./04_xlib/xfifo.cmi ./04_xlib/xequeue.cmi \
+    ./03_unix2/concur.cmi 
+./04_xlib/wintbl.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/xbuffer.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/xauth.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/conv_event.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/display.cmi: ./04_xlib/xtypes.cmi ./04_xlib/jeton.cmi 
+./04_xlib/xproto.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/x.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/xsync.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/xasync.cmi: ./04_xlib/xtypes.cmi ./04_xlib/jeton.cmi 
+./04_xlib/keyBind.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/xlib.cmi: ./04_xlib/xtypes.cmi ./04_xlib/jeton.cmi 
+./04_xlib/xtext.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/icccm.cmi: ./04_xlib/xtypes.cmi ./04_xlib/display.cmi 
+./04_xlib/zpixmap.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/shape.cmi: ./04_xlib/xtypes.cmi ./04_xlib/jeton.cmi 
+./04_xlib/xmu.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/eloop.cmi: ./04_xlib/xtypes.cmi ./03_unix2/concur.cmi 
+./04_xlib/selection.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/xterm.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/xpm.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/xGraphics.cmi: ./04_xlib/xtypes.cmi 
+./04_xlib/xrm.cmi: ./04_xlib/xtypes.cmi 

@@ -1,0 +1,4 @@
+./04_xlib/examples/xpmroot.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/xbuffer.cmi ./04_xlib/xA.cmi ./04_xlib/x.cmi 
+./04_xlib/examples/xpmroot.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xpm.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/xbuffer.cmx ./04_xlib/xA.cmx ./04_xlib/x.cmx 

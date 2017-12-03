@@ -1,0 +1,2 @@
+./04_xlib/examples/pacman.cmo: ./04_xlib/xGraphics.cmi 
+./04_xlib/examples/pacman.cmx: ./04_xlib/xGraphics.cmx 

@@ -1,0 +1,2 @@
+./04_xlib/examples/sqmove.cmo: ./04_xlib/xGraphics.cmi 
+./04_xlib/examples/sqmove.cmx: ./04_xlib/xGraphics.cmx 

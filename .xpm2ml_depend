@@ -1,0 +1,2 @@
+./04_xlib/examples/xpm2ml.cmo: ./04_xlib/xpm.cmi 
+./04_xlib/examples/xpm2ml.cmx: ./04_xlib/xpm.cmx 

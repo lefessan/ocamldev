@@ -1,0 +1,275 @@
+./05_wxlib/wX_types.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/x.cmi ./04_xlib/keyBind.cmi \
+    ./04_xlib/eloop.cmi ./05_wxlib/wX_types.cmi 
+./05_wxlib/wX_types.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xpm.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/x.cmx ./04_xlib/keyBind.cmx \
+    ./04_xlib/eloop.cmx ./05_wxlib/wX_types.cmi 
+./05_wxlib/wX_adjust.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_adjust.cmi 
+./05_wxlib/wX_adjust.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_adjust.cmi 
+./05_wxlib/wX_display.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./05_wxlib/wX_types.cmi ./04_xlib/selection.cmi ./04_xlib/eloop.cmi \
+    ./05_wxlib/wX_display.cmi 
+./05_wxlib/wX_display.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./05_wxlib/wX_types.cmx ./04_xlib/selection.cmx ./04_xlib/eloop.cmx \
+    ./05_wxlib/wX_display.cmi 
+./05_wxlib/wX_screen.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/xC.cmi ./04_xlib/x.cmi \
+    ./05_wxlib/wX_types.cmi ./02_extlib/filepath.cmi ./04_xlib/eloop.cmi \
+    ./05_wxlib/wX_screen.cmi 
+./05_wxlib/wX_screen.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xpm.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/xC.cmx ./04_xlib/x.cmx \
+    ./05_wxlib/wX_types.cmx ./02_extlib/filepath.cmx ./04_xlib/eloop.cmx \
+    ./05_wxlib/wX_screen.cmi 
+./05_wxlib/wX_base.cmo: ./04_xlib/xtypes.cmi ./04_xlib/x.cmi \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_screen.cmi ./04_xlib/keyBind.cmi \
+    ./05_wxlib/wX_base.cmi 
+./05_wxlib/wX_base.cmx: ./04_xlib/xtypes.cmx ./04_xlib/x.cmx \
+    ./05_wxlib/wX_types.cmx ./05_wxlib/wX_screen.cmx ./04_xlib/keyBind.cmx \
+    ./05_wxlib/wX_base.cmi 
+./05_wxlib/wX_object.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/x.cmi ./05_wxlib/wX_types.cmi ./05_wxlib/wX_base.cmi \
+    ./02_extlib/list2.cmi ./04_xlib/eloop.cmi ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_object.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/x.cmx ./05_wxlib/wX_types.cmx ./05_wxlib/wX_base.cmx \
+    ./02_extlib/list2.cmx ./04_xlib/eloop.cmx ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_root.cmo: ./04_xlib/xtypes.cmi ./04_xlib/x.cmi \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_display.cmi ./05_wxlib/wX_base.cmi \
+    ./04_xlib/eloop.cmi ./05_wxlib/wX_root.cmi 
+./05_wxlib/wX_root.cmx: ./04_xlib/xtypes.cmx ./04_xlib/x.cmx \
+    ./05_wxlib/wX_types.cmx ./05_wxlib/wX_display.cmx ./05_wxlib/wX_base.cmx \
+    ./04_xlib/eloop.cmx ./05_wxlib/wX_root.cmi 
+./05_wxlib/wX_top.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/x.cmi ./05_wxlib/wX_types.cmi ./05_wxlib/wX_root.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_top.cmi 
+./05_wxlib/wX_top.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/x.cmx ./05_wxlib/wX_types.cmx ./05_wxlib/wX_root.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_top.cmi 
+./05_wxlib/wX_dummy.cmo: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi \
+    ./05_wxlib/wX_dummy.cmi 
+./05_wxlib/wX_dummy.cmx: ./05_wxlib/wX_types.cmx ./05_wxlib/wX_object.cmx \
+    ./05_wxlib/wX_dummy.cmi 
+./05_wxlib/wX_bar.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_bar.cmi 
+./05_wxlib/wX_bar.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_bar.cmi 
+./05_wxlib/wX_table.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_dummy.cmi ./05_wxlib/wX_table.cmi 
+./05_wxlib/wX_table.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_dummy.cmx ./05_wxlib/wX_table.cmi 
+./05_wxlib/wX_scrollbar.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xC.cmi ./04_xlib/x.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_adjust.cmi ./04_xlib/eloop.cmi \
+    ./05_wxlib/wX_scrollbar.cmi 
+./05_wxlib/wX_scrollbar.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xC.cmx ./04_xlib/x.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_adjust.cmx ./04_xlib/eloop.cmx \
+    ./05_wxlib/wX_scrollbar.cmi 
+./05_wxlib/wX_label.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi ./05_wxlib/wX_label.cmi 
+./05_wxlib/wX_label.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./05_wxlib/wX_types.cmx ./05_wxlib/wX_object.cmx ./05_wxlib/wX_label.cmi 
+./05_wxlib/wX_pixmap.cmo: ./04_xlib/xtypes.cmi ./04_xlib/x.cmi \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi ./05_wxlib/wX_pixmap.cmi 
+./05_wxlib/wX_pixmap.cmx: ./04_xlib/xtypes.cmx ./04_xlib/x.cmx \
+    ./05_wxlib/wX_types.cmx ./05_wxlib/wX_object.cmx ./05_wxlib/wX_pixmap.cmi 
+./05_wxlib/wX_viewport.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_adjust.cmi \
+    ./05_wxlib/wX_viewport.cmi 
+./05_wxlib/wX_viewport.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_adjust.cmx \
+    ./05_wxlib/wX_viewport.cmi 
+./05_wxlib/wX_text.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/x.cmi ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi \
+    ./03_unix2/utils.cmo ./05_wxlib/wX_text.cmi 
+./05_wxlib/wX_text.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/x.cmx ./05_wxlib/wX_types.cmx ./05_wxlib/wX_object.cmx \
+    ./03_unix2/utils.cmx ./05_wxlib/wX_text.cmi 
+./05_wxlib/wX_button.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_label.cmi ./05_wxlib/wX_button.cmi 
+./05_wxlib/wX_button.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_label.cmx ./05_wxlib/wX_button.cmi 
+./05_wxlib/wX_popup.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_top.cmi ./05_wxlib/wX_label.cmi ./05_wxlib/wX_bar.cmi \
+    ./05_wxlib/wX_popup.cmi 
+./05_wxlib/wX_popup.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_top.cmx ./05_wxlib/wX_label.cmx ./05_wxlib/wX_bar.cmx \
+    ./05_wxlib/wX_popup.cmi 
+./05_wxlib/wX_selector.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_popup.cmi ./05_wxlib/wX_label.cmi ./05_wxlib/wX_button.cmi \
+    ./05_wxlib/wX_selector.cmi 
+./05_wxlib/wX_selector.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_popup.cmx ./05_wxlib/wX_label.cmx ./05_wxlib/wX_button.cmx \
+    ./05_wxlib/wX_selector.cmi 
+./05_wxlib/wX_deleg.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_wmtop.cmi \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_top.cmi ./05_wxlib/wX_pixmap.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_label.cmi ./05_wxlib/wX_base.cmi \
+    ./05_wxlib/wX_deleg.cmi 
+./05_wxlib/wX_deleg.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_wmtop.cmx \
+    ./05_wxlib/wX_types.cmx ./05_wxlib/wX_top.cmx ./05_wxlib/wX_pixmap.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_label.cmx ./05_wxlib/wX_base.cmx \
+    ./05_wxlib/wX_deleg.cmi 
+./05_wxlib/wX_port.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_port.cmi 
+./05_wxlib/wX_port.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_port.cmi 
+./05_wxlib/wX_wmtop.cmo: ./04_xlib/xtypes.cmi ./04_xlib/x.cmi \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_top.cmi ./04_xlib/icccm.cmi \
+    ./05_wxlib/wX_wmtop.cmi 
+./05_wxlib/wX_wmtop.cmx: ./04_xlib/xtypes.cmx ./04_xlib/x.cmx \
+    ./05_wxlib/wX_types.cmx ./05_wxlib/wX_top.cmx ./04_xlib/icccm.cmx \
+    ./05_wxlib/wX_wmtop.cmi 
+./05_wxlib/wX_appli.cmo: ./05_wxlib/wX_wmtop.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_root.cmi ./05_wxlib/wX_port.cmi ./05_wxlib/wX_popup.cmi \
+    ./05_wxlib/wX_label.cmi ./05_wxlib/wX_deleg.cmi ./05_wxlib/wX_button.cmi \
+    ./05_wxlib/wX_bar.cmi ./05_wxlib/wX_appli.cmi 
+./05_wxlib/wX_appli.cmx: ./05_wxlib/wX_wmtop.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_root.cmx ./05_wxlib/wX_port.cmx ./05_wxlib/wX_popup.cmx \
+    ./05_wxlib/wX_label.cmx ./05_wxlib/wX_deleg.cmx ./05_wxlib/wX_button.cmx \
+    ./05_wxlib/wX_bar.cmx ./05_wxlib/wX_appli.cmi 
+./05_wxlib/wX_dialog.cmo: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_top.cmi \
+    ./05_wxlib/wX_text.cmi ./05_wxlib/wX_root.cmi ./05_wxlib/wX_object.cmi \
+    ./05_wxlib/wX_label.cmi ./05_wxlib/wX_deleg.cmi ./05_wxlib/wX_button.cmi \
+    ./05_wxlib/wX_bar.cmi ./05_wxlib/wX_dialog.cmi 
+./05_wxlib/wX_dialog.cmx: ./05_wxlib/wX_types.cmx ./05_wxlib/wX_top.cmx \
+    ./05_wxlib/wX_text.cmx ./05_wxlib/wX_root.cmx ./05_wxlib/wX_object.cmx \
+    ./05_wxlib/wX_label.cmx ./05_wxlib/wX_deleg.cmx ./05_wxlib/wX_button.cmx \
+    ./05_wxlib/wX_bar.cmx ./05_wxlib/wX_dialog.cmi 
+./05_wxlib/wX_panel.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xC.cmi ./04_xlib/x.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_dummy.cmi ./05_wxlib/wX_adjust.cmi \
+    ./04_xlib/eloop.cmi ./05_wxlib/wX_panel.cmi 
+./05_wxlib/wX_panel.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xC.cmx ./04_xlib/x.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_dummy.cmx ./05_wxlib/wX_adjust.cmx \
+    ./04_xlib/eloop.cmx ./05_wxlib/wX_panel.cmi 
+./05_wxlib/wX_scale.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xC.cmi ./04_xlib/x.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_adjust.cmi ./04_xlib/eloop.cmi \
+    ./05_wxlib/wX_scale.cmi 
+./05_wxlib/wX_scale.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xC.cmx ./04_xlib/x.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_adjust.cmx ./04_xlib/eloop.cmx \
+    ./05_wxlib/wX_scale.cmi 
+./05_wxlib/wX_ledit.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xK.cmo \
+    ./04_xlib/xC.cmi ./05_wxlib/wX_types.cmi ./05_wxlib/wX_label.cmi \
+    ./05_wxlib/wX_ledit.cmi 
+./05_wxlib/wX_ledit.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xK.cmx \
+    ./04_xlib/xC.cmx ./05_wxlib/wX_types.cmx ./05_wxlib/wX_label.cmx \
+    ./05_wxlib/wX_ledit.cmi 
+./05_wxlib/wX_radiobutton.cmo: ./05_wxlib/wX_button.cmi \
+    ./05_wxlib/wX_adjust.cmi ./05_wxlib/wX_radiobutton.cmi 
+./05_wxlib/wX_radiobutton.cmx: ./05_wxlib/wX_button.cmx \
+    ./05_wxlib/wX_adjust.cmx ./05_wxlib/wX_radiobutton.cmi 
+./05_wxlib/wX_Graphics.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xGraphics.cmi \
+    ./04_xlib/x.cmi ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi \
+    ./04_xlib/eloop.cmi ./05_wxlib/wX_Graphics.cmi 
+./05_wxlib/wX_Graphics.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xGraphics.cmx \
+    ./04_xlib/x.cmx ./05_wxlib/wX_types.cmx ./05_wxlib/wX_object.cmx \
+    ./04_xlib/eloop.cmx ./05_wxlib/wX_Graphics.cmi 
+./05_wxlib/wX_xterm.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xsync.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/xK.cmo ./04_xlib/xC.cmi ./04_xlib/xA.cmi \
+    ./04_xlib/x.cmi ./05_wxlib/wX_types.cmi ./05_wxlib/wX_root.cmi \
+    ./04_xlib/selection.cmi ./04_xlib/keyBind.cmi ./04_xlib/eloop.cmi \
+    ./05_wxlib/wX_xterm.cmi 
+./05_wxlib/wX_xterm.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xsync.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/xK.cmx ./04_xlib/xC.cmx ./04_xlib/xA.cmx \
+    ./04_xlib/x.cmx ./05_wxlib/wX_types.cmx ./05_wxlib/wX_root.cmx \
+    ./04_xlib/selection.cmx ./04_xlib/keyBind.cmx ./04_xlib/eloop.cmx \
+    ./05_wxlib/wX_xterm.cmi 
+./05_wxlib/wX_filesel.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xK.cmo \
+    ./04_xlib/x.cmi ./05_wxlib/wX_wmtop.cmi ./05_wxlib/wX_viewport.cmi \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_scrollbar.cmi \
+    ./05_wxlib/wX_port.cmi ./05_wxlib/wX_object.cmi ./05_wxlib/wX_ledit.cmi \
+    ./05_wxlib/wX_label.cmi ./05_wxlib/wX_deleg.cmi ./05_wxlib/wX_button.cmi \
+    ./05_wxlib/wX_bar.cmi ./05_wxlib/wX_adjust.cmi ./03_unix2/utils.cmo \
+    ./02_extlib/printexc2.cmi ./05_wxlib/wX_filesel.cmi 
+./05_wxlib/wX_filesel.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xK.cmx \
+    ./04_xlib/x.cmx ./05_wxlib/wX_wmtop.cmx ./05_wxlib/wX_viewport.cmx \
+    ./05_wxlib/wX_types.cmx ./05_wxlib/wX_scrollbar.cmx \
+    ./05_wxlib/wX_port.cmx ./05_wxlib/wX_object.cmx ./05_wxlib/wX_ledit.cmx \
+    ./05_wxlib/wX_label.cmx ./05_wxlib/wX_deleg.cmx ./05_wxlib/wX_button.cmx \
+    ./05_wxlib/wX_bar.cmx ./05_wxlib/wX_adjust.cmx ./03_unix2/utils.cmx \
+    ./02_extlib/printexc2.cmx ./05_wxlib/wX_filesel.cmi 
+./05_wxlib/wX_tree.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xC.cmi ./04_xlib/x.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./04_xlib/eloop.cmi ./05_wxlib/wX_tree.cmi 
+./05_wxlib/wX_tree.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xC.cmx ./04_xlib/x.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_object.cmx ./04_xlib/eloop.cmx ./05_wxlib/wX_tree.cmi 
+./05_wxlib/wX_swap.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_swap.cmi 
+./05_wxlib/wX_swap.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_object.cmx ./05_wxlib/wX_swap.cmi 
+./05_wxlib/wX_notebook.cmo: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_swap.cmi ./05_wxlib/wX_object.cmi ./05_wxlib/wX_label.cmi \
+    ./05_wxlib/wX_button.cmi ./05_wxlib/wX_bar.cmi ./05_wxlib/wX_notebook.cmi 
+./05_wxlib/wX_notebook.cmx: ./04_xlib/xtypes.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_swap.cmx ./05_wxlib/wX_object.cmx ./05_wxlib/wX_label.cmx \
+    ./05_wxlib/wX_button.cmx ./05_wxlib/wX_bar.cmx ./05_wxlib/wX_notebook.cmi 
+./05_wxlib/wX_parent.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/x.cmi ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_parent.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/x.cmx ./05_wxlib/wX_types.cmx ./05_wxlib/wX_object.cmx 
+./05_wxlib/wX_types.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./04_xlib/eloop.cmi 
+./05_wxlib/wX_adjust.cmi: ./04_xlib/xtypes.cmi 
+./05_wxlib/wX_display.cmi: ./04_xlib/xtypes.cmi ./04_xlib/eloop.cmi 
+./05_wxlib/wX_screen.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./05_wxlib/wX_types.cmi 
+./05_wxlib/wX_base.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./05_wxlib/wX_types.cmi 
+./05_wxlib/wX_object.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./05_wxlib/wX_types.cmi 
+./05_wxlib/wX_root.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./05_wxlib/wX_types.cmi ./04_xlib/eloop.cmi 
+./05_wxlib/wX_top.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_root.cmi \
+    ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_dummy.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_bar.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_table.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_scrollbar.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_adjust.cmi 
+./05_wxlib/wX_label.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_pixmap.cmi: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_viewport.cmi: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_adjust.cmi 
+./05_wxlib/wX_text.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./05_wxlib/wX_types.cmi 
+./05_wxlib/wX_button.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi \
+    ./05_wxlib/wX_label.cmi 
+./05_wxlib/wX_popup.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_top.cmi \
+    ./05_wxlib/wX_root.cmi 
+./05_wxlib/wX_selector.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_root.cmi \
+    ./05_wxlib/wX_button.cmi 
+./05_wxlib/wX_deleg.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./05_wxlib/wX_wmtop.cmi ./05_wxlib/wX_types.cmi ./05_wxlib/wX_top.cmi \
+    ./05_wxlib/wX_pixmap.cmi ./05_wxlib/wX_object.cmi ./05_wxlib/wX_label.cmi \
+    ./05_wxlib/wX_base.cmi 
+./05_wxlib/wX_port.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_wmtop.cmi: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_top.cmi ./05_wxlib/wX_root.cmi 
+./05_wxlib/wX_appli.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_root.cmi \
+    ./05_wxlib/wX_popup.cmi ./05_wxlib/wX_deleg.cmi ./05_wxlib/wX_button.cmi 
+./05_wxlib/wX_dialog.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_text.cmi \
+    ./05_wxlib/wX_root.cmi ./05_wxlib/wX_deleg.cmi ./05_wxlib/wX_bar.cmi 
+./05_wxlib/wX_panel.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi \
+    ./05_wxlib/wX_adjust.cmi 
+./05_wxlib/wX_scale.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xpm.cmi \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_adjust.cmi 
+./05_wxlib/wX_ledit.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_label.cmi 
+./05_wxlib/wX_radiobutton.cmi: ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_button.cmi ./05_wxlib/wX_adjust.cmi 
+./05_wxlib/wX_Graphics.cmi: ./04_xlib/xGraphics.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_xterm.cmi: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_root.cmi 
+./05_wxlib/wX_filesel.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_root.cmi \
+    ./05_wxlib/wX_deleg.cmi 
+./05_wxlib/wX_tree.cmi: ./04_xlib/xtypes.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_swap.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_object.cmi 
+./05_wxlib/wX_notebook.cmi: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_swap.cmi \
+    ./05_wxlib/wX_object.cmi ./05_wxlib/wX_bar.cmi 

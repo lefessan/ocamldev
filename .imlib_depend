@@ -1,0 +1,3 @@
+./11_gwml/imager.cmo: ./04_xlib/xtypes.cmi ./11_gwml/imager.cmi 
+./11_gwml/imager.cmx: ./04_xlib/xtypes.cmx ./11_gwml/imager.cmi 
+./11_gwml/imager.cmi: ./04_xlib/xtypes.cmi 

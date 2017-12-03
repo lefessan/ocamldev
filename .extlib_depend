@@ -1,0 +1,97 @@
+./02_extlib/cdk.cmo: ./02_extlib/cdk.cmi 
+./02_extlib/cdk.cmx: ./02_extlib/cdk.cmi 
+./02_extlib/pervasives2.cmo: ./02_extlib/pervasives2.cmi 
+./02_extlib/pervasives2.cmx: ./02_extlib/pervasives2.cmi 
+./02_extlib/list2.cmo: ./02_extlib/list2.cmi 
+./02_extlib/list2.cmx: ./02_extlib/list2.cmi 
+./02_extlib/string2.cmo: ./02_extlib/string2.cmi 
+./02_extlib/string2.cmx: ./02_extlib/string2.cmi 
+./02_extlib/sysenv.cmo: ./02_extlib/sysenv.cmi 
+./02_extlib/sysenv.cmx: ./02_extlib/sysenv.cmi 
+./02_extlib/printexc2.cmo: ./02_extlib/printexc2.cmi 
+./02_extlib/printexc2.cmx: ./02_extlib/printexc2.cmi 
+./02_extlib/format2.cmo: ./02_extlib/pervasives2.cmi ./02_extlib/format2.cmi 
+./02_extlib/format2.cmx: ./02_extlib/pervasives2.cmx ./02_extlib/format2.cmi 
+./02_extlib/filename2.cmo: ./02_extlib/string2.cmi ./02_extlib/filename2.cmi 
+./02_extlib/filename2.cmx: ./02_extlib/string2.cmx ./02_extlib/filename2.cmi 
+./02_extlib/log.cmo: ./02_extlib/log.cmi 
+./02_extlib/log.cmx: ./02_extlib/log.cmi 
+./02_extlib/filepath.cmo: ./02_extlib/filepath.cmi 
+./02_extlib/filepath.cmx: ./02_extlib/filepath.cmi 
+./02_extlib/options.cmo: ./02_extlib/sysenv.cmi ./02_extlib/log.cmi \
+    ./02_extlib/filepath.cmi ./02_extlib/filename2.cmi \
+    ./02_extlib/options.cmi 
+./02_extlib/options.cmx: ./02_extlib/sysenv.cmx ./02_extlib/log.cmx \
+    ./02_extlib/filepath.cmx ./02_extlib/filename2.cmx \
+    ./02_extlib/options.cmi 
+./02_extlib/activebuffer.cmo: ./02_extlib/activebuffer.cmi 
+./02_extlib/activebuffer.cmx: ./02_extlib/activebuffer.cmi 
+./02_extlib/cpp.cmo: ./02_extlib/filepath.cmi 
+./02_extlib/cpp.cmx: ./02_extlib/filepath.cmx 
+./02_extlib/dynvars.cmo: ./02_extlib/dynvars.cmi 
+./02_extlib/dynvars.cmx: ./02_extlib/dynvars.cmi 
+./02_extlib/ptmap.cmo: ./02_extlib/ptmap.cmi 
+./02_extlib/ptmap.cmx: ./02_extlib/ptmap.cmi 
+./02_extlib/ptset.cmo: ./02_extlib/ptset.cmi 
+./02_extlib/ptset.cmx: ./02_extlib/ptset.cmi 
+./02_extlib/hashcons.cmo: ./02_extlib/hashcons.cmi 
+./02_extlib/hashcons.cmx: ./02_extlib/hashcons.cmi 
+./02_extlib/size.cmo: ./02_extlib/size.cmi 
+./02_extlib/size.cmx: ./02_extlib/size.cmi 
+./02_extlib/bitv.cmo: ./02_extlib/bitv.cmi 
+./02_extlib/bitv.cmx: ./02_extlib/bitv.cmi 
+./02_extlib/sb_ralist.cmo: ./02_extlib/sb_ralist.cmi 
+./02_extlib/sb_ralist.cmx: ./02_extlib/sb_ralist.cmi 
+./02_extlib/sb_ralist2.cmo: ./02_extlib/sb_ralist2.cmi 
+./02_extlib/sb_ralist2.cmx: ./02_extlib/sb_ralist2.cmi 
+./02_extlib/sort2.cmo: ./02_extlib/sort2.cmi 
+./02_extlib/sort2.cmx: ./02_extlib/sort2.cmi 
+./02_extlib/sys2.cmo: ./02_extlib/sys2.cmi 
+./02_extlib/sys2.cmx: ./02_extlib/sys2.cmi 
+./02_extlib/getopt.cmo: ./02_extlib/getopt.cmi 
+./02_extlib/getopt.cmx: ./02_extlib/getopt.cmi 
+./02_extlib/splay.cmo: ./02_extlib/splay.cmi 
+./02_extlib/splay.cmx: ./02_extlib/splay.cmi 
+./02_extlib/splaytbl.cmo: ./02_extlib/splay.cmi ./02_extlib/splaytbl.cmi 
+./02_extlib/splaytbl.cmx: ./02_extlib/splay.cmx ./02_extlib/splaytbl.cmi 
+./02_extlib/hashtbl2.cmo: ./02_extlib/hashtbl2.cmi 
+./02_extlib/hashtbl2.cmx: ./02_extlib/hashtbl2.cmi 
+./02_extlib/obuffer.cmo: ./02_extlib/obuffer.cmi 
+./02_extlib/obuffer.cmx: ./02_extlib/obuffer.cmi 
+./02_extlib/ohashtbl.cmo: ./02_extlib/ohashtbl.cmi 
+./02_extlib/ohashtbl.cmx: ./02_extlib/ohashtbl.cmi 
+./02_extlib/oqueue.cmo: ./02_extlib/oqueue.cmi 
+./02_extlib/oqueue.cmx: ./02_extlib/oqueue.cmi 
+./02_extlib/ostack.cmo: ./02_extlib/ostack.cmi 
+./02_extlib/ostack.cmx: ./02_extlib/ostack.cmi 
+./02_extlib/omap.cmo: ./02_extlib/omap.cmi 
+./02_extlib/omap.cmx: ./02_extlib/omap.cmi 
+./02_extlib/oset.cmo: ./02_extlib/oset.cmi 
+./02_extlib/oset.cmx: ./02_extlib/oset.cmi 
+./02_extlib/ostream.cmo: ./02_extlib/ostream.cmi 
+./02_extlib/ostream.cmx: ./02_extlib/ostream.cmi 
+./02_extlib/ogenlex.cmo: ./02_extlib/ostream.cmi ./02_extlib/ohashtbl.cmi \
+    ./02_extlib/obuffer.cmi ./02_extlib/ogenlex.cmi 
+./02_extlib/ogenlex.cmx: ./02_extlib/ostream.cmx ./02_extlib/ohashtbl.cmx \
+    ./02_extlib/obuffer.cmx ./02_extlib/ogenlex.cmi 
+./02_extlib/omapping.cmo: ./02_extlib/omapping.cmi 
+./02_extlib/omapping.cmx: ./02_extlib/omapping.cmi 
+./02_extlib/todo.cmo: ./02_extlib/list2.cmi ./02_extlib/todo.cmi 
+./02_extlib/todo.cmx: ./02_extlib/list2.cmx ./02_extlib/todo.cmi 
+./02_extlib/file.cmo: ./02_extlib/string2.cmi ./02_extlib/file.cmi 
+./02_extlib/file.cmx: ./02_extlib/string2.cmx ./02_extlib/file.cmi 
+./02_extlib/pp.cmo: ./02_extlib/pp.cmi 
+./02_extlib/pp.cmx: ./02_extlib/pp.cmi 
+./02_extlib/pc.cmo: ./02_extlib/pc.cmi 
+./02_extlib/pc.cmx: ./02_extlib/pc.cmi 
+./02_extlib/lc.cmo: ./02_extlib/lc.cmi 
+./02_extlib/lc.cmx: ./02_extlib/lc.cmi 
+./02_extlib/pc2.cmo: ./02_extlib/pc2.cmi 
+./02_extlib/pc2.cmx: ./02_extlib/pc2.cmi 
+./02_extlib/std.cmo: ./02_extlib/std.cmi 
+./02_extlib/std.cmx: ./02_extlib/std.cmi 
+./02_extlib/buffer2.cmo: ./02_extlib/buffer2.cmi 
+./02_extlib/buffer2.cmx: ./02_extlib/buffer2.cmi 
+./02_extlib/vlist.cmo: ./02_extlib/vlist.cmi 
+./02_extlib/vlist.cmx: ./02_extlib/vlist.cmi 
+./02_extlib/ogenlex.cmi: ./02_extlib/ohashtbl.cmi ./02_extlib/obuffer.cmi 

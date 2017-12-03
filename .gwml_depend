@@ -1,0 +1,398 @@
+./11_gwml/gwml_args.cmo: ./03_unix2/passwd.cmi ./02_extlib/options.cmi \
+    ./02_extlib/log.cmi ./11_gwml/gwml_version.cmo ./02_extlib/filepath.cmi \
+    ./02_extlib/cdk.cmi 
+./11_gwml/gwml_args.cmx: ./03_unix2/passwd.cmx ./02_extlib/options.cmx \
+    ./02_extlib/log.cmx ./11_gwml/gwml_version.cmx ./02_extlib/filepath.cmx \
+    ./02_extlib/cdk.cmx 
+./11_gwml/wobenv.cmo: ./11_gwml/wobenv.cmi 
+./11_gwml/wobenv.cmx: ./11_gwml/wobenv.cmi 
+./11_gwml/sound.cmo: ./02_extlib/options.cmi ./02_extlib/filepath.cmi \
+    ./03_unix2/concur.cmi ./11_gwml/sound.cmi 
+./11_gwml/sound.cmx: ./02_extlib/options.cmx ./02_extlib/filepath.cmx \
+    ./03_unix2/concur.cmx ./11_gwml/sound.cmi 
+./11_gwml/gwml.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xsync.cmi \
+    ./04_xlib/xrm.cmi ./04_xlib/xpm.cmi ./04_xlib/xlib.cmi ./04_xlib/xC.cmi \
+    ./04_xlib/x.cmi ./11_gwml/wobenv.cmi ./04_xlib/wintbl.cmi \
+    ./04_xlib/shape.cmi ./03_unix2/passwd.cmi ./02_extlib/options.cmi \
+    ./02_extlib/log.cmi ./11_gwml/imager.cmi ./11_gwml/gwml_args.cmo \
+    ./02_extlib/filepath.cmi ./04_xlib/eloop.cmi ./03_unix2/concur.cmi \
+    ./11_gwml/gwml.cmi 
+./11_gwml/gwml.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xsync.cmx \
+    ./04_xlib/xrm.cmx ./04_xlib/xpm.cmx ./04_xlib/xlib.cmx ./04_xlib/xC.cmx \
+    ./04_xlib/x.cmx ./11_gwml/wobenv.cmx ./04_xlib/wintbl.cmx \
+    ./04_xlib/shape.cmx ./03_unix2/passwd.cmx ./02_extlib/options.cmx \
+    ./02_extlib/log.cmx ./11_gwml/imager.cmx ./11_gwml/gwml_args.cmx \
+    ./02_extlib/filepath.cmx ./04_xlib/eloop.cmx ./03_unix2/concur.cmx \
+    ./11_gwml/gwml.cmi 
+./11_gwml/gradients.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/x.cmi ./02_extlib/options.cmi ./11_gwml/gwml.cmi \
+    ./11_gwml/gradients.cmi 
+./11_gwml/gradients.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/x.cmx ./02_extlib/options.cmx ./11_gwml/gwml.cmx \
+    ./11_gwml/gradients.cmi 
+./11_gwml/wob.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xsync.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/x.cmi ./11_gwml/wobenv.cmi \
+    ./04_xlib/wintbl.cmi ./03_unix2/utils.cmo ./02_extlib/options.cmi \
+    ./04_xlib/keyBind.cmi ./11_gwml/imager.cmi ./11_gwml/gwml.cmi \
+    ./11_gwml/gradients.cmi ./04_xlib/eloop.cmi ./03_unix2/concur.cmi \
+    ./11_gwml/wob.cmi 
+./11_gwml/wob.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xsync.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/x.cmx ./11_gwml/wobenv.cmx \
+    ./04_xlib/wintbl.cmx ./03_unix2/utils.cmx ./02_extlib/options.cmx \
+    ./04_xlib/keyBind.cmx ./11_gwml/imager.cmx ./11_gwml/gwml.cmx \
+    ./11_gwml/gradients.cmx ./04_xlib/eloop.cmx ./03_unix2/concur.cmx \
+    ./11_gwml/wob.cmi 
+./11_gwml/plug.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/x.cmi \
+    ./11_gwml/wob.cmi ./11_gwml/gwml.cmi ./04_xlib/eloop.cmi 
+./11_gwml/plug.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/x.cmx \
+    ./11_gwml/wob.cmx ./11_gwml/gwml.cmx ./04_xlib/eloop.cmx 
+./11_gwml/top.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/x.cmi \
+    ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi ./04_xlib/wintbl.cmi \
+    ./04_xlib/shape.cmi ./02_extlib/options.cmi ./02_extlib/log.cmi \
+    ./04_xlib/icccm.cmi ./11_gwml/gwml.cmi ./04_xlib/eloop.cmi \
+    ./11_gwml/top.cmi 
+./11_gwml/top.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/x.cmx \
+    ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx ./04_xlib/wintbl.cmx \
+    ./04_xlib/shape.cmx ./02_extlib/options.cmx ./02_extlib/log.cmx \
+    ./04_xlib/icccm.cmx ./11_gwml/gwml.cmx ./04_xlib/eloop.cmx \
+    ./11_gwml/top.cmi 
+./11_gwml/client.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xsync.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/xbuffer.cmi ./04_xlib/xA.cmi ./04_xlib/x.cmi \
+    ./11_gwml/wob.cmi ./04_xlib/wintbl.cmi ./03_unix2/utils.cmo \
+    ./11_gwml/top.cmi ./04_xlib/shape.cmi ./02_extlib/printexc2.cmi \
+    ./02_extlib/options.cmi ./02_extlib/log.cmi ./04_xlib/icccm.cmi \
+    ./11_gwml/gwml_args.cmo ./11_gwml/gwml.cmi ./04_xlib/eloop.cmi \
+    ./11_gwml/client.cmi 
+./11_gwml/client.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xsync.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/xbuffer.cmx ./04_xlib/xA.cmx ./04_xlib/x.cmx \
+    ./11_gwml/wob.cmx ./04_xlib/wintbl.cmx ./03_unix2/utils.cmx \
+    ./11_gwml/top.cmx ./04_xlib/shape.cmx ./02_extlib/printexc2.cmx \
+    ./02_extlib/options.cmx ./02_extlib/log.cmx ./04_xlib/icccm.cmx \
+    ./11_gwml/gwml_args.cmx ./11_gwml/gwml.cmx ./04_xlib/eloop.cmx \
+    ./11_gwml/client.cmi 
+./11_gwml/screen.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/x.cmi \
+    ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi ./04_xlib/wintbl.cmi \
+    ./02_extlib/printexc2.cmi ./02_extlib/options.cmi ./02_extlib/log.cmi \
+    ./04_xlib/keyBind.cmi ./04_xlib/jeton.cmi ./11_gwml/gwml_args.cmo \
+    ./11_gwml/gwml.cmi ./04_xlib/eloop.cmi ./11_gwml/client.cmi 
+./11_gwml/screen.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/x.cmx \
+    ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx ./04_xlib/wintbl.cmx \
+    ./02_extlib/printexc2.cmx ./02_extlib/options.cmx ./02_extlib/log.cmx \
+    ./04_xlib/keyBind.cmx ./04_xlib/jeton.cmx ./11_gwml/gwml_args.cmx \
+    ./11_gwml/gwml.cmx ./04_xlib/eloop.cmx ./11_gwml/client.cmx 
+./11_gwml/null.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/x.cmi \
+    ./11_gwml/wob.cmi ./04_xlib/shape.cmi ./11_gwml/gwml.cmi \
+    ./04_xlib/eloop.cmi ./11_gwml/null.cmi 
+./11_gwml/null.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/x.cmx \
+    ./11_gwml/wob.cmx ./04_xlib/shape.cmx ./11_gwml/gwml.cmx \
+    ./04_xlib/eloop.cmx ./11_gwml/null.cmi 
+./11_gwml/label.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xtext.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/x.cmi ./11_gwml/wob.cmi ./11_gwml/gwml.cmi \
+    ./04_xlib/eloop.cmi ./11_gwml/label.cmi 
+./11_gwml/label.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xtext.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/x.cmx ./11_gwml/wob.cmx ./11_gwml/gwml.cmx \
+    ./04_xlib/eloop.cmx ./11_gwml/label.cmi 
+./11_gwml/ledit.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xK.cmo ./04_xlib/xC.cmi \
+    ./04_xlib/x.cmi ./11_gwml/wob.cmi ./11_gwml/label.cmi ./11_gwml/gwml.cmi \
+    ./04_xlib/eloop.cmi ./11_gwml/ledit.cmi 
+./11_gwml/ledit.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xK.cmx ./04_xlib/xC.cmx \
+    ./04_xlib/x.cmx ./11_gwml/wob.cmx ./11_gwml/label.cmx ./11_gwml/gwml.cmx \
+    ./04_xlib/eloop.cmx ./11_gwml/ledit.cmi 
+./11_gwml/pixmap.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/x.cmi \
+    ./11_gwml/wob.cmi ./04_xlib/shape.cmi ./02_extlib/options.cmi \
+    ./11_gwml/gwml.cmi ./04_xlib/eloop.cmi ./11_gwml/pixmap.cmi 
+./11_gwml/pixmap.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/x.cmx \
+    ./11_gwml/wob.cmx ./04_xlib/shape.cmx ./02_extlib/options.cmx \
+    ./11_gwml/gwml.cmx ./04_xlib/eloop.cmx ./11_gwml/pixmap.cmi 
+./11_gwml/bar.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/x.cmi \
+    ./11_gwml/wob.cmi ./04_xlib/shape.cmi ./11_gwml/gwml.cmi \
+    ./04_xlib/eloop.cmi ./11_gwml/bar.cmi 
+./11_gwml/bar.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/x.cmx \
+    ./11_gwml/wob.cmx ./04_xlib/shape.cmx ./11_gwml/gwml.cmx \
+    ./04_xlib/eloop.cmx ./11_gwml/bar.cmi 
+./11_gwml/text.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xtext.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/x.cmi ./11_gwml/wob.cmi ./11_gwml/gwml.cmi \
+    ./04_xlib/eloop.cmi ./11_gwml/text.cmi 
+./11_gwml/text.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xtext.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/x.cmx ./11_gwml/wob.cmx ./11_gwml/gwml.cmx \
+    ./04_xlib/eloop.cmx ./11_gwml/text.cmi 
+./11_gwml/cpp.cmo: ./03_unix2/passwd.cmi ./02_extlib/filepath.cmi 
+./11_gwml/cpp.cmx: ./03_unix2/passwd.cmx ./02_extlib/filepath.cmx 
+./11_gwml/sendEvent.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xK.cmo \
+    ./04_xlib/x.cmi ./04_xlib/keyBind.cmi ./11_gwml/gwml.cmi 
+./11_gwml/sendEvent.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xK.cmx \
+    ./04_xlib/x.cmx ./04_xlib/keyBind.cmx ./11_gwml/gwml.cmx 
+./11_gwml/image.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/x.cmi \
+    ./11_gwml/wob.cmi ./11_gwml/imager.cmi ./11_gwml/gwml_args.cmo \
+    ./11_gwml/gwml.cmi ./04_xlib/eloop.cmi 
+./11_gwml/image.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/x.cmx \
+    ./11_gwml/wob.cmx ./11_gwml/imager.cmx ./11_gwml/gwml_args.cmx \
+    ./11_gwml/gwml.cmx ./04_xlib/eloop.cmx 
+./11_gwml/opttable.cmo: ./11_gwml/opttable.cmi 
+./11_gwml/opttable.cmx: ./11_gwml/opttable.cmi 
+./11_gwml/stdconfig.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xsync.cmi \
+    ./04_xlib/xrm.cmi ./04_xlib/xlib.cmi ./04_xlib/xK.cmo ./04_xlib/x.cmi \
+    ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi ./04_xlib/wintbl.cmi \
+    ./03_unix2/utils.cmo ./11_gwml/top.cmi ./03_unix2/passwd.cmi \
+    ./11_gwml/opttable.cmi ./02_extlib/options.cmi ./02_extlib/log.cmi \
+    ./11_gwml/ledit.cmi ./11_gwml/label.cmi ./11_gwml/gwml_args.cmo \
+    ./11_gwml/gwml.cmi ./02_extlib/filepath.cmi ./04_xlib/eloop.cmi \
+    ./03_unix2/concur.cmi ./11_gwml/client.cmi ./11_gwml/bar.cmi \
+    ./11_gwml/stdconfig.cmi 
+./11_gwml/stdconfig.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xsync.cmx \
+    ./04_xlib/xrm.cmx ./04_xlib/xlib.cmx ./04_xlib/xK.cmx ./04_xlib/x.cmx \
+    ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx ./04_xlib/wintbl.cmx \
+    ./03_unix2/utils.cmx ./11_gwml/top.cmx ./03_unix2/passwd.cmx \
+    ./11_gwml/opttable.cmx ./02_extlib/options.cmx ./02_extlib/log.cmx \
+    ./11_gwml/ledit.cmx ./11_gwml/label.cmx ./11_gwml/gwml_args.cmx \
+    ./11_gwml/gwml.cmx ./02_extlib/filepath.cmx ./04_xlib/eloop.cmx \
+    ./03_unix2/concur.cmx ./11_gwml/client.cmx ./11_gwml/bar.cmx \
+    ./11_gwml/stdconfig.cmi 
+./11_gwml/animate.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/x.cmi ./11_gwml/wob.cmi ./11_gwml/stdconfig.cmi \
+    ./02_extlib/options.cmi ./11_gwml/gwml.cmi ./11_gwml/animate.cmi 
+./11_gwml/animate.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/x.cmx ./11_gwml/wob.cmx ./11_gwml/stdconfig.cmx \
+    ./02_extlib/options.cmx ./11_gwml/gwml.cmx ./11_gwml/animate.cmi 
+./11_gwml/stdvirtual.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xC.cmi ./04_xlib/x.cmi ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi \
+    ./04_xlib/wintbl.cmi ./11_gwml/top.cmi ./11_gwml/stdconfig.cmi \
+    ./02_extlib/printexc2.cmi ./02_extlib/options.cmi ./02_extlib/log.cmi \
+    ./04_xlib/icccm.cmi ./11_gwml/gwml.cmi ./04_xlib/eloop.cmi \
+    ./03_unix2/concur.cmi 
+./11_gwml/stdvirtual.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xC.cmx ./04_xlib/x.cmx ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx \
+    ./04_xlib/wintbl.cmx ./11_gwml/top.cmx ./11_gwml/stdconfig.cmx \
+    ./02_extlib/printexc2.cmx ./02_extlib/options.cmx ./02_extlib/log.cmx \
+    ./04_xlib/icccm.cmx ./11_gwml/gwml.cmx ./04_xlib/eloop.cmx \
+    ./03_unix2/concur.cmx 
+./11_gwml/user.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/xK.cmo \
+    ./04_xlib/xC.cmi ./04_xlib/x.cmi ./11_gwml/wob.cmi ./04_xlib/wintbl.cmi \
+    ./11_gwml/top.cmi ./11_gwml/stdconfig.cmi ./02_extlib/options.cmi \
+    ./04_xlib/keyBind.cmi ./11_gwml/gwml.cmi ./04_xlib/eloop.cmi \
+    ./11_gwml/animate.cmi ./11_gwml/user.cmi 
+./11_gwml/user.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/xK.cmx \
+    ./04_xlib/xC.cmx ./04_xlib/x.cmx ./11_gwml/wob.cmx ./04_xlib/wintbl.cmx \
+    ./11_gwml/top.cmx ./11_gwml/stdconfig.cmx ./02_extlib/options.cmx \
+    ./04_xlib/keyBind.cmx ./11_gwml/gwml.cmx ./04_xlib/eloop.cmx \
+    ./11_gwml/animate.cmx ./11_gwml/user.cmi 
+./11_gwml/appMgr.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xK.cmo ./04_xlib/xA.cmi ./04_xlib/x.cmi ./11_gwml/wobenv.cmi \
+    ./11_gwml/wob.cmi ./04_xlib/wintbl.cmi ./11_gwml/top.cmi \
+    ./11_gwml/stdconfig.cmi ./02_extlib/options.cmi ./02_extlib/log.cmi \
+    ./11_gwml/label.cmi ./04_xlib/keyBind.cmi ./11_gwml/gwml.cmi \
+    ./04_xlib/eloop.cmi ./11_gwml/bar.cmi ./11_gwml/appMgr.cmi 
+./11_gwml/appMgr.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xK.cmx ./04_xlib/xA.cmx ./04_xlib/x.cmx ./11_gwml/wobenv.cmx \
+    ./11_gwml/wob.cmx ./04_xlib/wintbl.cmx ./11_gwml/top.cmx \
+    ./11_gwml/stdconfig.cmx ./02_extlib/options.cmx ./02_extlib/log.cmx \
+    ./11_gwml/label.cmx ./04_xlib/keyBind.cmx ./11_gwml/gwml.cmx \
+    ./04_xlib/eloop.cmx ./11_gwml/bar.cmx ./11_gwml/appMgr.cmi 
+./11_gwml/stdmenus.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xK.cmo ./04_xlib/x.cmi ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi \
+    ./03_unix2/utils.cmo ./11_gwml/top.cmi ./11_gwml/stdconfig.cmi \
+    ./11_gwml/pixmap.cmi ./02_extlib/options.cmi ./11_gwml/label.cmi \
+    ./11_gwml/gwml.cmi ./11_gwml/bar.cmi ./11_gwml/stdmenus.cmi 
+./11_gwml/stdmenus.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xK.cmx ./04_xlib/x.cmx ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx \
+    ./03_unix2/utils.cmx ./11_gwml/top.cmx ./11_gwml/stdconfig.cmx \
+    ./11_gwml/pixmap.cmx ./02_extlib/options.cmx ./11_gwml/label.cmx \
+    ./11_gwml/gwml.cmx ./11_gwml/bar.cmx ./11_gwml/stdmenus.cmi 
+./11_gwml/stdicon.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xrm.cmi \
+    ./04_xlib/xlib.cmi ./04_xlib/xA.cmi ./11_gwml/wobenv.cmi \
+    ./11_gwml/wob.cmi ./04_xlib/wintbl.cmi ./11_gwml/user.cmi \
+    ./11_gwml/top.cmi ./11_gwml/stdconfig.cmi ./11_gwml/pixmap.cmi \
+    ./02_extlib/options.cmi ./11_gwml/null.cmi ./11_gwml/label.cmi \
+    ./11_gwml/gwml.cmi 
+./11_gwml/stdicon.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xrm.cmx \
+    ./04_xlib/xlib.cmx ./04_xlib/xA.cmx ./11_gwml/wobenv.cmx \
+    ./11_gwml/wob.cmx ./04_xlib/wintbl.cmx ./11_gwml/user.cmx \
+    ./11_gwml/top.cmx ./11_gwml/stdconfig.cmx ./11_gwml/pixmap.cmx \
+    ./02_extlib/options.cmx ./11_gwml/null.cmx ./11_gwml/label.cmx \
+    ./11_gwml/gwml.cmx 
+./11_gwml/stdplacement.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/x.cmi ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi ./11_gwml/user.cmi \
+    ./11_gwml/stdconfig.cmi ./02_extlib/options.cmi ./11_gwml/gwml.cmi \
+    ./03_unix2/concur.cmi 
+./11_gwml/stdplacement.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/x.cmx ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx ./11_gwml/user.cmx \
+    ./11_gwml/stdconfig.cmx ./02_extlib/options.cmx ./11_gwml/gwml.cmx \
+    ./03_unix2/concur.cmx 
+./11_gwml/themes.cmo: ./04_xlib/xtypes.cmi ./04_xlib/x.cmi \
+    ./03_unix2/utils.cmo ./11_gwml/stdconfig.cmi ./03_unix2/passwd.cmi \
+    ./02_extlib/options.cmi ./11_gwml/imager.cmi ./11_gwml/gwml_args.cmo \
+    ./11_gwml/gwml.cmi ./02_extlib/filepath.cmi 
+./11_gwml/themes.cmx: ./04_xlib/xtypes.cmx ./04_xlib/x.cmx \
+    ./03_unix2/utils.cmx ./11_gwml/stdconfig.cmx ./03_unix2/passwd.cmx \
+    ./02_extlib/options.cmx ./11_gwml/imager.cmx ./11_gwml/gwml_args.cmx \
+    ./11_gwml/gwml.cmx ./02_extlib/filepath.cmx 
+./11_gwml/stddeco.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xA.cmi ./04_xlib/x.cmi ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi \
+    ./04_xlib/wintbl.cmi ./03_unix2/utils.cmo ./11_gwml/user.cmi \
+    ./11_gwml/top.cmi ./11_gwml/text.cmi ./11_gwml/stdplacement.cmo \
+    ./11_gwml/stdicon.cmo ./11_gwml/stdconfig.cmi ./11_gwml/sound.cmi \
+    ./11_gwml/pixmap.cmi ./03_unix2/passwd.cmi ./02_extlib/options.cmi \
+    ./11_gwml/null.cmi ./02_extlib/log.cmi ./11_gwml/ledit.cmi \
+    ./11_gwml/label.cmi ./04_xlib/icccm.cmi ./11_gwml/gwml.cmi \
+    ./02_extlib/filepath.cmi ./03_unix2/concur.cmi ./11_gwml/bar.cmi \
+    ./11_gwml/animate.cmi ./11_gwml/stddeco.cmi 
+./11_gwml/stddeco.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xA.cmx ./04_xlib/x.cmx ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx \
+    ./04_xlib/wintbl.cmx ./03_unix2/utils.cmx ./11_gwml/user.cmx \
+    ./11_gwml/top.cmx ./11_gwml/text.cmx ./11_gwml/stdplacement.cmx \
+    ./11_gwml/stdicon.cmx ./11_gwml/stdconfig.cmx ./11_gwml/sound.cmx \
+    ./11_gwml/pixmap.cmx ./03_unix2/passwd.cmx ./02_extlib/options.cmx \
+    ./11_gwml/null.cmx ./02_extlib/log.cmx ./11_gwml/ledit.cmx \
+    ./11_gwml/label.cmx ./04_xlib/icccm.cmx ./11_gwml/gwml.cmx \
+    ./02_extlib/filepath.cmx ./03_unix2/concur.cmx ./11_gwml/bar.cmx \
+    ./11_gwml/animate.cmx ./11_gwml/stddeco.cmi 
+./11_gwml/modules.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xbuffer.cmi \
+    ./04_xlib/wintbl.cmi ./03_unix2/utils.cmo ./11_gwml/stdconfig.cmi \
+    ./02_extlib/options.cmi ./11_gwml/gwml.cmi ./02_extlib/filepath.cmi \
+    ./04_xlib/eloop.cmi ./03_unix2/concur.cmi 
+./11_gwml/modules.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xbuffer.cmx \
+    ./04_xlib/wintbl.cmx ./03_unix2/utils.cmx ./11_gwml/stdconfig.cmx \
+    ./02_extlib/options.cmx ./11_gwml/gwml.cmx ./02_extlib/filepath.cmx \
+    ./04_xlib/eloop.cmx ./03_unix2/concur.cmx 
+./11_gwml/fvwm.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/xC.cmi \
+    ./04_xlib/xA.cmi ./04_xlib/x.cmi ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi \
+    ./04_xlib/wintbl.cmi ./03_unix2/utils.cmo ./11_gwml/user.cmi \
+    ./11_gwml/stddeco.cmi ./11_gwml/stdconfig.cmi ./11_gwml/pixmap.cmi \
+    ./03_unix2/passwd.cmi ./02_extlib/options.cmi ./11_gwml/null.cmi \
+    ./11_gwml/modules.cmo ./02_extlib/log.cmi ./11_gwml/label.cmi \
+    ./11_gwml/gwml_args.cmo ./11_gwml/gwml.cmi ./02_extlib/filepath.cmi \
+    ./03_unix2/concur.cmi ./11_gwml/client.cmi ./11_gwml/bar.cmi 
+./11_gwml/fvwm.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/xC.cmx \
+    ./04_xlib/xA.cmx ./04_xlib/x.cmx ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx \
+    ./04_xlib/wintbl.cmx ./03_unix2/utils.cmx ./11_gwml/user.cmx \
+    ./11_gwml/stddeco.cmx ./11_gwml/stdconfig.cmx ./11_gwml/pixmap.cmx \
+    ./03_unix2/passwd.cmx ./02_extlib/options.cmx ./11_gwml/null.cmx \
+    ./11_gwml/modules.cmx ./02_extlib/log.cmx ./11_gwml/label.cmx \
+    ./11_gwml/gwml_args.cmx ./11_gwml/gwml.cmx ./02_extlib/filepath.cmx \
+    ./03_unix2/concur.cmx ./11_gwml/client.cmx ./11_gwml/bar.cmx 
+./11_gwml/wmaker.cmo: ./11_gwml/wob.cmi ./03_unix2/utils.cmo \
+    ./11_gwml/themes.cmo ./11_gwml/stddeco.cmi ./11_gwml/stdconfig.cmi \
+    ./03_unix2/passwd.cmi ./02_extlib/options.cmi ./11_gwml/gwml.cmi \
+    ./11_gwml/gradients.cmi ./02_extlib/filepath.cmi ./11_gwml/cpp.cmo \
+    ./03_unix2/concur.cmi ./11_gwml/wmaker.cmi 
+./11_gwml/wmaker.cmx: ./11_gwml/wob.cmx ./03_unix2/utils.cmx \
+    ./11_gwml/themes.cmx ./11_gwml/stddeco.cmx ./11_gwml/stdconfig.cmx \
+    ./03_unix2/passwd.cmx ./02_extlib/options.cmx ./11_gwml/gwml.cmx \
+    ./11_gwml/gradients.cmx ./02_extlib/filepath.cmx ./11_gwml/cpp.cmx \
+    ./03_unix2/concur.cmx ./11_gwml/wmaker.cmi 
+./11_gwml/afterstep.cmo: ./11_gwml/wob.cmi ./03_unix2/utils.cmo \
+    ./11_gwml/themes.cmo ./11_gwml/stddeco.cmi ./11_gwml/stdconfig.cmi \
+    ./02_extlib/options.cmi ./11_gwml/gwml.cmi ./02_extlib/filepath.cmi 
+./11_gwml/afterstep.cmx: ./11_gwml/wob.cmx ./03_unix2/utils.cmx \
+    ./11_gwml/themes.cmx ./11_gwml/stddeco.cmx ./11_gwml/stdconfig.cmx \
+    ./02_extlib/options.cmx ./11_gwml/gwml.cmx ./02_extlib/filepath.cmx 
+./11_gwml/twm_l.cmo: ./11_gwml/twm_t.cmo ./11_gwml/twm_p.cmi 
+./11_gwml/twm_l.cmx: ./11_gwml/twm_t.cmx ./11_gwml/twm_p.cmx 
+./11_gwml/twm_p.cmo: ./04_xlib/xtypes.cmi ./11_gwml/twm_t.cmo \
+    ./11_gwml/twm_p.cmi 
+./11_gwml/twm_p.cmx: ./04_xlib/xtypes.cmx ./11_gwml/twm_t.cmx \
+    ./11_gwml/twm_p.cmi 
+./11_gwml/twm.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/xK.cmo \
+    ./04_xlib/xC.cmi ./04_xlib/x.cmi ./11_gwml/wob.cmi ./11_gwml/user.cmi \
+    ./11_gwml/twm_t.cmo ./11_gwml/twm_p.cmi ./11_gwml/twm_l.cmo \
+    ./11_gwml/stddeco.cmi ./11_gwml/stdconfig.cmi ./11_gwml/pixmap.cmi \
+    ./02_extlib/options.cmi ./11_gwml/null.cmi ./11_gwml/label.cmi \
+    ./11_gwml/gwml.cmi ./11_gwml/client.cmi ./11_gwml/bar.cmi 
+./11_gwml/twm.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/xK.cmx \
+    ./04_xlib/xC.cmx ./04_xlib/x.cmx ./11_gwml/wob.cmx ./11_gwml/user.cmx \
+    ./11_gwml/twm_t.cmx ./11_gwml/twm_p.cmx ./11_gwml/twm_l.cmx \
+    ./11_gwml/stddeco.cmx ./11_gwml/stdconfig.cmx ./11_gwml/pixmap.cmx \
+    ./02_extlib/options.cmx ./11_gwml/null.cmx ./11_gwml/label.cmx \
+    ./11_gwml/gwml.cmx ./11_gwml/client.cmx ./11_gwml/bar.cmx 
+./11_gwml/group.cmo: ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi \
+    ./04_xlib/wintbl.cmi ./11_gwml/stdconfig.cmi ./11_gwml/gwml.cmi 
+./11_gwml/group.cmx: ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx \
+    ./04_xlib/wintbl.cmx ./11_gwml/stdconfig.cmx ./11_gwml/gwml.cmx 
+./11_gwml/gnome.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xbuffer.cmi ./04_xlib/xA.cmi ./04_xlib/x.cmi \
+    ./04_xlib/wintbl.cmi ./11_gwml/stdconfig.cmi ./04_xlib/icccm.cmi \
+    ./11_gwml/gwml_version.cmo ./11_gwml/gwml.cmi 
+./11_gwml/gnome.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xbuffer.cmx ./04_xlib/xA.cmx ./04_xlib/x.cmx \
+    ./04_xlib/wintbl.cmx ./11_gwml/stdconfig.cmx ./04_xlib/icccm.cmx \
+    ./11_gwml/gwml_version.cmx ./11_gwml/gwml.cmx 
+./11_gwml/undo.cmo: ./11_gwml/stdconfig.cmi 
+./11_gwml/undo.cmx: ./11_gwml/stdconfig.cmx 
+./11_gwml/dvroom.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./04_xlib/x.cmi \
+    ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi ./04_xlib/wintbl.cmi \
+    ./03_unix2/utils.cmo ./11_gwml/stdconfig.cmi ./02_extlib/options.cmi \
+    ./02_extlib/log.cmi ./04_xlib/icccm.cmi ./11_gwml/gwml_args.cmo \
+    ./11_gwml/gwml.cmi 
+./11_gwml/dvroom.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./04_xlib/x.cmx \
+    ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx ./04_xlib/wintbl.cmx \
+    ./03_unix2/utils.cmx ./11_gwml/stdconfig.cmx ./02_extlib/options.cmx \
+    ./02_extlib/log.cmx ./04_xlib/icccm.cmx ./11_gwml/gwml_args.cmx \
+    ./11_gwml/gwml.cmx 
+./11_gwml/stdgwmlrc.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/xK.cmo ./04_xlib/x.cmi ./11_gwml/wobenv.cmi ./11_gwml/wob.cmi \
+    ./11_gwml/wmaker.cmi ./04_xlib/wintbl.cmi ./03_unix2/utils.cmo \
+    ./11_gwml/user.cmi ./11_gwml/undo.cmo ./11_gwml/twm.cmo \
+    ./11_gwml/themes.cmo ./11_gwml/stdvirtual.cmo ./11_gwml/stdplacement.cmo \
+    ./11_gwml/stdmenus.cmi ./11_gwml/stdicon.cmo ./11_gwml/stddeco.cmi \
+    ./11_gwml/stdconfig.cmi ./11_gwml/sound.cmi ./03_unix2/passwd.cmi \
+    ./02_extlib/options.cmi ./11_gwml/modules.cmo ./11_gwml/gwml_args.cmo \
+    ./11_gwml/gwml.cmi ./11_gwml/group.cmo ./11_gwml/gnome.cmo \
+    ./11_gwml/fvwm.cmo ./11_gwml/dvroom.cmo ./11_gwml/appMgr.cmi \
+    ./11_gwml/animate.cmi ./11_gwml/afterstep.cmo 
+./11_gwml/stdgwmlrc.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/xK.cmx ./04_xlib/x.cmx ./11_gwml/wobenv.cmx ./11_gwml/wob.cmx \
+    ./11_gwml/wmaker.cmx ./04_xlib/wintbl.cmx ./03_unix2/utils.cmx \
+    ./11_gwml/user.cmx ./11_gwml/undo.cmx ./11_gwml/twm.cmx \
+    ./11_gwml/themes.cmx ./11_gwml/stdvirtual.cmx ./11_gwml/stdplacement.cmx \
+    ./11_gwml/stdmenus.cmx ./11_gwml/stdicon.cmx ./11_gwml/stddeco.cmx \
+    ./11_gwml/stdconfig.cmx ./11_gwml/sound.cmx ./03_unix2/passwd.cmx \
+    ./02_extlib/options.cmx ./11_gwml/modules.cmx ./11_gwml/gwml_args.cmx \
+    ./11_gwml/gwml.cmx ./11_gwml/group.cmx ./11_gwml/gnome.cmx \
+    ./11_gwml/fvwm.cmx ./11_gwml/dvroom.cmx ./11_gwml/appMgr.cmx \
+    ./11_gwml/animate.cmx ./11_gwml/afterstep.cmx 
+./11_gwml/gwmlrc.cmo: ./04_xlib/xtypes.cmi ./11_gwml/wob.cmi \
+    ./11_gwml/themes.cmo ./11_gwml/stdgwmlrc.cmo ./11_gwml/stddeco.cmi \
+    ./11_gwml/stdconfig.cmi ./02_extlib/options.cmi ./11_gwml/gwml_args.cmo \
+    ./11_gwml/gwml.cmi ./11_gwml/appMgr.cmi 
+./11_gwml/gwmlrc.cmx: ./04_xlib/xtypes.cmx ./11_gwml/wob.cmx \
+    ./11_gwml/themes.cmx ./11_gwml/stdgwmlrc.cmx ./11_gwml/stddeco.cmx \
+    ./11_gwml/stdconfig.cmx ./02_extlib/options.cmx ./11_gwml/gwml_args.cmx \
+    ./11_gwml/gwml.cmx ./11_gwml/appMgr.cmx 
+./11_gwml/main.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi ./11_gwml/wob.cmi \
+    ./03_unix2/utils.cmo ./11_gwml/screen.cmo ./02_extlib/printexc2.cmi \
+    ./03_unix2/passwd.cmi ./02_extlib/options.cmi ./02_extlib/log.cmi \
+    ./11_gwml/gwml_args.cmo ./11_gwml/gwml.cmi ./04_xlib/eloop.cmi 
+./11_gwml/main.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx ./11_gwml/wob.cmx \
+    ./03_unix2/utils.cmx ./11_gwml/screen.cmx ./02_extlib/printexc2.cmx \
+    ./03_unix2/passwd.cmx ./02_extlib/options.cmx ./02_extlib/log.cmx \
+    ./11_gwml/gwml_args.cmx ./11_gwml/gwml.cmx ./04_xlib/eloop.cmx 
+./11_gwml/sound.cmi: ./02_extlib/options.cmi 
+./11_gwml/gwml.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xrm.cmi ./04_xlib/xpm.cmi \
+    ./11_gwml/wobenv.cmi ./04_xlib/wintbl.cmi ./04_xlib/shape.cmi \
+    ./02_extlib/options.cmi ./04_xlib/eloop.cmi 
+./11_gwml/gradients.cmi: ./02_extlib/options.cmi 
+./11_gwml/wob.cmi: ./04_xlib/xtypes.cmi ./11_gwml/wobenv.cmi \
+    ./02_extlib/options.cmi ./11_gwml/imager.cmi ./11_gwml/gwml.cmi 
+./11_gwml/top.cmi: ./04_xlib/xtypes.cmi ./11_gwml/wob.cmi \
+    ./02_extlib/options.cmi ./11_gwml/gwml.cmi 
+./11_gwml/client.cmi: ./04_xlib/xtypes.cmi ./11_gwml/wob.cmi \
+    ./04_xlib/shape.cmi ./02_extlib/options.cmi ./11_gwml/gwml.cmi 
+./11_gwml/null.cmi: ./11_gwml/wob.cmi ./11_gwml/gwml.cmi 
+./11_gwml/label.cmi: ./11_gwml/wob.cmi ./11_gwml/gwml.cmi 
+./11_gwml/ledit.cmi: ./11_gwml/label.cmi ./11_gwml/gwml.cmi 
+./11_gwml/pixmap.cmi: ./04_xlib/xtypes.cmi ./11_gwml/wob.cmi \
+    ./11_gwml/gwml.cmi 
+./11_gwml/bar.cmi: ./11_gwml/wob.cmi ./11_gwml/gwml.cmi 
+./11_gwml/text.cmi: ./11_gwml/wob.cmi ./11_gwml/gwml.cmi 
+./11_gwml/stdconfig.cmi: ./04_xlib/xtypes.cmi ./11_gwml/wobenv.cmi \
+    ./11_gwml/top.cmi ./11_gwml/opttable.cmi ./02_extlib/options.cmi \
+    ./11_gwml/ledit.cmi ./11_gwml/label.cmi ./11_gwml/gwml.cmi 
+./11_gwml/animate.cmi: ./04_xlib/xtypes.cmi ./11_gwml/stdconfig.cmi \
+    ./02_extlib/options.cmi ./11_gwml/gwml.cmi 
+./11_gwml/user.cmi: ./04_xlib/xtypes.cmi ./11_gwml/gwml.cmi 
+./11_gwml/appMgr.cmi: ./11_gwml/stdconfig.cmi ./02_extlib/options.cmi 
+./11_gwml/stdmenus.cmi: ./02_extlib/options.cmi 
+./11_gwml/stddeco.cmi: ./11_gwml/top.cmi ./11_gwml/stdconfig.cmi \
+    ./02_extlib/options.cmi ./11_gwml/ledit.cmi ./11_gwml/gwml.cmi 
+./11_gwml/wmaker.cmi: ./11_gwml/stdconfig.cmi ./02_extlib/options.cmi 
+./11_gwml/twm_p.cmi: ./11_gwml/twm_t.cmo 

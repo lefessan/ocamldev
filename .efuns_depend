@@ -1,0 +1,343 @@
+./10_efuns/local.cmo: ./10_efuns/local.cmi 
+./10_efuns/local.cmx: ./10_efuns/local.cmi 
+./10_efuns/efuns.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xrm.cmi \
+    ./05_wxlib/wX_xterm.cmi ./05_wxlib/wX_root.cmi ./05_wxlib/wX_appli.cmi \
+    ./05_wxlib/wX_adjust.cmi ./03_unix2/utils.cmo ./10_efuns/text.cmi \
+    ./03_unix2/passwd.cmi ./02_extlib/options.cmi ./10_efuns/local.cmi \
+    ./10_efuns/interface.cmi ./02_extlib/filepath.cmi \
+    ./10_efuns/efuns_version.cmo ./03_unix2/concur.cmi ./10_efuns/efuns.cmi 
+./10_efuns/efuns.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xrm.cmx \
+    ./05_wxlib/wX_xterm.cmx ./05_wxlib/wX_root.cmx ./05_wxlib/wX_appli.cmx \
+    ./05_wxlib/wX_adjust.cmx ./03_unix2/utils.cmx ./10_efuns/text.cmx \
+    ./03_unix2/passwd.cmx ./02_extlib/options.cmx ./10_efuns/local.cmx \
+    ./10_efuns/interface.cmi ./02_extlib/filepath.cmx \
+    ./10_efuns/efuns_version.cmx ./03_unix2/concur.cmx ./10_efuns/efuns.cmi 
+./10_efuns/text.cmo: ./05_wxlib/wX_types.cmi ./05_wxlib/wX_text.cmi \
+    ./03_unix2/utils.cmo ./02_extlib/options.cmi ./10_efuns/interface.cmi \
+    ./10_efuns/text.cmi 
+./10_efuns/text.cmx: ./05_wxlib/wX_types.cmx ./05_wxlib/wX_text.cmx \
+    ./03_unix2/utils.cmx ./02_extlib/options.cmx ./10_efuns/interface.cmi \
+    ./10_efuns/text.cmi 
+./10_efuns/keymap.cmo: ./04_xlib/xK.cmo ./10_efuns/interface.cmi \
+    ./10_efuns/efuns.cmi 
+./10_efuns/keymap.cmx: ./04_xlib/xK.cmx ./10_efuns/interface.cmi \
+    ./10_efuns/efuns.cmx 
+./10_efuns/ebuffer.cmo: ./03_unix2/utils.cmo ./10_efuns/text.cmi \
+    ./02_extlib/options.cmi ./10_efuns/local.cmi ./10_efuns/keymap.cmo \
+    ./10_efuns/interface.cmi ./10_efuns/efuns_version.cmo \
+    ./10_efuns/efuns.cmi ./02_extlib/cdk.cmi ./10_efuns/ebuffer.cmi 
+./10_efuns/ebuffer.cmx: ./03_unix2/utils.cmx ./10_efuns/text.cmx \
+    ./02_extlib/options.cmx ./10_efuns/local.cmx ./10_efuns/keymap.cmx \
+    ./10_efuns/interface.cmi ./10_efuns/efuns_version.cmx \
+    ./10_efuns/efuns.cmx ./02_extlib/cdk.cmx ./10_efuns/ebuffer.cmi 
+./10_efuns/window.cmo: ./10_efuns/efuns.cmi 
+./10_efuns/window.cmx: ./10_efuns/efuns.cmx 
+./10_efuns/frame.cmo: ./10_efuns/window.cmo ./05_wxlib/wX_xterm.cmi \
+    ./10_efuns/text.cmi ./02_extlib/options.cmi ./10_efuns/keymap.cmo \
+    ./10_efuns/interface.cmi ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi \
+    ./10_efuns/frame.cmi 
+./10_efuns/frame.cmx: ./10_efuns/window.cmx ./05_wxlib/wX_xterm.cmx \
+    ./10_efuns/text.cmx ./02_extlib/options.cmx ./10_efuns/keymap.cmx \
+    ./10_efuns/interface.cmi ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx \
+    ./10_efuns/frame.cmi 
+./10_efuns/top_window.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xK.cmo \
+    ./10_efuns/window.cmo ./05_wxlib/wX_xterm.cmi ./05_wxlib/wX_types.cmi \
+    ./05_wxlib/wX_scrollbar.cmi ./05_wxlib/wX_button.cmi \
+    ./05_wxlib/wX_bar.cmi ./05_wxlib/wX_appli.cmi ./05_wxlib/wX_adjust.cmi \
+    ./03_unix2/utils.cmo ./10_efuns/text.cmi ./02_extlib/options.cmi \
+    ./10_efuns/local.cmi ./10_efuns/keymap.cmo ./10_efuns/interface.cmi \
+    ./10_efuns/frame.cmi ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi \
+    ./03_unix2/concur.cmi 
+./10_efuns/top_window.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xK.cmx \
+    ./10_efuns/window.cmx ./05_wxlib/wX_xterm.cmx ./05_wxlib/wX_types.cmx \
+    ./05_wxlib/wX_scrollbar.cmx ./05_wxlib/wX_button.cmx \
+    ./05_wxlib/wX_bar.cmx ./05_wxlib/wX_appli.cmx ./05_wxlib/wX_adjust.cmx \
+    ./03_unix2/utils.cmx ./10_efuns/text.cmx ./02_extlib/options.cmx \
+    ./10_efuns/local.cmx ./10_efuns/keymap.cmx ./10_efuns/interface.cmi \
+    ./10_efuns/frame.cmx ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx \
+    ./03_unix2/concur.cmx 
+./10_efuns/simple.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xK.cmo \
+    ./10_efuns/window.cmo ./05_wxlib/wX_xterm.cmi ./03_unix2/utils.cmo \
+    ./10_efuns/top_window.cmo ./10_efuns/text.cmi ./02_extlib/options.cmi \
+    ./10_efuns/local.cmi ./10_efuns/keymap.cmo ./10_efuns/interface.cmi \
+    ./10_efuns/frame.cmi ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi \
+    ./10_efuns/simple.cmi 
+./10_efuns/simple.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xK.cmx \
+    ./10_efuns/window.cmx ./05_wxlib/wX_xterm.cmx ./03_unix2/utils.cmx \
+    ./10_efuns/top_window.cmx ./10_efuns/text.cmx ./02_extlib/options.cmx \
+    ./10_efuns/local.cmx ./10_efuns/keymap.cmx ./10_efuns/interface.cmi \
+    ./10_efuns/frame.cmx ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx \
+    ./10_efuns/simple.cmi 
+./10_efuns/minibuffer.cmo: ./04_xlib/xK.cmo ./10_efuns/window.cmo \
+    ./10_efuns/top_window.cmo ./10_efuns/text.cmi ./10_efuns/simple.cmi \
+    ./02_extlib/options.cmi ./10_efuns/local.cmi ./10_efuns/keymap.cmo \
+    ./10_efuns/interface.cmi ./10_efuns/frame.cmi ./10_efuns/efuns.cmi \
+    ./10_efuns/ebuffer.cmi 
+./10_efuns/minibuffer.cmx: ./04_xlib/xK.cmx ./10_efuns/window.cmx \
+    ./10_efuns/top_window.cmx ./10_efuns/text.cmx ./10_efuns/simple.cmx \
+    ./02_extlib/options.cmx ./10_efuns/local.cmx ./10_efuns/keymap.cmx \
+    ./10_efuns/interface.cmi ./10_efuns/frame.cmx ./10_efuns/efuns.cmx \
+    ./10_efuns/ebuffer.cmx 
+./10_efuns/multi_frames.cmo: ./10_efuns/window.cmo ./10_efuns/top_window.cmo \
+    ./10_efuns/text.cmi ./10_efuns/frame.cmi ./10_efuns/efuns.cmi 
+./10_efuns/multi_frames.cmx: ./10_efuns/window.cmx ./10_efuns/top_window.cmx \
+    ./10_efuns/text.cmx ./10_efuns/frame.cmx ./10_efuns/efuns.cmx 
+./10_efuns/select.cmo: ./04_xlib/xK.cmo ./10_efuns/window.cmo \
+    ./03_unix2/utils.cmo ./10_efuns/top_window.cmo ./10_efuns/text.cmi \
+    ./03_unix2/str2.cmo ./10_efuns/simple.cmi ./03_unix2/passwd.cmi \
+    ./02_extlib/options.cmi ./10_efuns/multi_frames.cmo \
+    ./10_efuns/minibuffer.cmo ./10_efuns/keymap.cmo ./10_efuns/interface.cmi \
+    ./10_efuns/frame.cmi ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi \
+    ./10_efuns/select.cmi 
+./10_efuns/select.cmx: ./04_xlib/xK.cmx ./10_efuns/window.cmx \
+    ./03_unix2/utils.cmx ./10_efuns/top_window.cmx ./10_efuns/text.cmx \
+    ./03_unix2/str2.cmx ./10_efuns/simple.cmx ./03_unix2/passwd.cmx \
+    ./02_extlib/options.cmx ./10_efuns/multi_frames.cmx \
+    ./10_efuns/minibuffer.cmx ./10_efuns/keymap.cmx ./10_efuns/interface.cmi \
+    ./10_efuns/frame.cmx ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx \
+    ./10_efuns/select.cmi 
+./10_efuns/search.cmo: ./04_xlib/xK.cmo ./10_efuns/window.cmo \
+    ./10_efuns/top_window.cmo ./10_efuns/text.cmi ./10_efuns/simple.cmi \
+    ./10_efuns/select.cmi ./10_efuns/minibuffer.cmo ./10_efuns/keymap.cmo \
+    ./10_efuns/interface.cmi ./10_efuns/frame.cmi ./10_efuns/efuns.cmi \
+    ./10_efuns/search.cmi 
+./10_efuns/search.cmx: ./04_xlib/xK.cmx ./10_efuns/window.cmx \
+    ./10_efuns/top_window.cmx ./10_efuns/text.cmx ./10_efuns/simple.cmx \
+    ./10_efuns/select.cmx ./10_efuns/minibuffer.cmx ./10_efuns/keymap.cmx \
+    ./10_efuns/interface.cmi ./10_efuns/frame.cmx ./10_efuns/efuns.cmx \
+    ./10_efuns/search.cmi 
+./10_efuns/system.cmo: ./04_xlib/xK.cmo ./10_efuns/window.cmo \
+    ./05_wxlib/wX_xterm.cmi ./10_efuns/top_window.cmo ./10_efuns/text.cmi \
+    ./10_efuns/simple.cmi ./10_efuns/select.cmi ./10_efuns/multi_frames.cmo \
+    ./10_efuns/keymap.cmo ./10_efuns/interface.cmi ./10_efuns/frame.cmi \
+    ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi ./03_unix2/concur.cmi 
+./10_efuns/system.cmx: ./04_xlib/xK.cmx ./10_efuns/window.cmx \
+    ./05_wxlib/wX_xterm.cmx ./10_efuns/top_window.cmx ./10_efuns/text.cmx \
+    ./10_efuns/simple.cmx ./10_efuns/select.cmx ./10_efuns/multi_frames.cmx \
+    ./10_efuns/keymap.cmx ./10_efuns/interface.cmi ./10_efuns/frame.cmx \
+    ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx ./03_unix2/concur.cmx 
+./10_efuns/abbrevs.cmo: ./10_efuns/window.cmo ./10_efuns/text.cmi \
+    ./10_efuns/simple.cmi ./10_efuns/local.cmi ./10_efuns/interactive.cmo \
+    ./10_efuns/frame.cmi ./10_efuns/efuns.cmi 
+./10_efuns/abbrevs.cmx: ./10_efuns/window.cmx ./10_efuns/text.cmx \
+    ./10_efuns/simple.cmx ./10_efuns/local.cmx ./10_efuns/interactive.cmx \
+    ./10_efuns/frame.cmx ./10_efuns/efuns.cmx 
+./10_efuns/complex.cmo: ./10_efuns/window.cmo ./05_wxlib/wX_xterm.cmi \
+    ./05_wxlib/wX_root.cmi ./05_wxlib/wX_display.cmi ./03_unix2/utils.cmo \
+    ./10_efuns/top_window.cmo ./10_efuns/text.cmi ./10_efuns/simple.cmi \
+    ./10_efuns/select.cmi ./02_extlib/options.cmi ./10_efuns/minibuffer.cmo \
+    ./10_efuns/local.cmi ./10_efuns/keymap.cmo ./10_efuns/interface.cmi \
+    ./10_efuns/interactive.cmo ./10_efuns/frame.cmi ./10_efuns/efuns.cmi \
+    ./10_efuns/ebuffer.cmi 
+./10_efuns/complex.cmx: ./10_efuns/window.cmx ./05_wxlib/wX_xterm.cmx \
+    ./05_wxlib/wX_root.cmx ./05_wxlib/wX_display.cmx ./03_unix2/utils.cmx \
+    ./10_efuns/top_window.cmx ./10_efuns/text.cmx ./10_efuns/simple.cmx \
+    ./10_efuns/select.cmx ./02_extlib/options.cmx ./10_efuns/minibuffer.cmx \
+    ./10_efuns/local.cmx ./10_efuns/keymap.cmx ./10_efuns/interface.cmi \
+    ./10_efuns/interactive.cmx ./10_efuns/frame.cmx ./10_efuns/efuns.cmx \
+    ./10_efuns/ebuffer.cmx 
+./10_efuns/compil.cmo: ./10_efuns/window.cmo ./10_efuns/top_window.cmo \
+    ./10_efuns/text.cmi ./10_efuns/system.cmo ./10_efuns/simple.cmi \
+    ./10_efuns/select.cmi ./02_extlib/options.cmi ./10_efuns/multi_frames.cmo \
+    ./10_efuns/local.cmi ./10_efuns/keymap.cmo ./10_efuns/frame.cmi \
+    ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi 
+./10_efuns/compil.cmx: ./10_efuns/window.cmx ./10_efuns/top_window.cmx \
+    ./10_efuns/text.cmx ./10_efuns/system.cmx ./10_efuns/simple.cmx \
+    ./10_efuns/select.cmx ./02_extlib/options.cmx ./10_efuns/multi_frames.cmx \
+    ./10_efuns/local.cmx ./10_efuns/keymap.cmx ./10_efuns/frame.cmx \
+    ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx 
+./10_efuns/eval.cmo: ./10_efuns/text.cmi ./10_efuns/simple.cmi \
+    ./10_efuns/select.cmi ./10_efuns/search.cmi ./10_efuns/frame.cmi \
+    ./10_efuns/efuns.cmi ./10_efuns/compil.cmo 
+./10_efuns/eval.cmx: ./10_efuns/text.cmx ./10_efuns/simple.cmx \
+    ./10_efuns/select.cmx ./10_efuns/search.cmx ./10_efuns/frame.cmx \
+    ./10_efuns/efuns.cmx ./10_efuns/compil.cmx 
+./10_efuns/interactive.cmo: ./10_efuns/window.cmo ./10_efuns/top_window.cmo \
+    ./10_efuns/text.cmi ./10_efuns/simple.cmi ./10_efuns/select.cmi \
+    ./10_efuns/keymap.cmo ./10_efuns/frame.cmi ./10_efuns/efuns.cmi \
+    ./10_efuns/ebuffer.cmi 
+./10_efuns/interactive.cmx: ./10_efuns/window.cmx ./10_efuns/top_window.cmx \
+    ./10_efuns/text.cmx ./10_efuns/simple.cmx ./10_efuns/select.cmx \
+    ./10_efuns/keymap.cmx ./10_efuns/frame.cmx ./10_efuns/efuns.cmx \
+    ./10_efuns/ebuffer.cmx 
+./10_efuns/server.cmo: ./04_xlib/xtypes.cmi ./10_efuns/window.cmo \
+    ./05_wxlib/wX_xterm.cmi ./10_efuns/top_window.cmo ./10_efuns/text.cmi \
+    ./02_extlib/printexc2.cmi ./10_efuns/interface.cmi ./10_efuns/frame.cmi \
+    ./10_efuns/efuns.cmi ./03_unix2/concur.cmi 
+./10_efuns/server.cmx: ./04_xlib/xtypes.cmx ./10_efuns/window.cmx \
+    ./05_wxlib/wX_xterm.cmx ./10_efuns/top_window.cmx ./10_efuns/text.cmx \
+    ./02_extlib/printexc2.cmx ./10_efuns/interface.cmi ./10_efuns/frame.cmx \
+    ./10_efuns/efuns.cmx ./03_unix2/concur.cmx 
+./10_efuns/accents_mode.cmo: ./04_xlib/xK.cmo ./10_efuns/top_window.cmo \
+    ./10_efuns/text.cmi ./10_efuns/simple.cmi ./10_efuns/keymap.cmo \
+    ./10_efuns/interface.cmi ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi 
+./10_efuns/accents_mode.cmx: ./04_xlib/xK.cmx ./10_efuns/top_window.cmx \
+    ./10_efuns/text.cmx ./10_efuns/simple.cmx ./10_efuns/keymap.cmx \
+    ./10_efuns/interface.cmi ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx 
+./10_efuns/paren_mode.cmo: ./10_efuns/top_window.cmo ./10_efuns/text.cmi \
+    ./10_efuns/simple.cmi ./10_efuns/keymap.cmo ./10_efuns/efuns.cmi \
+    ./10_efuns/ebuffer.cmi 
+./10_efuns/paren_mode.cmx: ./10_efuns/top_window.cmx ./10_efuns/text.cmx \
+    ./10_efuns/simple.cmx ./10_efuns/keymap.cmx ./10_efuns/efuns.cmx \
+    ./10_efuns/ebuffer.cmx 
+./10_efuns/abbrevs_mode.cmo: ./03_unix2/utils.cmo ./10_efuns/top_window.cmo \
+    ./10_efuns/text.cmi ./10_efuns/simple.cmi ./02_extlib/options.cmi \
+    ./10_efuns/keymap.cmo ./10_efuns/interface.cmi ./10_efuns/efuns.cmi \
+    ./10_efuns/ebuffer.cmi ./10_efuns/abbrevs.cmo 
+./10_efuns/abbrevs_mode.cmx: ./03_unix2/utils.cmx ./10_efuns/top_window.cmx \
+    ./10_efuns/text.cmx ./10_efuns/simple.cmx ./02_extlib/options.cmx \
+    ./10_efuns/keymap.cmx ./10_efuns/interface.cmi ./10_efuns/efuns.cmx \
+    ./10_efuns/ebuffer.cmx ./10_efuns/abbrevs.cmx 
+./10_efuns/fill_mode.cmo: ./10_efuns/top_window.cmo ./10_efuns/text.cmi \
+    ./10_efuns/simple.cmi ./02_extlib/options.cmi ./10_efuns/keymap.cmo \
+    ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi 
+./10_efuns/fill_mode.cmx: ./10_efuns/top_window.cmx ./10_efuns/text.cmx \
+    ./10_efuns/simple.cmx ./02_extlib/options.cmx ./10_efuns/keymap.cmx \
+    ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx 
+./10_efuns/tab_mode.cmo: ./04_xlib/xK.cmo ./10_efuns/top_window.cmo \
+    ./10_efuns/text.cmi ./10_efuns/simple.cmi ./10_efuns/keymap.cmo \
+    ./10_efuns/interface.cmi ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi 
+./10_efuns/tab_mode.cmx: ./04_xlib/xK.cmx ./10_efuns/top_window.cmx \
+    ./10_efuns/text.cmx ./10_efuns/simple.cmx ./10_efuns/keymap.cmx \
+    ./10_efuns/interface.cmi ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx 
+./10_efuns/ocaml_mode.cmo: ./04_xlib/xK.cmo ./10_efuns/window.cmo \
+    ./03_unix2/utils.cmo ./10_efuns/text.cmi ./10_efuns/simple.cmi \
+    ./10_efuns/select.cmi ./02_extlib/options.cmi ./02_extlib/log.cmi \
+    ./10_efuns/keymap.cmo ./10_efuns/interface.cmi ./10_efuns/interactive.cmo \
+    ./10_efuns/eval.cmo ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi \
+    ./10_efuns/complex.cmo ./10_efuns/compil.cmo ./10_efuns/abbrevs.cmo \
+    ./10_efuns/ocaml_mode.cmi 
+./10_efuns/ocaml_mode.cmx: ./04_xlib/xK.cmx ./10_efuns/window.cmx \
+    ./03_unix2/utils.cmx ./10_efuns/text.cmx ./10_efuns/simple.cmx \
+    ./10_efuns/select.cmx ./02_extlib/options.cmx ./02_extlib/log.cmx \
+    ./10_efuns/keymap.cmx ./10_efuns/interface.cmi ./10_efuns/interactive.cmx \
+    ./10_efuns/eval.cmx ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx \
+    ./10_efuns/complex.cmx ./10_efuns/compil.cmx ./10_efuns/abbrevs.cmx \
+    ./10_efuns/ocaml_mode.cmi 
+./10_efuns/ocaml_toplevel.cmo: ./10_efuns/window.cmo ./10_efuns/text.cmi \
+    ./10_efuns/simple.cmi ./10_efuns/select.cmi ./02_extlib/options.cmi \
+    ./10_efuns/ocaml_mode.cmi ./10_efuns/keymap.cmo ./10_efuns/interface.cmi \
+    ./10_efuns/interactive.cmo ./10_efuns/eval.cmo ./10_efuns/efuns.cmi \
+    ./10_efuns/complex.cmo ./10_efuns/compil.cmo ./10_efuns/compat_comp.cmo \
+    ./10_efuns/abbrevs.cmo 
+./10_efuns/ocaml_toplevel.cmx: ./10_efuns/window.cmx ./10_efuns/text.cmx \
+    ./10_efuns/simple.cmx ./10_efuns/select.cmx ./02_extlib/options.cmx \
+    ./10_efuns/ocaml_mode.cmx ./10_efuns/keymap.cmx ./10_efuns/interface.cmi \
+    ./10_efuns/interactive.cmx ./10_efuns/eval.cmx ./10_efuns/efuns.cmx \
+    ./10_efuns/complex.cmx ./10_efuns/compil.cmx ./10_efuns/compat_comp.cmx \
+    ./10_efuns/abbrevs.cmx 
+./10_efuns/makefile_mode.cmo: ./10_efuns/window.cmo ./10_efuns/text.cmi \
+    ./10_efuns/simple.cmi ./02_extlib/options.cmi ./02_extlib/log.cmi \
+    ./10_efuns/keymap.cmo ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi \
+    ./10_efuns/complex.cmo ./10_efuns/compil.cmo 
+./10_efuns/makefile_mode.cmx: ./10_efuns/window.cmx ./10_efuns/text.cmx \
+    ./10_efuns/simple.cmx ./02_extlib/options.cmx ./02_extlib/log.cmx \
+    ./10_efuns/keymap.cmx ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx \
+    ./10_efuns/complex.cmx ./10_efuns/compil.cmx 
+./10_efuns/tex_mode.cmo: ./04_xlib/xK.cmo ./10_efuns/window.cmo \
+    ./03_unix2/utils.cmo ./10_efuns/text.cmi ./10_efuns/simple.cmi \
+    ./10_efuns/server.cmo ./10_efuns/select.cmi ./02_extlib/options.cmi \
+    ./02_extlib/log.cmi ./10_efuns/keymap.cmo ./10_efuns/interface.cmi \
+    ./10_efuns/interactive.cmo ./10_efuns/frame.cmi ./10_efuns/efuns.cmi \
+    ./10_efuns/ebuffer.cmi ./10_efuns/compil.cmo ./10_efuns/abbrevs.cmo 
+./10_efuns/tex_mode.cmx: ./04_xlib/xK.cmx ./10_efuns/window.cmx \
+    ./03_unix2/utils.cmx ./10_efuns/text.cmx ./10_efuns/simple.cmx \
+    ./10_efuns/server.cmx ./10_efuns/select.cmx ./02_extlib/options.cmx \
+    ./02_extlib/log.cmx ./10_efuns/keymap.cmx ./10_efuns/interface.cmi \
+    ./10_efuns/interactive.cmx ./10_efuns/frame.cmx ./10_efuns/efuns.cmx \
+    ./10_efuns/ebuffer.cmx ./10_efuns/compil.cmx ./10_efuns/abbrevs.cmx 
+./10_efuns/c_mode.cmo: ./04_xlib/xK.cmo ./10_efuns/window.cmo \
+    ./03_unix2/utils.cmo ./10_efuns/text.cmi ./10_efuns/simple.cmi \
+    ./10_efuns/select.cmi ./02_extlib/options.cmi ./02_extlib/log.cmi \
+    ./10_efuns/keymap.cmo ./10_efuns/interface.cmi ./10_efuns/interactive.cmo \
+    ./10_efuns/eval.cmo ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi \
+    ./10_efuns/complex.cmo ./10_efuns/compil.cmo ./10_efuns/abbrevs.cmo 
+./10_efuns/c_mode.cmx: ./04_xlib/xK.cmx ./10_efuns/window.cmx \
+    ./03_unix2/utils.cmx ./10_efuns/text.cmx ./10_efuns/simple.cmx \
+    ./10_efuns/select.cmx ./02_extlib/options.cmx ./02_extlib/log.cmx \
+    ./10_efuns/keymap.cmx ./10_efuns/interface.cmi ./10_efuns/interactive.cmx \
+    ./10_efuns/eval.cmx ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx \
+    ./10_efuns/complex.cmx ./10_efuns/compil.cmx ./10_efuns/abbrevs.cmx 
+./10_efuns/lisp_mode.cmo: ./04_xlib/xK.cmo ./10_efuns/window.cmo \
+    ./03_unix2/utils.cmo ./10_efuns/text.cmi ./10_efuns/simple.cmi \
+    ./10_efuns/select.cmi ./10_efuns/keymap.cmo ./10_efuns/interface.cmi \
+    ./10_efuns/interactive.cmo ./10_efuns/eval.cmo ./10_efuns/efuns.cmi \
+    ./10_efuns/ebuffer.cmi ./10_efuns/complex.cmo ./10_efuns/compil.cmo \
+    ./10_efuns/abbrevs.cmo 
+./10_efuns/lisp_mode.cmx: ./04_xlib/xK.cmx ./10_efuns/window.cmx \
+    ./03_unix2/utils.cmx ./10_efuns/text.cmx ./10_efuns/simple.cmx \
+    ./10_efuns/select.cmx ./10_efuns/keymap.cmx ./10_efuns/interface.cmi \
+    ./10_efuns/interactive.cmx ./10_efuns/eval.cmx ./10_efuns/efuns.cmx \
+    ./10_efuns/ebuffer.cmx ./10_efuns/complex.cmx ./10_efuns/compil.cmx \
+    ./10_efuns/abbrevs.cmx 
+./10_efuns/html_mode.cmo: ./10_efuns/window.cmo ./03_unix2/utils.cmo \
+    ./10_efuns/text.cmi ./10_efuns/simple.cmi ./10_efuns/select.cmi \
+    ./10_efuns/keymap.cmo ./10_efuns/interface.cmi ./10_efuns/interactive.cmo \
+    ./10_efuns/eval.cmo ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi \
+    ./10_efuns/complex.cmo ./10_efuns/compil.cmo ./10_efuns/accents_mode.cmo \
+    ./10_efuns/abbrevs.cmo 
+./10_efuns/html_mode.cmx: ./10_efuns/window.cmx ./03_unix2/utils.cmx \
+    ./10_efuns/text.cmx ./10_efuns/simple.cmx ./10_efuns/select.cmx \
+    ./10_efuns/keymap.cmx ./10_efuns/interface.cmi ./10_efuns/interactive.cmx \
+    ./10_efuns/eval.cmx ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx \
+    ./10_efuns/complex.cmx ./10_efuns/compil.cmx ./10_efuns/accents_mode.cmx \
+    ./10_efuns/abbrevs.cmx 
+./10_efuns/dired.cmo: ./04_xlib/xK.cmo ./10_efuns/window.cmo \
+    ./03_unix2/utils.cmo ./10_efuns/text.cmi ./10_efuns/simple.cmi \
+    ./10_efuns/select.cmi ./10_efuns/keymap.cmo ./10_efuns/interface.cmi \
+    ./10_efuns/frame.cmi ./10_efuns/efuns.cmi ./10_efuns/ebuffer.cmi \
+    ./10_efuns/complex.cmo ./10_efuns/compil.cmo 
+./10_efuns/dired.cmx: ./04_xlib/xK.cmx ./10_efuns/window.cmx \
+    ./03_unix2/utils.cmx ./10_efuns/text.cmx ./10_efuns/simple.cmx \
+    ./10_efuns/select.cmx ./10_efuns/keymap.cmx ./10_efuns/interface.cmi \
+    ./10_efuns/frame.cmx ./10_efuns/efuns.cmx ./10_efuns/ebuffer.cmx \
+    ./10_efuns/complex.cmx ./10_efuns/compil.cmx 
+./10_efuns/std_efunsrc.cmo: ./04_xlib/xK.cmo ./10_efuns/window.cmo \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_popup.cmi ./05_wxlib/wX_filesel.cmi \
+    ./03_unix2/utils.cmo ./10_efuns/top_window.cmo ./10_efuns/text.cmi \
+    ./10_efuns/system.cmo ./10_efuns/simple.cmi ./10_efuns/server.cmo \
+    ./10_efuns/select.cmi ./10_efuns/search.cmi ./02_extlib/options.cmi \
+    ./10_efuns/multi_frames.cmo ./02_extlib/log.cmi ./10_efuns/keymap.cmo \
+    ./10_efuns/interface.cmi ./10_efuns/interactive.cmo ./10_efuns/frame.cmi \
+    ./10_efuns/eval.cmo ./10_efuns/efuns_version.cmo ./10_efuns/efuns.cmi \
+    ./10_efuns/ebuffer.cmi ./10_efuns/complex.cmo ./10_efuns/compil.cmo \
+    ./10_efuns/abbrevs.cmo 
+./10_efuns/std_efunsrc.cmx: ./04_xlib/xK.cmx ./10_efuns/window.cmx \
+    ./05_wxlib/wX_types.cmx ./05_wxlib/wX_popup.cmx ./05_wxlib/wX_filesel.cmx \
+    ./03_unix2/utils.cmx ./10_efuns/top_window.cmx ./10_efuns/text.cmx \
+    ./10_efuns/system.cmx ./10_efuns/simple.cmx ./10_efuns/server.cmx \
+    ./10_efuns/select.cmx ./10_efuns/search.cmx ./02_extlib/options.cmx \
+    ./10_efuns/multi_frames.cmx ./02_extlib/log.cmx ./10_efuns/keymap.cmx \
+    ./10_efuns/interface.cmi ./10_efuns/interactive.cmx ./10_efuns/frame.cmx \
+    ./10_efuns/eval.cmx ./10_efuns/efuns_version.cmx ./10_efuns/efuns.cmx \
+    ./10_efuns/ebuffer.cmx ./10_efuns/complex.cmx ./10_efuns/compil.cmx \
+    ./10_efuns/abbrevs.cmx 
+./10_efuns/main.cmo: ./10_efuns/window.cmo ./05_wxlib/wX_xterm.cmi \
+    ./05_wxlib/wX_types.cmi ./05_wxlib/wX_root.cmi ./05_wxlib/wX_display.cmi \
+    ./03_unix2/utils.cmo ./03_unix2/unix2.cmi ./10_efuns/top_window.cmo \
+    ./10_efuns/text.cmi ./10_efuns/server.cmo ./02_extlib/printexc2.cmi \
+    ./03_unix2/passwd.cmi ./02_extlib/options.cmi ./10_efuns/local.cmi \
+    ./10_efuns/keymap.cmo ./10_efuns/interface.cmi ./10_efuns/interactive.cmo \
+    ./10_efuns/frame.cmi ./10_efuns/efuns.cmi ./03_unix2/concur.cmi 
+./10_efuns/main.cmx: ./10_efuns/window.cmx ./05_wxlib/wX_xterm.cmx \
+    ./05_wxlib/wX_types.cmx ./05_wxlib/wX_root.cmx ./05_wxlib/wX_display.cmx \
+    ./03_unix2/utils.cmx ./03_unix2/unix2.cmx ./10_efuns/top_window.cmx \
+    ./10_efuns/text.cmx ./10_efuns/server.cmx ./02_extlib/printexc2.cmx \
+    ./03_unix2/passwd.cmx ./02_extlib/options.cmx ./10_efuns/local.cmx \
+    ./10_efuns/keymap.cmx ./10_efuns/interface.cmi ./10_efuns/interactive.cmx \
+    ./10_efuns/frame.cmx ./10_efuns/efuns.cmx ./03_unix2/concur.cmx 
+./10_efuns/efuns.cmi: ./04_xlib/xtypes.cmi ./04_xlib/xrm.cmi \
+    ./05_wxlib/wX_xterm.cmi ./05_wxlib/wX_root.cmi ./05_wxlib/wX_appli.cmi \
+    ./05_wxlib/wX_adjust.cmi ./10_efuns/text.cmi ./02_extlib/options.cmi \
+    ./10_efuns/local.cmi ./10_efuns/interface.cmi ./03_unix2/concur.cmi 
+./10_efuns/text.cmi: ./05_wxlib/wX_text.cmi ./02_extlib/options.cmi \
+    ./10_efuns/interface.cmi 
+./10_efuns/ebuffer.cmi: ./10_efuns/text.cmi ./10_efuns/local.cmi \
+    ./10_efuns/efuns.cmi 
+./10_efuns/frame.cmi: ./10_efuns/text.cmi ./10_efuns/efuns.cmi 
+./10_efuns/simple.cmi: ./10_efuns/text.cmi ./02_extlib/options.cmi \
+    ./10_efuns/local.cmi ./10_efuns/efuns.cmi 
+./10_efuns/select.cmi: ./02_extlib/options.cmi ./10_efuns/efuns.cmi 
+./10_efuns/search.cmi: ./10_efuns/efuns.cmi 
+./10_efuns/ocaml_mode.cmi: ./10_efuns/text.cmi ./02_extlib/options.cmi \
+    ./10_efuns/efuns.cmi ./10_efuns/compil.cmo 

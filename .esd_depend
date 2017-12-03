@@ -1,0 +1,5 @@
+./11_gwml/sound.cmo: ./02_extlib/options.cmi ./02_extlib/filepath.cmi \
+    ./03_unix2/concur.cmi ./11_gwml/sound.cmi 
+./11_gwml/sound.cmx: ./02_extlib/options.cmx ./02_extlib/filepath.cmx \
+    ./03_unix2/concur.cmx ./11_gwml/sound.cmi 
+./11_gwml/sound.cmi: ./02_extlib/options.cmi 

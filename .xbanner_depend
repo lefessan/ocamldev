@@ -1,0 +1,4 @@
+./04_xlib/examples/xbanner.cmo: ./04_xlib/xtypes.cmi ./04_xlib/xlib.cmi \
+    ./04_xlib/x.cmi ./02_extlib/log.cmi 
+./04_xlib/examples/xbanner.cmx: ./04_xlib/xtypes.cmx ./04_xlib/xlib.cmx \
+    ./04_xlib/x.cmx ./02_extlib/log.cmx 

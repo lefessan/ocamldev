@@ -1,0 +1,2723 @@
+
+#####################################
+# Project extlib
+# From: ./02_extlib
+# Score: 5
+# Enabled: true
+# External deps: 
+# Internal deps: 
+
+#####################################
+# Project unix2
+# From: ./03_unix2
+# Score: 4
+# Enabled: true
+# External deps: 
+# Internal deps:  extlib
+
+#####################################
+# Project xlib
+# From: ./04_xlib
+# Score: 3
+# Enabled: true
+# External deps:  unix
+# Internal deps:  extlib unix2
+
+#####################################
+# Project wxlib
+# From: ./05_wxlib
+# Score: 2
+# Enabled: true
+# External deps:  unix
+# Internal deps:  extlib unix2 xlib
+
+#####################################
+# Project imlib
+# From: ./11_gwml
+# Score: 1
+# Enabled: true
+# External deps:  unix str
+# Internal deps:  extlib unix2 xlib wxlib
+
+#####################################
+# Project esd
+# From: ./11_gwml
+# Score: 1
+# Enabled: true
+# External deps:  unix str
+# Internal deps:  extlib unix2 xlib wxlib
+
+#####################################
+# Project extlib_pack
+# From: 
+# Score: 0
+# Enabled: true
+# External deps: 
+# Internal deps: 
+
+#####################################
+# Project unix2_pack
+# From: 
+# Score: 0
+# Enabled: true
+# External deps: 
+# Internal deps: 
+
+#####################################
+# Project sqmove
+# From: ./04_xlib/examples
+# Score: 0
+# Enabled: true
+# External deps:  unix
+# Internal deps:  extlib unix2 xlib
+
+#####################################
+# Project xprop
+# From: ./04_xlib/examples
+# Score: 0
+# Enabled: true
+# External deps:  unix
+# Internal deps:  extlib unix2 xlib
+
+#####################################
+# Project xpmroot
+# From: ./04_xlib/examples
+# Score: 0
+# Enabled: true
+# External deps:  unix
+# Internal deps:  extlib unix2 xlib
+
+#####################################
+# Project gwml
+# From: ./11_gwml
+# Score: 0
+# Enabled: true
+# External deps:  unix str
+# Internal deps:  extlib unix2 xlib wxlib esd imlib
+
+#####################################
+# Project pacman
+# From: ./04_xlib/examples
+# Score: 0
+# Enabled: true
+# External deps:  unix
+# Internal deps:  extlib unix2 xlib
+
+#####################################
+# Project sendKey
+# From: ./04_xlib/examples
+# Score: 0
+# Enabled: true
+# External deps:  unix str
+# Internal deps:  extlib unix2 xlib
+
+#####################################
+# Project efuns
+# From: ./10_efuns
+# Score: 0
+# Enabled: true
+# External deps:  unix str
+# Internal deps:  extlib unix2 xlib wxlib
+
+#####################################
+# Project movePointer
+# From: ./04_xlib/examples
+# Score: 0
+# Enabled: true
+# External deps:  unix
+# Internal deps:  extlib unix2 xlib
+
+#####################################
+# Project chess
+# From: ./04_xlib/examples
+# Score: 0
+# Enabled: true
+# External deps:  unix
+# Internal deps:  extlib unix2 xlib
+
+#####################################
+# Project xpm2ml
+# From: ./04_xlib/examples
+# Score: 0
+# Enabled: true
+# External deps:  unix
+# Internal deps:  extlib unix2 xlib
+
+#####################################
+# Project xbanner
+# From: ./04_xlib/examples
+# Score: 0
+# Enabled: true
+# External deps:  unix
+# Internal deps:  extlib unix2 xlib
+
+
+OCAMLCONF=/usr/bin/ocamlmake
+all:: Makefile opt byte
+
+byte::
+opt::
+dependencies::
+install::
+doc::
+	mkdir -p doc/man doc/html
+include Makefile.config
+
+
+#####################################
+# Project extlib
+# From: ./02_extlib
+
+extlib_CONF=  ./02_extlib/ocamlconf.ocf
+Makefile: $(extlib_CONF)
+
+extlib_FILES= 02_extlib/cdk.ml 02_extlib/pervasives2.ml 02_extlib/list2.ml 02_extlib/string2.ml 02_extlib/sysenv.ml 02_extlib/printexc2.ml 02_extlib/format2.ml 02_extlib/filename2.ml 02_extlib/log.ml 02_extlib/filepath.ml 02_extlib/options.ml 02_extlib/activebuffer.ml 02_extlib/cpp.mll 02_extlib/dynvars.ml 02_extlib/ptmap.ml 02_extlib/ptset.ml 02_extlib/hashcons.ml 02_extlib/size.ml 02_extlib/bitv.ml 02_extlib/sb_ralist.ml 02_extlib/sb_ralist2.ml 02_extlib/sort2.ml 02_extlib/sys2.ml 02_extlib/getopt.ml 02_extlib/splay.ml 02_extlib/splaytbl.ml 02_extlib/hashtbl2.ml 02_extlib/obuffer.ml 02_extlib/ohashtbl.ml 02_extlib/oqueue.ml 02_extlib/ostack.ml 02_extlib/omap.ml 02_extlib/oset.ml 02_extlib/ostream.ml 02_extlib/ogenlex.ml 02_extlib/omapping.ml 02_extlib/todo.ml 02_extlib/file.ml 02_extlib/crcs.ml 02_extlib/pp.ml 02_extlib/pc.ml 02_extlib/lc.ml 02_extlib/pc2.ml 02_extlib/std.ml 02_extlib/buffer2.ml 02_extlib/vlist.ml
+extlib_CONFDEP = 
+extlib_PP = -pp camlp4o.opt
+extlib_INCLUDES= -I ./02_extlib 
+./02_extlib/cdk.cmi: ./02_extlib/cdk.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/cdk.mli
+./02_extlib/cdk.cmo: ./02_extlib/cdk.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/cdk.ml
+./02_extlib/cdk.cmx: ./02_extlib/cdk.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/cdk.ml
+./02_extlib/cdk.mlt: ./02_extlib/cdk.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/cdk.ml > ./02_extlib/cdk.mlt
+./02_extlib/pervasives2.cmi: ./02_extlib/pervasives2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pervasives2.mli
+./02_extlib/pervasives2.cmo: ./02_extlib/pervasives2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pervasives2.ml
+./02_extlib/pervasives2.cmx: ./02_extlib/pervasives2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pervasives2.ml
+./02_extlib/pervasives2.mlt: ./02_extlib/pervasives2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/pervasives2.ml > ./02_extlib/pervasives2.mlt
+./02_extlib/list2.cmi: ./02_extlib/list2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/list2.mli
+./02_extlib/list2.cmo: ./02_extlib/list2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/list2.ml
+./02_extlib/list2.cmx: ./02_extlib/list2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/list2.ml
+./02_extlib/list2.mlt: ./02_extlib/list2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/list2.ml > ./02_extlib/list2.mlt
+./02_extlib/string2.cmi: ./02_extlib/string2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/string2.mli
+./02_extlib/string2.cmo: ./02_extlib/string2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/string2.ml
+./02_extlib/string2.cmx: ./02_extlib/string2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/string2.ml
+./02_extlib/string2.mlt: ./02_extlib/string2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/string2.ml > ./02_extlib/string2.mlt
+./02_extlib/sysenv.cmi: ./02_extlib/sysenv.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sysenv.mli
+./02_extlib/sysenv.cmo: ./02_extlib/sysenv.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sysenv.ml
+./02_extlib/sysenv.cmx: ./02_extlib/sysenv.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sysenv.ml
+./02_extlib/sysenv.mlt: ./02_extlib/sysenv.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/sysenv.ml > ./02_extlib/sysenv.mlt
+./02_extlib/printexc2.cmi: ./02_extlib/printexc2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/printexc2.mli
+./02_extlib/printexc2.cmo: ./02_extlib/printexc2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/printexc2.ml
+./02_extlib/printexc2.cmx: ./02_extlib/printexc2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/printexc2.ml
+./02_extlib/printexc2.mlt: ./02_extlib/printexc2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/printexc2.ml > ./02_extlib/printexc2.mlt
+./02_extlib/format2.cmi: ./02_extlib/format2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/format2.mli
+./02_extlib/format2.cmo: ./02_extlib/format2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/format2.ml
+./02_extlib/format2.cmx: ./02_extlib/format2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/format2.ml
+./02_extlib/format2.mlt: ./02_extlib/format2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/format2.ml > ./02_extlib/format2.mlt
+./02_extlib/filename2.cmi: ./02_extlib/filename2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/filename2.mli
+./02_extlib/filename2.cmo: ./02_extlib/filename2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/filename2.ml
+./02_extlib/filename2.cmx: ./02_extlib/filename2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/filename2.ml
+./02_extlib/filename2.mlt: ./02_extlib/filename2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/filename2.ml > ./02_extlib/filename2.mlt
+./02_extlib/log.cmi: ./02_extlib/log.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/log.mli
+./02_extlib/log.cmo: ./02_extlib/log.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/log.ml
+./02_extlib/log.cmx: ./02_extlib/log.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/log.ml
+./02_extlib/log.mlt: ./02_extlib/log.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/log.ml > ./02_extlib/log.mlt
+./02_extlib/filepath.cmi: ./02_extlib/filepath.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/filepath.mli
+./02_extlib/filepath.cmo: ./02_extlib/filepath.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/filepath.ml
+./02_extlib/filepath.cmx: ./02_extlib/filepath.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/filepath.ml
+./02_extlib/filepath.mlt: ./02_extlib/filepath.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/filepath.ml > ./02_extlib/filepath.mlt
+./02_extlib/options.cmi: ./02_extlib/options.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/options.mli
+./02_extlib/options.cmo: ./02_extlib/options.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/options.ml
+./02_extlib/options.cmx: ./02_extlib/options.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/options.ml
+./02_extlib/options.mlt: ./02_extlib/options.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/options.ml > ./02_extlib/options.mlt
+./02_extlib/activebuffer.cmi: ./02_extlib/activebuffer.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/activebuffer.mli
+./02_extlib/activebuffer.cmo: ./02_extlib/activebuffer.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/activebuffer.ml
+./02_extlib/activebuffer.cmx: ./02_extlib/activebuffer.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/activebuffer.ml
+./02_extlib/activebuffer.mlt: ./02_extlib/activebuffer.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/activebuffer.ml > ./02_extlib/activebuffer.mlt
+./02_extlib/cpp.cmi: ./02_extlib/cpp.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/cpp.mli
+./02_extlib/cpp.cmo: ./02_extlib/cpp.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/cpp.ml
+./02_extlib/cpp.cmx: ./02_extlib/cpp.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/cpp.ml
+./02_extlib/cpp.mlt: ./02_extlib/cpp.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/cpp.ml > ./02_extlib/cpp.mlt
+./02_extlib/dynvars.cmi: ./02_extlib/dynvars.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/dynvars.mli
+./02_extlib/dynvars.cmo: ./02_extlib/dynvars.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/dynvars.ml
+./02_extlib/dynvars.cmx: ./02_extlib/dynvars.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/dynvars.ml
+./02_extlib/dynvars.mlt: ./02_extlib/dynvars.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/dynvars.ml > ./02_extlib/dynvars.mlt
+./02_extlib/ptmap.cmi: ./02_extlib/ptmap.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ptmap.mli
+./02_extlib/ptmap.cmo: ./02_extlib/ptmap.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ptmap.ml
+./02_extlib/ptmap.cmx: ./02_extlib/ptmap.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ptmap.ml
+./02_extlib/ptmap.mlt: ./02_extlib/ptmap.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/ptmap.ml > ./02_extlib/ptmap.mlt
+./02_extlib/ptset.cmi: ./02_extlib/ptset.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ptset.mli
+./02_extlib/ptset.cmo: ./02_extlib/ptset.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ptset.ml
+./02_extlib/ptset.cmx: ./02_extlib/ptset.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ptset.ml
+./02_extlib/ptset.mlt: ./02_extlib/ptset.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/ptset.ml > ./02_extlib/ptset.mlt
+./02_extlib/hashcons.cmi: ./02_extlib/hashcons.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/hashcons.mli
+./02_extlib/hashcons.cmo: ./02_extlib/hashcons.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/hashcons.ml
+./02_extlib/hashcons.cmx: ./02_extlib/hashcons.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/hashcons.ml
+./02_extlib/hashcons.mlt: ./02_extlib/hashcons.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/hashcons.ml > ./02_extlib/hashcons.mlt
+./02_extlib/size.cmi: ./02_extlib/size.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/size.mli
+./02_extlib/size.cmo: ./02_extlib/size.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/size.ml
+./02_extlib/size.cmx: ./02_extlib/size.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/size.ml
+./02_extlib/size.mlt: ./02_extlib/size.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/size.ml > ./02_extlib/size.mlt
+./02_extlib/bitv.cmi: ./02_extlib/bitv.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/bitv.mli
+./02_extlib/bitv.cmo: ./02_extlib/bitv.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/bitv.ml
+./02_extlib/bitv.cmx: ./02_extlib/bitv.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/bitv.ml
+./02_extlib/bitv.mlt: ./02_extlib/bitv.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/bitv.ml > ./02_extlib/bitv.mlt
+./02_extlib/sb_ralist.cmi: ./02_extlib/sb_ralist.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sb_ralist.mli
+./02_extlib/sb_ralist.cmo: ./02_extlib/sb_ralist.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sb_ralist.ml
+./02_extlib/sb_ralist.cmx: ./02_extlib/sb_ralist.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sb_ralist.ml
+./02_extlib/sb_ralist.mlt: ./02_extlib/sb_ralist.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/sb_ralist.ml > ./02_extlib/sb_ralist.mlt
+./02_extlib/sb_ralist2.cmi: ./02_extlib/sb_ralist2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sb_ralist2.mli
+./02_extlib/sb_ralist2.cmo: ./02_extlib/sb_ralist2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sb_ralist2.ml
+./02_extlib/sb_ralist2.cmx: ./02_extlib/sb_ralist2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sb_ralist2.ml
+./02_extlib/sb_ralist2.mlt: ./02_extlib/sb_ralist2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/sb_ralist2.ml > ./02_extlib/sb_ralist2.mlt
+./02_extlib/sort2.cmi: ./02_extlib/sort2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sort2.mli
+./02_extlib/sort2.cmo: ./02_extlib/sort2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sort2.ml
+./02_extlib/sort2.cmx: ./02_extlib/sort2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sort2.ml
+./02_extlib/sort2.mlt: ./02_extlib/sort2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/sort2.ml > ./02_extlib/sort2.mlt
+./02_extlib/sys2.cmi: ./02_extlib/sys2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sys2.mli
+./02_extlib/sys2.cmo: ./02_extlib/sys2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sys2.ml
+./02_extlib/sys2.cmx: ./02_extlib/sys2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/sys2.ml
+./02_extlib/sys2.mlt: ./02_extlib/sys2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/sys2.ml > ./02_extlib/sys2.mlt
+./02_extlib/getopt.cmi: ./02_extlib/getopt.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/getopt.mli
+./02_extlib/getopt.cmo: ./02_extlib/getopt.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/getopt.ml
+./02_extlib/getopt.cmx: ./02_extlib/getopt.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/getopt.ml
+./02_extlib/getopt.mlt: ./02_extlib/getopt.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/getopt.ml > ./02_extlib/getopt.mlt
+./02_extlib/splay.cmi: ./02_extlib/splay.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/splay.mli
+./02_extlib/splay.cmo: ./02_extlib/splay.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/splay.ml
+./02_extlib/splay.cmx: ./02_extlib/splay.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/splay.ml
+./02_extlib/splay.mlt: ./02_extlib/splay.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/splay.ml > ./02_extlib/splay.mlt
+./02_extlib/splaytbl.cmi: ./02_extlib/splaytbl.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/splaytbl.mli
+./02_extlib/splaytbl.cmo: ./02_extlib/splaytbl.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/splaytbl.ml
+./02_extlib/splaytbl.cmx: ./02_extlib/splaytbl.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/splaytbl.ml
+./02_extlib/splaytbl.mlt: ./02_extlib/splaytbl.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/splaytbl.ml > ./02_extlib/splaytbl.mlt
+./02_extlib/hashtbl2.cmi: ./02_extlib/hashtbl2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/hashtbl2.mli
+./02_extlib/hashtbl2.cmo: ./02_extlib/hashtbl2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/hashtbl2.ml
+./02_extlib/hashtbl2.cmx: ./02_extlib/hashtbl2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/hashtbl2.ml
+./02_extlib/hashtbl2.mlt: ./02_extlib/hashtbl2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/hashtbl2.ml > ./02_extlib/hashtbl2.mlt
+./02_extlib/obuffer.cmi: ./02_extlib/obuffer.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/obuffer.mli
+./02_extlib/obuffer.cmo: ./02_extlib/obuffer.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/obuffer.ml
+./02_extlib/obuffer.cmx: ./02_extlib/obuffer.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/obuffer.ml
+./02_extlib/obuffer.mlt: ./02_extlib/obuffer.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/obuffer.ml > ./02_extlib/obuffer.mlt
+./02_extlib/ohashtbl.cmi: ./02_extlib/ohashtbl.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ohashtbl.mli
+./02_extlib/ohashtbl.cmo: ./02_extlib/ohashtbl.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ohashtbl.ml
+./02_extlib/ohashtbl.cmx: ./02_extlib/ohashtbl.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ohashtbl.ml
+./02_extlib/ohashtbl.mlt: ./02_extlib/ohashtbl.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/ohashtbl.ml > ./02_extlib/ohashtbl.mlt
+./02_extlib/oqueue.cmi: ./02_extlib/oqueue.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/oqueue.mli
+./02_extlib/oqueue.cmo: ./02_extlib/oqueue.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/oqueue.ml
+./02_extlib/oqueue.cmx: ./02_extlib/oqueue.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/oqueue.ml
+./02_extlib/oqueue.mlt: ./02_extlib/oqueue.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/oqueue.ml > ./02_extlib/oqueue.mlt
+./02_extlib/ostack.cmi: ./02_extlib/ostack.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ostack.mli
+./02_extlib/ostack.cmo: ./02_extlib/ostack.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ostack.ml
+./02_extlib/ostack.cmx: ./02_extlib/ostack.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ostack.ml
+./02_extlib/ostack.mlt: ./02_extlib/ostack.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/ostack.ml > ./02_extlib/ostack.mlt
+./02_extlib/omap.cmi: ./02_extlib/omap.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/omap.mli
+./02_extlib/omap.cmo: ./02_extlib/omap.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/omap.ml
+./02_extlib/omap.cmx: ./02_extlib/omap.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/omap.ml
+./02_extlib/omap.mlt: ./02_extlib/omap.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/omap.ml > ./02_extlib/omap.mlt
+./02_extlib/oset.cmi: ./02_extlib/oset.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/oset.mli
+./02_extlib/oset.cmo: ./02_extlib/oset.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/oset.ml
+./02_extlib/oset.cmx: ./02_extlib/oset.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/oset.ml
+./02_extlib/oset.mlt: ./02_extlib/oset.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/oset.ml > ./02_extlib/oset.mlt
+./02_extlib/ostream.cmi: ./02_extlib/ostream.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ostream.mli
+./02_extlib/ostream.cmo: ./02_extlib/ostream.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ostream.ml
+./02_extlib/ostream.cmx: ./02_extlib/ostream.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ostream.ml
+./02_extlib/ostream.mlt: ./02_extlib/ostream.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/ostream.ml > ./02_extlib/ostream.mlt
+./02_extlib/ogenlex.cmi: ./02_extlib/ogenlex.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ogenlex.mli
+./02_extlib/ogenlex.cmo: ./02_extlib/ogenlex.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ogenlex.ml
+./02_extlib/ogenlex.cmx: ./02_extlib/ogenlex.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/ogenlex.ml
+./02_extlib/ogenlex.mlt: ./02_extlib/ogenlex.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/ogenlex.ml > ./02_extlib/ogenlex.mlt
+./02_extlib/omapping.cmi: ./02_extlib/omapping.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/omapping.mli
+./02_extlib/omapping.cmo: ./02_extlib/omapping.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/omapping.ml
+./02_extlib/omapping.cmx: ./02_extlib/omapping.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/omapping.ml
+./02_extlib/omapping.mlt: ./02_extlib/omapping.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/omapping.ml > ./02_extlib/omapping.mlt
+./02_extlib/todo.cmi: ./02_extlib/todo.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/todo.mli
+./02_extlib/todo.cmo: ./02_extlib/todo.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/todo.ml
+./02_extlib/todo.cmx: ./02_extlib/todo.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/todo.ml
+./02_extlib/todo.mlt: ./02_extlib/todo.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/todo.ml > ./02_extlib/todo.mlt
+./02_extlib/file.cmi: ./02_extlib/file.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/file.mli
+./02_extlib/file.cmo: ./02_extlib/file.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/file.ml
+./02_extlib/file.cmx: ./02_extlib/file.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/file.ml
+./02_extlib/file.mlt: ./02_extlib/file.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/file.ml > ./02_extlib/file.mlt
+./02_extlib/crcs.cmo: ./02_extlib/crcs.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/crcs.ml
+./02_extlib/crcs.cmx: ./02_extlib/crcs.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/crcs.ml
+./02_extlib/crcs.mlt: ./02_extlib/crcs.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/crcs.ml > ./02_extlib/crcs.mlt
+./02_extlib/pp.cmi: ./02_extlib/pp.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pp.mli
+./02_extlib/pp.cmo: ./02_extlib/pp.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pp.ml
+./02_extlib/pp.cmx: ./02_extlib/pp.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pp.ml
+./02_extlib/pp.mlt: ./02_extlib/pp.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/pp.ml > ./02_extlib/pp.mlt
+./02_extlib/pc.cmi: ./02_extlib/pc.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pc.mli
+./02_extlib/pc.cmo: ./02_extlib/pc.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pc.ml
+./02_extlib/pc.cmx: ./02_extlib/pc.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pc.ml
+./02_extlib/pc.mlt: ./02_extlib/pc.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/pc.ml > ./02_extlib/pc.mlt
+./02_extlib/lc.cmi: ./02_extlib/lc.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/lc.mli
+./02_extlib/lc.cmo: ./02_extlib/lc.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/lc.ml
+./02_extlib/lc.cmx: ./02_extlib/lc.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/lc.ml
+./02_extlib/lc.mlt: ./02_extlib/lc.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/lc.ml > ./02_extlib/lc.mlt
+./02_extlib/pc2.cmi: ./02_extlib/pc2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pc2.mli
+./02_extlib/pc2.cmo: ./02_extlib/pc2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pc2.ml
+./02_extlib/pc2.cmx: ./02_extlib/pc2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/pc2.ml
+./02_extlib/pc2.mlt: ./02_extlib/pc2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/pc2.ml > ./02_extlib/pc2.mlt
+./02_extlib/std.cmi: ./02_extlib/std.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/std.mli
+./02_extlib/std.cmo: ./02_extlib/std.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/std.ml
+./02_extlib/std.cmx: ./02_extlib/std.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/std.ml
+./02_extlib/std.mlt: ./02_extlib/std.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/std.ml > ./02_extlib/std.mlt
+./02_extlib/buffer2.cmi: ./02_extlib/buffer2.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/buffer2.mli
+./02_extlib/buffer2.cmo: ./02_extlib/buffer2.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/buffer2.ml
+./02_extlib/buffer2.cmx: ./02_extlib/buffer2.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/buffer2.ml
+./02_extlib/buffer2.mlt: ./02_extlib/buffer2.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/buffer2.ml > ./02_extlib/buffer2.mlt
+./02_extlib/vlist.cmi: ./02_extlib/vlist.mli $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/vlist.mli
+./02_extlib/vlist.cmo: ./02_extlib/vlist.ml $(extlib_PPDEP)
+	$(OCAMLC) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/vlist.ml
+./02_extlib/vlist.cmx: ./02_extlib/vlist.ml $(extlib_PPDEP)
+	$(OCAMLOPT) $(extlib_INCLUDES) -c $(extlib_PP) ./02_extlib/vlist.ml
+./02_extlib/vlist.mlt: ./02_extlib/vlist.ml $(extlib_PPDEP)
+	$(extlib_PPDEP) -ml ./02_extlib/vlist.ml > ./02_extlib/vlist.mlt
+extlib_DIR = ./02_extlib
+extlib_CMOS = ./02_extlib/cdk.cmo ./02_extlib/pervasives2.cmo ./02_extlib/list2.cmo ./02_extlib/string2.cmo ./02_extlib/sysenv.cmo ./02_extlib/printexc2.cmo ./02_extlib/format2.cmo ./02_extlib/filename2.cmo ./02_extlib/log.cmo ./02_extlib/filepath.cmo ./02_extlib/options.cmo ./02_extlib/activebuffer.cmo ./02_extlib/cpp.cmo ./02_extlib/dynvars.cmo ./02_extlib/ptmap.cmo ./02_extlib/ptset.cmo ./02_extlib/hashcons.cmo ./02_extlib/size.cmo ./02_extlib/bitv.cmo ./02_extlib/sb_ralist.cmo ./02_extlib/sb_ralist2.cmo ./02_extlib/sort2.cmo ./02_extlib/sys2.cmo ./02_extlib/getopt.cmo ./02_extlib/splay.cmo ./02_extlib/splaytbl.cmo ./02_extlib/hashtbl2.cmo ./02_extlib/obuffer.cmo ./02_extlib/ohashtbl.cmo ./02_extlib/oqueue.cmo ./02_extlib/ostack.cmo ./02_extlib/omap.cmo ./02_extlib/oset.cmo ./02_extlib/ostream.cmo ./02_extlib/ogenlex.cmo ./02_extlib/omapping.cmo ./02_extlib/todo.cmo ./02_extlib/file.cmo ./02_extlib/crcs.cmo ./02_extlib/pp.cmo ./02_extlib/pc.cmo ./02_extlib/lc.cmo ./02_extlib/pc2.cmo ./02_extlib/std.cmo ./02_extlib/buffer2.cmo ./02_extlib/vlist.cmo
+extlib_CMXS = ./02_extlib/cdk.cmx ./02_extlib/pervasives2.cmx ./02_extlib/list2.cmx ./02_extlib/string2.cmx ./02_extlib/sysenv.cmx ./02_extlib/printexc2.cmx ./02_extlib/format2.cmx ./02_extlib/filename2.cmx ./02_extlib/log.cmx ./02_extlib/filepath.cmx ./02_extlib/options.cmx ./02_extlib/activebuffer.cmx ./02_extlib/cpp.cmx ./02_extlib/dynvars.cmx ./02_extlib/ptmap.cmx ./02_extlib/ptset.cmx ./02_extlib/hashcons.cmx ./02_extlib/size.cmx ./02_extlib/bitv.cmx ./02_extlib/sb_ralist.cmx ./02_extlib/sb_ralist2.cmx ./02_extlib/sort2.cmx ./02_extlib/sys2.cmx ./02_extlib/getopt.cmx ./02_extlib/splay.cmx ./02_extlib/splaytbl.cmx ./02_extlib/hashtbl2.cmx ./02_extlib/obuffer.cmx ./02_extlib/ohashtbl.cmx ./02_extlib/oqueue.cmx ./02_extlib/ostack.cmx ./02_extlib/omap.cmx ./02_extlib/oset.cmx ./02_extlib/ostream.cmx ./02_extlib/ogenlex.cmx ./02_extlib/omapping.cmx ./02_extlib/todo.cmx ./02_extlib/file.cmx ./02_extlib/crcs.cmx ./02_extlib/pp.cmx ./02_extlib/pc.cmx ./02_extlib/lc.cmx ./02_extlib/pc2.cmx ./02_extlib/std.cmx ./02_extlib/buffer2.cmx ./02_extlib/vlist.cmx
+extlib_MLS = ./02_extlib/cdk.ml ./02_extlib/pervasives2.ml ./02_extlib/list2.ml ./02_extlib/string2.ml ./02_extlib/sysenv.ml ./02_extlib/printexc2.ml ./02_extlib/format2.ml ./02_extlib/filename2.ml ./02_extlib/log.ml ./02_extlib/filepath.ml ./02_extlib/options.ml ./02_extlib/activebuffer.ml ./02_extlib/cpp.ml ./02_extlib/dynvars.ml ./02_extlib/ptmap.ml ./02_extlib/ptset.ml ./02_extlib/hashcons.ml ./02_extlib/size.ml ./02_extlib/bitv.ml ./02_extlib/sb_ralist.ml ./02_extlib/sb_ralist2.ml ./02_extlib/sort2.ml ./02_extlib/sys2.ml ./02_extlib/getopt.ml ./02_extlib/splay.ml ./02_extlib/splaytbl.ml ./02_extlib/hashtbl2.ml ./02_extlib/obuffer.ml ./02_extlib/ohashtbl.ml ./02_extlib/oqueue.ml ./02_extlib/ostack.ml ./02_extlib/omap.ml ./02_extlib/oset.ml ./02_extlib/ostream.ml ./02_extlib/ogenlex.ml ./02_extlib/omapping.ml ./02_extlib/todo.ml ./02_extlib/file.ml ./02_extlib/crcs.ml ./02_extlib/pp.ml ./02_extlib/pc.ml ./02_extlib/lc.ml ./02_extlib/pc2.ml ./02_extlib/std.ml ./02_extlib/buffer2.ml ./02_extlib/vlist.ml
+extlib_ANNOTS = ./02_extlib/cdk.annot ./02_extlib/pervasives2.annot ./02_extlib/list2.annot ./02_extlib/string2.annot ./02_extlib/sysenv.annot ./02_extlib/printexc2.annot ./02_extlib/format2.annot ./02_extlib/filename2.annot ./02_extlib/log.annot ./02_extlib/filepath.annot ./02_extlib/options.annot ./02_extlib/activebuffer.annot ./02_extlib/cpp.annot ./02_extlib/dynvars.annot ./02_extlib/ptmap.annot ./02_extlib/ptset.annot ./02_extlib/hashcons.annot ./02_extlib/size.annot ./02_extlib/bitv.annot ./02_extlib/sb_ralist.annot ./02_extlib/sb_ralist2.annot ./02_extlib/sort2.annot ./02_extlib/sys2.annot ./02_extlib/getopt.annot ./02_extlib/splay.annot ./02_extlib/splaytbl.annot ./02_extlib/hashtbl2.annot ./02_extlib/obuffer.annot ./02_extlib/ohashtbl.annot ./02_extlib/oqueue.annot ./02_extlib/ostack.annot ./02_extlib/omap.annot ./02_extlib/oset.annot ./02_extlib/ostream.annot ./02_extlib/ogenlex.annot ./02_extlib/omapping.annot ./02_extlib/todo.annot ./02_extlib/file.annot ./02_extlib/crcs.annot ./02_extlib/pp.annot ./02_extlib/pc.annot ./02_extlib/lc.annot ./02_extlib/pc2.annot ./02_extlib/std.annot ./02_extlib/buffer2.annot ./02_extlib/vlist.annot
+extlib_MLIS = ./02_extlib/cdk.mli ./02_extlib/pervasives2.mli ./02_extlib/list2.mli ./02_extlib/string2.mli ./02_extlib/sysenv.mli ./02_extlib/printexc2.mli ./02_extlib/format2.mli ./02_extlib/filename2.mli ./02_extlib/log.mli ./02_extlib/filepath.mli ./02_extlib/options.mli ./02_extlib/activebuffer.mli ./02_extlib/cpp.mli ./02_extlib/dynvars.mli ./02_extlib/ptmap.mli ./02_extlib/ptset.mli ./02_extlib/hashcons.mli ./02_extlib/size.mli ./02_extlib/bitv.mli ./02_extlib/sb_ralist.mli ./02_extlib/sb_ralist2.mli ./02_extlib/sort2.mli ./02_extlib/sys2.mli ./02_extlib/getopt.mli ./02_extlib/splay.mli ./02_extlib/splaytbl.mli ./02_extlib/hashtbl2.mli ./02_extlib/obuffer.mli ./02_extlib/ohashtbl.mli ./02_extlib/oqueue.mli ./02_extlib/ostack.mli ./02_extlib/omap.mli ./02_extlib/oset.mli ./02_extlib/ostream.mli ./02_extlib/ogenlex.mli ./02_extlib/omapping.mli ./02_extlib/todo.mli ./02_extlib/file.mli ./02_extlib/pp.mli ./02_extlib/pc.mli ./02_extlib/lc.mli ./02_extlib/pc2.mli ./02_extlib/std.mli ./02_extlib/buffer2.mli ./02_extlib/vlist.mli
+extlib_CMIS = ./02_extlib/cdk.cmi ./02_extlib/pervasives2.cmi ./02_extlib/list2.cmi ./02_extlib/string2.cmi ./02_extlib/sysenv.cmi ./02_extlib/printexc2.cmi ./02_extlib/format2.cmi ./02_extlib/filename2.cmi ./02_extlib/log.cmi ./02_extlib/filepath.cmi ./02_extlib/options.cmi ./02_extlib/activebuffer.cmi ./02_extlib/cpp.cmi ./02_extlib/dynvars.cmi ./02_extlib/ptmap.cmi ./02_extlib/ptset.cmi ./02_extlib/hashcons.cmi ./02_extlib/size.cmi ./02_extlib/bitv.cmi ./02_extlib/sb_ralist.cmi ./02_extlib/sb_ralist2.cmi ./02_extlib/sort2.cmi ./02_extlib/sys2.cmi ./02_extlib/getopt.cmi ./02_extlib/splay.cmi ./02_extlib/splaytbl.cmi ./02_extlib/hashtbl2.cmi ./02_extlib/obuffer.cmi ./02_extlib/ohashtbl.cmi ./02_extlib/oqueue.cmi ./02_extlib/ostack.cmi ./02_extlib/omap.cmi ./02_extlib/oset.cmi ./02_extlib/ostream.cmi ./02_extlib/ogenlex.cmi ./02_extlib/omapping.cmi ./02_extlib/todo.cmi ./02_extlib/file.cmi ./02_extlib/crcs.cmi ./02_extlib/pp.cmi ./02_extlib/pc.cmi ./02_extlib/lc.cmi ./02_extlib/pc2.cmi ./02_extlib/std.cmi ./02_extlib/buffer2.cmi ./02_extlib/vlist.cmi
+extlib_TMPS = ./02_extlib/cdk.cmo ./02_extlib/cdk.cmx ./02_extlib/cdk.cmi ./02_extlib/cdk.o ./02_extlib/pervasives2.cmo ./02_extlib/pervasives2.cmx ./02_extlib/pervasives2.cmi ./02_extlib/pervasives2.o ./02_extlib/list2.cmo ./02_extlib/list2.cmx ./02_extlib/list2.cmi ./02_extlib/list2.o ./02_extlib/string2.cmo ./02_extlib/string2.cmx ./02_extlib/string2.cmi ./02_extlib/string2.o ./02_extlib/sysenv.cmo ./02_extlib/sysenv.cmx ./02_extlib/sysenv.cmi ./02_extlib/sysenv.o ./02_extlib/printexc2.cmo ./02_extlib/printexc2.cmx ./02_extlib/printexc2.cmi ./02_extlib/printexc2.o ./02_extlib/format2.cmo ./02_extlib/format2.cmx ./02_extlib/format2.cmi ./02_extlib/format2.o ./02_extlib/filename2.cmo ./02_extlib/filename2.cmx ./02_extlib/filename2.cmi ./02_extlib/filename2.o ./02_extlib/log.cmo ./02_extlib/log.cmx ./02_extlib/log.cmi ./02_extlib/log.o ./02_extlib/filepath.cmo ./02_extlib/filepath.cmx ./02_extlib/filepath.cmi ./02_extlib/filepath.o ./02_extlib/options.cmo ./02_extlib/options.cmx ./02_extlib/options.cmi ./02_extlib/options.o ./02_extlib/activebuffer.cmo ./02_extlib/activebuffer.cmx ./02_extlib/activebuffer.cmi ./02_extlib/activebuffer.o ./02_extlib/cpp.cmo ./02_extlib/cpp.cmx ./02_extlib/cpp.cmi ./02_extlib/cpp.o ./02_extlib/dynvars.cmo ./02_extlib/dynvars.cmx ./02_extlib/dynvars.cmi ./02_extlib/dynvars.o ./02_extlib/ptmap.cmo ./02_extlib/ptmap.cmx ./02_extlib/ptmap.cmi ./02_extlib/ptmap.o ./02_extlib/ptset.cmo ./02_extlib/ptset.cmx ./02_extlib/ptset.cmi ./02_extlib/ptset.o ./02_extlib/hashcons.cmo ./02_extlib/hashcons.cmx ./02_extlib/hashcons.cmi ./02_extlib/hashcons.o ./02_extlib/size.cmo ./02_extlib/size.cmx ./02_extlib/size.cmi ./02_extlib/size.o ./02_extlib/bitv.cmo ./02_extlib/bitv.cmx ./02_extlib/bitv.cmi ./02_extlib/bitv.o ./02_extlib/sb_ralist.cmo ./02_extlib/sb_ralist.cmx ./02_extlib/sb_ralist.cmi ./02_extlib/sb_ralist.o ./02_extlib/sb_ralist2.cmo ./02_extlib/sb_ralist2.cmx ./02_extlib/sb_ralist2.cmi ./02_extlib/sb_ralist2.o ./02_extlib/sort2.cmo ./02_extlib/sort2.cmx ./02_extlib/sort2.cmi ./02_extlib/sort2.o ./02_extlib/sys2.cmo ./02_extlib/sys2.cmx ./02_extlib/sys2.cmi ./02_extlib/sys2.o ./02_extlib/getopt.cmo ./02_extlib/getopt.cmx ./02_extlib/getopt.cmi ./02_extlib/getopt.o ./02_extlib/splay.cmo ./02_extlib/splay.cmx ./02_extlib/splay.cmi ./02_extlib/splay.o ./02_extlib/splaytbl.cmo ./02_extlib/splaytbl.cmx ./02_extlib/splaytbl.cmi ./02_extlib/splaytbl.o ./02_extlib/hashtbl2.cmo ./02_extlib/hashtbl2.cmx ./02_extlib/hashtbl2.cmi ./02_extlib/hashtbl2.o ./02_extlib/obuffer.cmo ./02_extlib/obuffer.cmx ./02_extlib/obuffer.cmi ./02_extlib/obuffer.o ./02_extlib/ohashtbl.cmo ./02_extlib/ohashtbl.cmx ./02_extlib/ohashtbl.cmi ./02_extlib/ohashtbl.o ./02_extlib/oqueue.cmo ./02_extlib/oqueue.cmx ./02_extlib/oqueue.cmi ./02_extlib/oqueue.o ./02_extlib/ostack.cmo ./02_extlib/ostack.cmx ./02_extlib/ostack.cmi ./02_extlib/ostack.o ./02_extlib/omap.cmo ./02_extlib/omap.cmx ./02_extlib/omap.cmi ./02_extlib/omap.o ./02_extlib/oset.cmo ./02_extlib/oset.cmx ./02_extlib/oset.cmi ./02_extlib/oset.o ./02_extlib/ostream.cmo ./02_extlib/ostream.cmx ./02_extlib/ostream.cmi ./02_extlib/ostream.o ./02_extlib/ogenlex.cmo ./02_extlib/ogenlex.cmx ./02_extlib/ogenlex.cmi ./02_extlib/ogenlex.o ./02_extlib/omapping.cmo ./02_extlib/omapping.cmx ./02_extlib/omapping.cmi ./02_extlib/omapping.o ./02_extlib/todo.cmo ./02_extlib/todo.cmx ./02_extlib/todo.cmi ./02_extlib/todo.o ./02_extlib/file.cmo ./02_extlib/file.cmx ./02_extlib/file.cmi ./02_extlib/file.o ./02_extlib/crcs.cmo ./02_extlib/crcs.cmx ./02_extlib/crcs.cmi ./02_extlib/crcs.o ./02_extlib/pp.cmo ./02_extlib/pp.cmx ./02_extlib/pp.cmi ./02_extlib/pp.o ./02_extlib/pc.cmo ./02_extlib/pc.cmx ./02_extlib/pc.cmi ./02_extlib/pc.o ./02_extlib/lc.cmo ./02_extlib/lc.cmx ./02_extlib/lc.cmi ./02_extlib/lc.o ./02_extlib/pc2.cmo ./02_extlib/pc2.cmx ./02_extlib/pc2.cmi ./02_extlib/pc2.o ./02_extlib/std.cmo ./02_extlib/std.cmx ./02_extlib/std.cmi ./02_extlib/std.o ./02_extlib/buffer2.cmo ./02_extlib/buffer2.cmx ./02_extlib/buffer2.cmi ./02_extlib/buffer2.o ./02_extlib/vlist.cmo ./02_extlib/vlist.cmx ./02_extlib/vlist.cmi ./02_extlib/vlist.o
+extlib_GENS = ./02_extlib/cpp.ml
+extlib.depend:: Makefile
+	mv -f .extlib_depend .extlib_depend_old
+	$(MAKE) -f Makefile.rules .extlib_depend || echo OK
+.extlib_depend: $(extlib_GENS) $(extlib_PPDEP) $(extlib_CONF) $(extlib_CONFDEP)
+	$(OCAMLDEP) $(extlib_PP) $(extlib_INCLUDES) $(extlib_MLS) $(extlib_MLIS) > .extlib_depend_new
+	cmp .extlib_depend_new .extlib_depend_old || (rm -f .extlib_depend_old; mv .extlib_depend_new .extlib_depend_old)
+	mv .extlib_depend_old .extlib_depend
+depend:: extlib.depend
+extlib.distclean::
+	rm -f .extlib_depend $(extlib_GENS)
+extlib_CMXADEP= $(extlib_DIR)/extlib.cmxa
+extlib_CMXA= extlib.cmxa
+extlib_CMADEP= $(extlib_DIR)/extlib.cma
+extlib_CMA= extlib.cma
+$(extlib_DIR)/extlib.cma: .extlib_depend $(extlib_CMOS) $(extlib_CONF)
+	$(OCAMLC) -a $(extlib_CCLIB) -o $(extlib_DIR)/extlib.cma $(extlib_CMOS)
+$(extlib_DIR)/extlib.cmxa: .extlib_depend $(extlib_CMXS) $(extlib_CONF)
+	$(OCAMLOPT) -a $(extlib_CCLIB) -o $(extlib_DIR)/extlib.cmxa $(extlib_CMXS)
+extlib.opt:: $(extlib_DIR)/extlib.cmxa
+extlib.byte:: $(extlib_DIR)/extlib.cma
+extlib.install::
+	$(CP) $(extlib_DIR)/extlib.cma $(extlib_DIR)/extlib.cmxa $(extlib_DIR)/extlib.a $(ALTLIB)
+	echo "installed = true" > $(ALTLIB)/extlib.ocf
+	cat $(extlib_CONF) >> $(ALTLIB)/extlib.ocf
+	$(CP) $(extlib_CMXS) $(ALTLIB)
+	$(CP) $(extlib_CMIS) $(ALTLIB)
+extlib.clean::
+	rm -f $(extlib_DIR)/extlib.cma $(extlib_DIR)/extlib.cmxa $(extlib_DIR)/extlib.a
+	rm -f $(extlib_OS) $(extlib_TMPS) $(extlib_ANNOTS)
+$(HTML_DIR)/extlib/index.html: $(extlib_MLS)
+	mkdir -p $(HTML_DIR)/extlib
+	$(OCAMLDOC) -html -d $(HTML_DIR)/extlib $(extlib_INCLUDES) $(extlib_PP) $(extlib_MLS)
+	$(OCAMLDOC) -man -d $(MAN_DIR) $(extlib_INCLUDES) $(extlib_PP) $(extlib_MLS)
+extlib.doc:: $(HTML_DIR)/extlib/index.html
+doc:: extlib.doc
+byte:: extlib.byte
+extlib.byte::
+opt:: extlib.opt
+extlib.opt::
+clean:: extlib.clean
+extlib.clean::
+distclean:: extlib.clean extlib.distclean
+extlib.distclean:: extlib.clean
+install:: extlib.install
+extlib.install::
+
+
+#####################################
+# Project unix2
+# From: ./03_unix2
+
+unix2_CONF=  ./03_unix2/ocamlconf.ocf
+Makefile: $(unix2_CONF)
+
+unix2_FILES= 03_unix2/concur.ml 03_unix2/cdk_passwd_lexers.mll 03_unix2/cdk_passwd_parsers.mly 03_unix2/passwd.ml 03_unix2/unix2.ml 03_unix2/pty.ml 03_unix2/getdomainname.c 03_unix2/select.c 03_unix2/glob.ml 03_unix2/glob_c.c 03_unix2/wordexp.ml 03_unix2/wordexp_c.c 03_unix2/fnmatch.ml 03_unix2/fnmatch_c.c 03_unix2/utils.ml 03_unix2/str2.ml 03_unix2/time.ml
+unix2_CONFDEP = $(extlib_CONF) 
+unix2_INCLUDES= -I ./03_unix2 -I ./02_extlib 
+./03_unix2/concur.cmi: ./03_unix2/concur.mli $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/concur.mli
+./03_unix2/concur.cmo: ./03_unix2/concur.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/concur.ml
+./03_unix2/concur.cmx: ./03_unix2/concur.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/concur.ml
+./03_unix2/cdk_passwd_lexers.cmi: ./03_unix2/cdk_passwd_lexers.mli $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/cdk_passwd_lexers.mli
+./03_unix2/cdk_passwd_lexers.cmo: ./03_unix2/cdk_passwd_lexers.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/cdk_passwd_lexers.ml
+./03_unix2/cdk_passwd_lexers.cmx: ./03_unix2/cdk_passwd_lexers.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/cdk_passwd_lexers.ml
+./03_unix2/cdk_passwd_parsers.cmi: ./03_unix2/cdk_passwd_parsers.mli $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/cdk_passwd_parsers.mli
+./03_unix2/cdk_passwd_parsers.cmo: ./03_unix2/cdk_passwd_parsers.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/cdk_passwd_parsers.ml
+./03_unix2/cdk_passwd_parsers.cmx: ./03_unix2/cdk_passwd_parsers.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/cdk_passwd_parsers.ml
+./03_unix2/passwd.cmi: ./03_unix2/passwd.mli $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/passwd.mli
+./03_unix2/passwd.cmo: ./03_unix2/passwd.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/passwd.ml
+./03_unix2/passwd.cmx: ./03_unix2/passwd.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/passwd.ml
+./03_unix2/unix2.cmi: ./03_unix2/unix2.mli $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/unix2.mli
+./03_unix2/unix2.cmo: ./03_unix2/unix2.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/unix2.ml
+./03_unix2/unix2.cmx: ./03_unix2/unix2.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/unix2.ml
+./03_unix2/pty.cmi: ./03_unix2/pty.mli $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/pty.mli
+./03_unix2/pty.cmo: ./03_unix2/pty.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/pty.ml
+./03_unix2/pty.cmx: ./03_unix2/pty.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/pty.ml
+./03_unix2/glob.cmi: ./03_unix2/glob.mli $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/glob.mli
+./03_unix2/glob.cmo: ./03_unix2/glob.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/glob.ml
+./03_unix2/glob.cmx: ./03_unix2/glob.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/glob.ml
+./03_unix2/wordexp.cmi: ./03_unix2/wordexp.mli $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/wordexp.mli
+./03_unix2/wordexp.cmo: ./03_unix2/wordexp.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/wordexp.ml
+./03_unix2/wordexp.cmx: ./03_unix2/wordexp.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/wordexp.ml
+./03_unix2/fnmatch.cmi: ./03_unix2/fnmatch.mli $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/fnmatch.mli
+./03_unix2/fnmatch.cmo: ./03_unix2/fnmatch.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/fnmatch.ml
+./03_unix2/fnmatch.cmx: ./03_unix2/fnmatch.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/fnmatch.ml
+./03_unix2/utils.cmo: ./03_unix2/utils.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/utils.ml
+./03_unix2/utils.cmx: ./03_unix2/utils.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/utils.ml
+./03_unix2/str2.cmo: ./03_unix2/str2.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/str2.ml
+./03_unix2/str2.cmx: ./03_unix2/str2.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/str2.ml
+./03_unix2/time.cmo: ./03_unix2/time.ml $(unix2_PPDEP)
+	$(OCAMLC) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/time.ml
+./03_unix2/time.cmx: ./03_unix2/time.ml $(unix2_PPDEP)
+	$(OCAMLOPT) $(unix2_INCLUDES) -c $(unix2_PP) ./03_unix2/time.ml
+unix2_DIR = ./03_unix2
+unix2_CMOS = ./03_unix2/concur.cmo ./03_unix2/cdk_passwd_lexers.cmo ./03_unix2/cdk_passwd_parsers.cmo ./03_unix2/passwd.cmo ./03_unix2/unix2.cmo ./03_unix2/pty.cmo ./03_unix2/glob.cmo ./03_unix2/wordexp.cmo ./03_unix2/fnmatch.cmo ./03_unix2/utils.cmo ./03_unix2/str2.cmo ./03_unix2/time.cmo
+unix2_CMXS = ./03_unix2/concur.cmx ./03_unix2/cdk_passwd_lexers.cmx ./03_unix2/cdk_passwd_parsers.cmx ./03_unix2/passwd.cmx ./03_unix2/unix2.cmx ./03_unix2/pty.cmx ./03_unix2/glob.cmx ./03_unix2/wordexp.cmx ./03_unix2/fnmatch.cmx ./03_unix2/utils.cmx ./03_unix2/str2.cmx ./03_unix2/time.cmx
+unix2_MLS = ./03_unix2/concur.ml ./03_unix2/cdk_passwd_lexers.ml ./03_unix2/cdk_passwd_parsers.ml ./03_unix2/passwd.ml ./03_unix2/unix2.ml ./03_unix2/pty.ml ./03_unix2/glob.ml ./03_unix2/wordexp.ml ./03_unix2/fnmatch.ml ./03_unix2/utils.ml ./03_unix2/str2.ml ./03_unix2/time.ml
+unix2_ANNOTS = ./03_unix2/concur.annot ./03_unix2/cdk_passwd_lexers.annot ./03_unix2/cdk_passwd_parsers.annot ./03_unix2/passwd.annot ./03_unix2/unix2.annot ./03_unix2/pty.annot ./03_unix2/glob.annot ./03_unix2/wordexp.annot ./03_unix2/fnmatch.annot ./03_unix2/utils.annot ./03_unix2/str2.annot ./03_unix2/time.annot
+unix2_MLIS = ./03_unix2/concur.mli ./03_unix2/cdk_passwd_lexers.mli ./03_unix2/cdk_passwd_parsers.mli ./03_unix2/passwd.mli ./03_unix2/unix2.mli ./03_unix2/pty.mli ./03_unix2/glob.mli ./03_unix2/wordexp.mli ./03_unix2/fnmatch.mli
+unix2_CMIS = ./03_unix2/concur.cmi ./03_unix2/cdk_passwd_lexers.cmi ./03_unix2/cdk_passwd_parsers.cmi ./03_unix2/passwd.cmi ./03_unix2/unix2.cmi ./03_unix2/pty.cmi ./03_unix2/glob.cmi ./03_unix2/wordexp.cmi ./03_unix2/fnmatch.cmi ./03_unix2/utils.cmi ./03_unix2/str2.cmi ./03_unix2/time.cmi
+unix2_TMPS = ./03_unix2/concur.cmo ./03_unix2/concur.cmx ./03_unix2/concur.cmi ./03_unix2/concur.o ./03_unix2/cdk_passwd_lexers.cmo ./03_unix2/cdk_passwd_lexers.cmx ./03_unix2/cdk_passwd_lexers.cmi ./03_unix2/cdk_passwd_lexers.o ./03_unix2/cdk_passwd_parsers.cmo ./03_unix2/cdk_passwd_parsers.cmx ./03_unix2/cdk_passwd_parsers.cmi ./03_unix2/cdk_passwd_parsers.o ./03_unix2/passwd.cmo ./03_unix2/passwd.cmx ./03_unix2/passwd.cmi ./03_unix2/passwd.o ./03_unix2/unix2.cmo ./03_unix2/unix2.cmx ./03_unix2/unix2.cmi ./03_unix2/unix2.o ./03_unix2/pty.cmo ./03_unix2/pty.cmx ./03_unix2/pty.cmi ./03_unix2/pty.o ./03_unix2/glob.cmo ./03_unix2/glob.cmx ./03_unix2/glob.cmi ./03_unix2/glob.o ./03_unix2/wordexp.cmo ./03_unix2/wordexp.cmx ./03_unix2/wordexp.cmi ./03_unix2/wordexp.o ./03_unix2/fnmatch.cmo ./03_unix2/fnmatch.cmx ./03_unix2/fnmatch.cmi ./03_unix2/fnmatch.o ./03_unix2/utils.cmo ./03_unix2/utils.cmx ./03_unix2/utils.cmi ./03_unix2/utils.o ./03_unix2/str2.cmo ./03_unix2/str2.cmx ./03_unix2/str2.cmi ./03_unix2/str2.o ./03_unix2/time.cmo ./03_unix2/time.cmx ./03_unix2/time.cmi ./03_unix2/time.o
+unix2_GENS = ./03_unix2/cdk_passwd_lexers.ml ./03_unix2/cdk_passwd_parsers.mli ./03_unix2/cdk_passwd_parsers.ml
+unix2_CCLIB = -cclib " -L$(unix2_DIR) -lmlunix2  -L$(unix2_DIR)"
+unix2_OS = ./03_unix2/getdomainname.o ./03_unix2/select.o ./03_unix2/glob_c.o ./03_unix2/wordexp_c.o ./03_unix2/fnmatch_c.o
+unix2_CFLAGS= 
+./03_unix2/getdomainname.o: ./03_unix2/getdomainname.c
+	$(CC) $(unix2_INCLUDES) -I $(OCAMLDIR) $(unix2_CFLAGS) -o ./03_unix2/getdomainname.o -c ./03_unix2/getdomainname.c
+./03_unix2/select.o: ./03_unix2/select.c
+	$(CC) $(unix2_INCLUDES) -I $(OCAMLDIR) $(unix2_CFLAGS) -o ./03_unix2/select.o -c ./03_unix2/select.c
+./03_unix2/glob_c.o: ./03_unix2/glob_c.c
+	$(CC) $(unix2_INCLUDES) -I $(OCAMLDIR) $(unix2_CFLAGS) -o ./03_unix2/glob_c.o -c ./03_unix2/glob_c.c
+./03_unix2/wordexp_c.o: ./03_unix2/wordexp_c.c
+	$(CC) $(unix2_INCLUDES) -I $(OCAMLDIR) $(unix2_CFLAGS) -o ./03_unix2/wordexp_c.o -c ./03_unix2/wordexp_c.c
+./03_unix2/fnmatch_c.o: ./03_unix2/fnmatch_c.c
+	$(CC) $(unix2_INCLUDES) -I $(OCAMLDIR) $(unix2_CFLAGS) -o ./03_unix2/fnmatch_c.o -c ./03_unix2/fnmatch_c.c
+unix2.depend:: Makefile
+	mv -f .unix2_depend .unix2_depend_old
+	$(MAKE) -f Makefile.rules .unix2_depend || echo OK
+.unix2_depend: $(unix2_GENS) $(unix2_PPDEP) $(unix2_CONF) $(unix2_CONFDEP)
+	$(OCAMLDEP) $(unix2_PP) $(unix2_INCLUDES) $(unix2_MLS) $(unix2_MLIS) > .unix2_depend_new
+	cmp .unix2_depend_new .unix2_depend_old || (rm -f .unix2_depend_old; mv .unix2_depend_new .unix2_depend_old)
+	mv .unix2_depend_old .unix2_depend
+depend:: unix2.depend
+unix2.distclean::
+	rm -f .unix2_depend $(unix2_GENS)
+unix2_CMXADEP= $(unix2_DIR)/unix2.cmxa
+unix2_CMXA= unix2.cmxa
+unix2_CMADEP= $(unix2_DIR)/unix2.cma
+unix2_CMA= unix2.cma
+$(unix2_DIR)/unix2.cma: .unix2_depend $(unix2_CMOS) $(unix2_CONF)
+	$(OCAMLC) -a $(unix2_CCLIB) -o $(unix2_DIR)/unix2.cma $(unix2_CMOS)
+$(unix2_DIR)/unix2.cmxa: .unix2_depend $(unix2_CMXS) $(unix2_CONF)
+	$(OCAMLOPT) -a $(unix2_CCLIB) -o $(unix2_DIR)/unix2.cmxa $(unix2_CMXS)
+unix2.opt:: $(unix2_DIR)/unix2.cmxa
+unix2.byte:: $(unix2_DIR)/unix2.cma
+unix2.install::
+	$(CP) $(unix2_DIR)/unix2.cma $(unix2_DIR)/unix2.cmxa $(unix2_DIR)/unix2.a $(ALTLIB)
+	echo "installed = true" > $(ALTLIB)/unix2.ocf
+	cat $(unix2_CONF) >> $(ALTLIB)/unix2.ocf
+	$(CP) $(unix2_CMXS) $(ALTLIB)
+	$(CP) $(unix2_CMIS) $(ALTLIB)
+unix2.clean::
+	rm -f $(unix2_DIR)/unix2.cma $(unix2_DIR)/unix2.cmxa $(unix2_DIR)/unix2.a
+	rm -f $(unix2_OS) $(unix2_TMPS) $(unix2_ANNOTS)
+$(HTML_DIR)/unix2/index.html: $(unix2_MLS)
+	mkdir -p $(HTML_DIR)/unix2
+	$(OCAMLDOC) -html -d $(HTML_DIR)/unix2 $(unix2_INCLUDES) $(unix2_PP) $(unix2_MLS)
+	$(OCAMLDOC) -man -d $(MAN_DIR) $(unix2_INCLUDES) $(unix2_PP) $(unix2_MLS)
+unix2.doc:: $(HTML_DIR)/unix2/index.html
+doc:: unix2.doc
+unix2.byte:: $(unix2_DIR)/libmlunix2.a
+unix2.opt:: $(unix2_DIR)/libmlunix2.a
+$(unix2_DIR)/unix2.cma: $(unix2_DIR)/libmlunix2.a
+$(unix2_DIR)/unix2.cmxa: $(unix2_DIR)/libmlunix2.a
+unix2.clean::
+	rm -f $(unix2_DIR)/libmlunix2.a
+unix2.install::
+	$(CP) $(unix2_DIR)/libmlunix2.a $(ALTLIB)
+$(unix2_DIR)/libmlunix2.a: $(unix2_OS) $(unix2_CONF)
+	$(AR) $(unix2_DIR)/libmlunix2.a $(unix2_OS)
+	$(RANLIB) $(unix2_DIR)/libmlunix2.a
+byte:: unix2.byte
+unix2.byte::
+opt:: unix2.opt
+unix2.opt::
+clean:: unix2.clean
+unix2.clean::
+distclean:: unix2.clean unix2.distclean
+unix2.distclean:: unix2.clean
+install:: unix2.install
+unix2.install::
+
+
+#####################################
+# Project xlib
+# From: ./04_xlib
+
+xlib_CONF=  ./04_xlib/ocamlconf.ocf
+Makefile: $(xlib_CONF)
+
+xlib_FILES= 04_xlib/xdebug.ml 04_xlib/xA.ml 04_xlib/xfifo.ml 04_xlib/xequeue.ml 04_xlib/jeton.ml 04_xlib/xtypes.ml 04_xlib/wintbl.ml 04_xlib/xbuffer.ml 04_xlib/xauth.ml 04_xlib/ll_trans.ml 04_xlib/conv_event.ml 04_xlib/shbuf.ml 04_xlib/display.ml 04_xlib/xproto.ml 04_xlib/x.ml 04_xlib/xsync.ml 04_xlib/xasync.ml 04_xlib/xC.ml 04_xlib/xK.ml 04_xlib/keyBind.ml 04_xlib/xlib.ml 04_xlib/xtext.ml 04_xlib/icccm.ml 04_xlib/zpixmap.ml 04_xlib/shape.ml 04_xlib/xmu.ml 04_xlib/eloop.ml 04_xlib/selection.ml 04_xlib/xterm.ml 04_xlib/xpm.mll 04_xlib/xGraphics.ml 04_xlib/xrm.mll
+xlib_CONFDEP = $(extlib_CONF) $(unix2_CONF) 
+xlib_INCLUDES= -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./04_xlib/xdebug.cmi: ./04_xlib/xdebug.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xdebug.mli
+./04_xlib/xdebug.cmo: ./04_xlib/xdebug.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xdebug.ml
+./04_xlib/xdebug.cmx: ./04_xlib/xdebug.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xdebug.ml
+./04_xlib/xA.cmi: ./04_xlib/xA.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xA.mli
+./04_xlib/xA.cmo: ./04_xlib/xA.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xA.ml
+./04_xlib/xA.cmx: ./04_xlib/xA.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xA.ml
+./04_xlib/xfifo.cmi: ./04_xlib/xfifo.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xfifo.mli
+./04_xlib/xfifo.cmo: ./04_xlib/xfifo.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xfifo.ml
+./04_xlib/xfifo.cmx: ./04_xlib/xfifo.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xfifo.ml
+./04_xlib/xequeue.cmi: ./04_xlib/xequeue.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xequeue.mli
+./04_xlib/xequeue.cmo: ./04_xlib/xequeue.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xequeue.ml
+./04_xlib/xequeue.cmx: ./04_xlib/xequeue.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xequeue.ml
+./04_xlib/jeton.cmi: ./04_xlib/jeton.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/jeton.mli
+./04_xlib/jeton.cmo: ./04_xlib/jeton.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/jeton.ml
+./04_xlib/jeton.cmx: ./04_xlib/jeton.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/jeton.ml
+./04_xlib/xtypes.cmi: ./04_xlib/xtypes.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xtypes.mli
+./04_xlib/xtypes.cmo: ./04_xlib/xtypes.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xtypes.ml
+./04_xlib/xtypes.cmx: ./04_xlib/xtypes.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xtypes.ml
+./04_xlib/wintbl.cmi: ./04_xlib/wintbl.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/wintbl.mli
+./04_xlib/wintbl.cmo: ./04_xlib/wintbl.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/wintbl.ml
+./04_xlib/wintbl.cmx: ./04_xlib/wintbl.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/wintbl.ml
+./04_xlib/xbuffer.cmi: ./04_xlib/xbuffer.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xbuffer.mli
+./04_xlib/xbuffer.cmo: ./04_xlib/xbuffer.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xbuffer.ml
+./04_xlib/xbuffer.cmx: ./04_xlib/xbuffer.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xbuffer.ml
+./04_xlib/xauth.cmi: ./04_xlib/xauth.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xauth.mli
+./04_xlib/xauth.cmo: ./04_xlib/xauth.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xauth.ml
+./04_xlib/xauth.cmx: ./04_xlib/xauth.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xauth.ml
+./04_xlib/ll_trans.cmi: ./04_xlib/ll_trans.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/ll_trans.mli
+./04_xlib/ll_trans.cmo: ./04_xlib/ll_trans.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/ll_trans.ml
+./04_xlib/ll_trans.cmx: ./04_xlib/ll_trans.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/ll_trans.ml
+./04_xlib/conv_event.cmi: ./04_xlib/conv_event.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/conv_event.mli
+./04_xlib/conv_event.cmo: ./04_xlib/conv_event.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/conv_event.ml
+./04_xlib/conv_event.cmx: ./04_xlib/conv_event.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/conv_event.ml
+./04_xlib/shbuf.cmi: ./04_xlib/shbuf.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/shbuf.mli
+./04_xlib/shbuf.cmo: ./04_xlib/shbuf.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/shbuf.ml
+./04_xlib/shbuf.cmx: ./04_xlib/shbuf.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/shbuf.ml
+./04_xlib/display.cmi: ./04_xlib/display.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/display.mli
+./04_xlib/display.cmo: ./04_xlib/display.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/display.ml
+./04_xlib/display.cmx: ./04_xlib/display.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/display.ml
+./04_xlib/xproto.cmi: ./04_xlib/xproto.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xproto.mli
+./04_xlib/xproto.cmo: ./04_xlib/xproto.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xproto.ml
+./04_xlib/xproto.cmx: ./04_xlib/xproto.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xproto.ml
+./04_xlib/x.cmi: ./04_xlib/x.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/x.mli
+./04_xlib/x.cmo: ./04_xlib/x.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/x.ml
+./04_xlib/x.cmx: ./04_xlib/x.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/x.ml
+./04_xlib/xsync.cmi: ./04_xlib/xsync.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xsync.mli
+./04_xlib/xsync.cmo: ./04_xlib/xsync.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xsync.ml
+./04_xlib/xsync.cmx: ./04_xlib/xsync.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xsync.ml
+./04_xlib/xasync.cmi: ./04_xlib/xasync.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xasync.mli
+./04_xlib/xasync.cmo: ./04_xlib/xasync.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xasync.ml
+./04_xlib/xasync.cmx: ./04_xlib/xasync.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xasync.ml
+./04_xlib/xC.cmi: ./04_xlib/xC.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xC.mli
+./04_xlib/xC.cmo: ./04_xlib/xC.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xC.ml
+./04_xlib/xC.cmx: ./04_xlib/xC.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xC.ml
+./04_xlib/xK.cmo: ./04_xlib/xK.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xK.ml
+./04_xlib/xK.cmx: ./04_xlib/xK.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xK.ml
+./04_xlib/keyBind.cmi: ./04_xlib/keyBind.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/keyBind.mli
+./04_xlib/keyBind.cmo: ./04_xlib/keyBind.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/keyBind.ml
+./04_xlib/keyBind.cmx: ./04_xlib/keyBind.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/keyBind.ml
+./04_xlib/xlib.cmi: ./04_xlib/xlib.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xlib.mli
+./04_xlib/xlib.cmo: ./04_xlib/xlib.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xlib.ml
+./04_xlib/xlib.cmx: ./04_xlib/xlib.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xlib.ml
+./04_xlib/xtext.cmi: ./04_xlib/xtext.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xtext.mli
+./04_xlib/xtext.cmo: ./04_xlib/xtext.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xtext.ml
+./04_xlib/xtext.cmx: ./04_xlib/xtext.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xtext.ml
+./04_xlib/icccm.cmi: ./04_xlib/icccm.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/icccm.mli
+./04_xlib/icccm.cmo: ./04_xlib/icccm.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/icccm.ml
+./04_xlib/icccm.cmx: ./04_xlib/icccm.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/icccm.ml
+./04_xlib/zpixmap.cmi: ./04_xlib/zpixmap.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/zpixmap.mli
+./04_xlib/zpixmap.cmo: ./04_xlib/zpixmap.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/zpixmap.ml
+./04_xlib/zpixmap.cmx: ./04_xlib/zpixmap.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/zpixmap.ml
+./04_xlib/shape.cmi: ./04_xlib/shape.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/shape.mli
+./04_xlib/shape.cmo: ./04_xlib/shape.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/shape.ml
+./04_xlib/shape.cmx: ./04_xlib/shape.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/shape.ml
+./04_xlib/xmu.cmi: ./04_xlib/xmu.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xmu.mli
+./04_xlib/xmu.cmo: ./04_xlib/xmu.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xmu.ml
+./04_xlib/xmu.cmx: ./04_xlib/xmu.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xmu.ml
+./04_xlib/eloop.cmi: ./04_xlib/eloop.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/eloop.mli
+./04_xlib/eloop.cmo: ./04_xlib/eloop.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/eloop.ml
+./04_xlib/eloop.cmx: ./04_xlib/eloop.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/eloop.ml
+./04_xlib/selection.cmi: ./04_xlib/selection.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/selection.mli
+./04_xlib/selection.cmo: ./04_xlib/selection.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/selection.ml
+./04_xlib/selection.cmx: ./04_xlib/selection.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/selection.ml
+./04_xlib/xterm.cmi: ./04_xlib/xterm.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xterm.mli
+./04_xlib/xterm.cmo: ./04_xlib/xterm.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xterm.ml
+./04_xlib/xterm.cmx: ./04_xlib/xterm.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xterm.ml
+./04_xlib/xpm.cmi: ./04_xlib/xpm.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xpm.mli
+./04_xlib/xpm.cmo: ./04_xlib/xpm.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xpm.ml
+./04_xlib/xpm.cmx: ./04_xlib/xpm.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xpm.ml
+./04_xlib/xGraphics.cmi: ./04_xlib/xGraphics.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xGraphics.mli
+./04_xlib/xGraphics.cmo: ./04_xlib/xGraphics.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xGraphics.ml
+./04_xlib/xGraphics.cmx: ./04_xlib/xGraphics.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xGraphics.ml
+./04_xlib/xrm.cmi: ./04_xlib/xrm.mli $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xrm.mli
+./04_xlib/xrm.cmo: ./04_xlib/xrm.ml $(xlib_PPDEP)
+	$(OCAMLC) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xrm.ml
+./04_xlib/xrm.cmx: ./04_xlib/xrm.ml $(xlib_PPDEP)
+	$(OCAMLOPT) $(xlib_INCLUDES) -c $(xlib_PP) ./04_xlib/xrm.ml
+xlib_DIR = ./04_xlib
+xlib_CMOS = ./04_xlib/xdebug.cmo ./04_xlib/xA.cmo ./04_xlib/xfifo.cmo ./04_xlib/xequeue.cmo ./04_xlib/jeton.cmo ./04_xlib/xtypes.cmo ./04_xlib/wintbl.cmo ./04_xlib/xbuffer.cmo ./04_xlib/xauth.cmo ./04_xlib/ll_trans.cmo ./04_xlib/conv_event.cmo ./04_xlib/shbuf.cmo ./04_xlib/display.cmo ./04_xlib/xproto.cmo ./04_xlib/x.cmo ./04_xlib/xsync.cmo ./04_xlib/xasync.cmo ./04_xlib/xC.cmo ./04_xlib/xK.cmo ./04_xlib/keyBind.cmo ./04_xlib/xlib.cmo ./04_xlib/xtext.cmo ./04_xlib/icccm.cmo ./04_xlib/zpixmap.cmo ./04_xlib/shape.cmo ./04_xlib/xmu.cmo ./04_xlib/eloop.cmo ./04_xlib/selection.cmo ./04_xlib/xterm.cmo ./04_xlib/xpm.cmo ./04_xlib/xGraphics.cmo ./04_xlib/xrm.cmo
+xlib_CMXS = ./04_xlib/xdebug.cmx ./04_xlib/xA.cmx ./04_xlib/xfifo.cmx ./04_xlib/xequeue.cmx ./04_xlib/jeton.cmx ./04_xlib/xtypes.cmx ./04_xlib/wintbl.cmx ./04_xlib/xbuffer.cmx ./04_xlib/xauth.cmx ./04_xlib/ll_trans.cmx ./04_xlib/conv_event.cmx ./04_xlib/shbuf.cmx ./04_xlib/display.cmx ./04_xlib/xproto.cmx ./04_xlib/x.cmx ./04_xlib/xsync.cmx ./04_xlib/xasync.cmx ./04_xlib/xC.cmx ./04_xlib/xK.cmx ./04_xlib/keyBind.cmx ./04_xlib/xlib.cmx ./04_xlib/xtext.cmx ./04_xlib/icccm.cmx ./04_xlib/zpixmap.cmx ./04_xlib/shape.cmx ./04_xlib/xmu.cmx ./04_xlib/eloop.cmx ./04_xlib/selection.cmx ./04_xlib/xterm.cmx ./04_xlib/xpm.cmx ./04_xlib/xGraphics.cmx ./04_xlib/xrm.cmx
+xlib_MLS = ./04_xlib/xdebug.ml ./04_xlib/xA.ml ./04_xlib/xfifo.ml ./04_xlib/xequeue.ml ./04_xlib/jeton.ml ./04_xlib/xtypes.ml ./04_xlib/wintbl.ml ./04_xlib/xbuffer.ml ./04_xlib/xauth.ml ./04_xlib/ll_trans.ml ./04_xlib/conv_event.ml ./04_xlib/shbuf.ml ./04_xlib/display.ml ./04_xlib/xproto.ml ./04_xlib/x.ml ./04_xlib/xsync.ml ./04_xlib/xasync.ml ./04_xlib/xC.ml ./04_xlib/xK.ml ./04_xlib/keyBind.ml ./04_xlib/xlib.ml ./04_xlib/xtext.ml ./04_xlib/icccm.ml ./04_xlib/zpixmap.ml ./04_xlib/shape.ml ./04_xlib/xmu.ml ./04_xlib/eloop.ml ./04_xlib/selection.ml ./04_xlib/xterm.ml ./04_xlib/xpm.ml ./04_xlib/xGraphics.ml ./04_xlib/xrm.ml
+xlib_ANNOTS = ./04_xlib/xdebug.annot ./04_xlib/xA.annot ./04_xlib/xfifo.annot ./04_xlib/xequeue.annot ./04_xlib/jeton.annot ./04_xlib/xtypes.annot ./04_xlib/wintbl.annot ./04_xlib/xbuffer.annot ./04_xlib/xauth.annot ./04_xlib/ll_trans.annot ./04_xlib/conv_event.annot ./04_xlib/shbuf.annot ./04_xlib/display.annot ./04_xlib/xproto.annot ./04_xlib/x.annot ./04_xlib/xsync.annot ./04_xlib/xasync.annot ./04_xlib/xC.annot ./04_xlib/xK.annot ./04_xlib/keyBind.annot ./04_xlib/xlib.annot ./04_xlib/xtext.annot ./04_xlib/icccm.annot ./04_xlib/zpixmap.annot ./04_xlib/shape.annot ./04_xlib/xmu.annot ./04_xlib/eloop.annot ./04_xlib/selection.annot ./04_xlib/xterm.annot ./04_xlib/xpm.annot ./04_xlib/xGraphics.annot ./04_xlib/xrm.annot
+xlib_MLIS = ./04_xlib/xdebug.mli ./04_xlib/xA.mli ./04_xlib/xfifo.mli ./04_xlib/xequeue.mli ./04_xlib/jeton.mli ./04_xlib/xtypes.mli ./04_xlib/wintbl.mli ./04_xlib/xbuffer.mli ./04_xlib/xauth.mli ./04_xlib/ll_trans.mli ./04_xlib/conv_event.mli ./04_xlib/shbuf.mli ./04_xlib/display.mli ./04_xlib/xproto.mli ./04_xlib/x.mli ./04_xlib/xsync.mli ./04_xlib/xasync.mli ./04_xlib/xC.mli ./04_xlib/keyBind.mli ./04_xlib/xlib.mli ./04_xlib/xtext.mli ./04_xlib/icccm.mli ./04_xlib/zpixmap.mli ./04_xlib/shape.mli ./04_xlib/xmu.mli ./04_xlib/eloop.mli ./04_xlib/selection.mli ./04_xlib/xterm.mli ./04_xlib/xpm.mli ./04_xlib/xGraphics.mli ./04_xlib/xrm.mli
+xlib_CMIS = ./04_xlib/xdebug.cmi ./04_xlib/xA.cmi ./04_xlib/xfifo.cmi ./04_xlib/xequeue.cmi ./04_xlib/jeton.cmi ./04_xlib/xtypes.cmi ./04_xlib/wintbl.cmi ./04_xlib/xbuffer.cmi ./04_xlib/xauth.cmi ./04_xlib/ll_trans.cmi ./04_xlib/conv_event.cmi ./04_xlib/shbuf.cmi ./04_xlib/display.cmi ./04_xlib/xproto.cmi ./04_xlib/x.cmi ./04_xlib/xsync.cmi ./04_xlib/xasync.cmi ./04_xlib/xC.cmi ./04_xlib/xK.cmi ./04_xlib/keyBind.cmi ./04_xlib/xlib.cmi ./04_xlib/xtext.cmi ./04_xlib/icccm.cmi ./04_xlib/zpixmap.cmi ./04_xlib/shape.cmi ./04_xlib/xmu.cmi ./04_xlib/eloop.cmi ./04_xlib/selection.cmi ./04_xlib/xterm.cmi ./04_xlib/xpm.cmi ./04_xlib/xGraphics.cmi ./04_xlib/xrm.cmi
+xlib_TMPS = ./04_xlib/xdebug.cmo ./04_xlib/xdebug.cmx ./04_xlib/xdebug.cmi ./04_xlib/xdebug.o ./04_xlib/xA.cmo ./04_xlib/xA.cmx ./04_xlib/xA.cmi ./04_xlib/xA.o ./04_xlib/xfifo.cmo ./04_xlib/xfifo.cmx ./04_xlib/xfifo.cmi ./04_xlib/xfifo.o ./04_xlib/xequeue.cmo ./04_xlib/xequeue.cmx ./04_xlib/xequeue.cmi ./04_xlib/xequeue.o ./04_xlib/jeton.cmo ./04_xlib/jeton.cmx ./04_xlib/jeton.cmi ./04_xlib/jeton.o ./04_xlib/xtypes.cmo ./04_xlib/xtypes.cmx ./04_xlib/xtypes.cmi ./04_xlib/xtypes.o ./04_xlib/wintbl.cmo ./04_xlib/wintbl.cmx ./04_xlib/wintbl.cmi ./04_xlib/wintbl.o ./04_xlib/xbuffer.cmo ./04_xlib/xbuffer.cmx ./04_xlib/xbuffer.cmi ./04_xlib/xbuffer.o ./04_xlib/xauth.cmo ./04_xlib/xauth.cmx ./04_xlib/xauth.cmi ./04_xlib/xauth.o ./04_xlib/ll_trans.cmo ./04_xlib/ll_trans.cmx ./04_xlib/ll_trans.cmi ./04_xlib/ll_trans.o ./04_xlib/conv_event.cmo ./04_xlib/conv_event.cmx ./04_xlib/conv_event.cmi ./04_xlib/conv_event.o ./04_xlib/shbuf.cmo ./04_xlib/shbuf.cmx ./04_xlib/shbuf.cmi ./04_xlib/shbuf.o ./04_xlib/display.cmo ./04_xlib/display.cmx ./04_xlib/display.cmi ./04_xlib/display.o ./04_xlib/xproto.cmo ./04_xlib/xproto.cmx ./04_xlib/xproto.cmi ./04_xlib/xproto.o ./04_xlib/x.cmo ./04_xlib/x.cmx ./04_xlib/x.cmi ./04_xlib/x.o ./04_xlib/xsync.cmo ./04_xlib/xsync.cmx ./04_xlib/xsync.cmi ./04_xlib/xsync.o ./04_xlib/xasync.cmo ./04_xlib/xasync.cmx ./04_xlib/xasync.cmi ./04_xlib/xasync.o ./04_xlib/xC.cmo ./04_xlib/xC.cmx ./04_xlib/xC.cmi ./04_xlib/xC.o ./04_xlib/xK.cmo ./04_xlib/xK.cmx ./04_xlib/xK.cmi ./04_xlib/xK.o ./04_xlib/keyBind.cmo ./04_xlib/keyBind.cmx ./04_xlib/keyBind.cmi ./04_xlib/keyBind.o ./04_xlib/xlib.cmo ./04_xlib/xlib.cmx ./04_xlib/xlib.cmi ./04_xlib/xlib.o ./04_xlib/xtext.cmo ./04_xlib/xtext.cmx ./04_xlib/xtext.cmi ./04_xlib/xtext.o ./04_xlib/icccm.cmo ./04_xlib/icccm.cmx ./04_xlib/icccm.cmi ./04_xlib/icccm.o ./04_xlib/zpixmap.cmo ./04_xlib/zpixmap.cmx ./04_xlib/zpixmap.cmi ./04_xlib/zpixmap.o ./04_xlib/shape.cmo ./04_xlib/shape.cmx ./04_xlib/shape.cmi ./04_xlib/shape.o ./04_xlib/xmu.cmo ./04_xlib/xmu.cmx ./04_xlib/xmu.cmi ./04_xlib/xmu.o ./04_xlib/eloop.cmo ./04_xlib/eloop.cmx ./04_xlib/eloop.cmi ./04_xlib/eloop.o ./04_xlib/selection.cmo ./04_xlib/selection.cmx ./04_xlib/selection.cmi ./04_xlib/selection.o ./04_xlib/xterm.cmo ./04_xlib/xterm.cmx ./04_xlib/xterm.cmi ./04_xlib/xterm.o ./04_xlib/xpm.cmo ./04_xlib/xpm.cmx ./04_xlib/xpm.cmi ./04_xlib/xpm.o ./04_xlib/xGraphics.cmo ./04_xlib/xGraphics.cmx ./04_xlib/xGraphics.cmi ./04_xlib/xGraphics.o ./04_xlib/xrm.cmo ./04_xlib/xrm.cmx ./04_xlib/xrm.cmi ./04_xlib/xrm.o
+xlib_GENS = ./04_xlib/xpm.ml ./04_xlib/xrm.ml
+xlib.depend:: Makefile
+	mv -f .xlib_depend .xlib_depend_old
+	$(MAKE) -f Makefile.rules .xlib_depend || echo OK
+.xlib_depend: $(xlib_GENS) $(xlib_PPDEP) $(xlib_CONF) $(xlib_CONFDEP)
+	$(OCAMLDEP) $(xlib_PP) $(xlib_INCLUDES) $(xlib_MLS) $(xlib_MLIS) > .xlib_depend_new
+	cmp .xlib_depend_new .xlib_depend_old || (rm -f .xlib_depend_old; mv .xlib_depend_new .xlib_depend_old)
+	mv .xlib_depend_old .xlib_depend
+depend:: xlib.depend
+xlib.distclean::
+	rm -f .xlib_depend $(xlib_GENS)
+xlib_CMXADEP= $(xlib_DIR)/xlib.cmxa
+xlib_CMXA= xlib.cmxa
+xlib_CMADEP= $(xlib_DIR)/xlib.cma
+xlib_CMA= xlib.cma
+$(xlib_DIR)/xlib.cma: .xlib_depend $(xlib_CMOS) $(xlib_CONF)
+	$(OCAMLC) -a $(xlib_CCLIB) -o $(xlib_DIR)/xlib.cma $(xlib_CMOS)
+$(xlib_DIR)/xlib.cmxa: .xlib_depend $(xlib_CMXS) $(xlib_CONF)
+	$(OCAMLOPT) -a $(xlib_CCLIB) -o $(xlib_DIR)/xlib.cmxa $(xlib_CMXS)
+xlib.opt:: $(xlib_DIR)/xlib.cmxa
+xlib.byte:: $(xlib_DIR)/xlib.cma
+xlib.install::
+	$(CP) $(xlib_DIR)/xlib.cma $(xlib_DIR)/xlib.cmxa $(xlib_DIR)/xlib.a $(ALTLIB)
+	echo "installed = true" > $(ALTLIB)/xlib.ocf
+	cat $(xlib_CONF) >> $(ALTLIB)/xlib.ocf
+	$(CP) $(xlib_CMXS) $(ALTLIB)
+	$(CP) $(xlib_CMIS) $(ALTLIB)
+xlib.clean::
+	rm -f $(xlib_DIR)/xlib.cma $(xlib_DIR)/xlib.cmxa $(xlib_DIR)/xlib.a
+	rm -f $(xlib_OS) $(xlib_TMPS) $(xlib_ANNOTS)
+$(HTML_DIR)/xlib/index.html: $(xlib_MLS)
+	mkdir -p $(HTML_DIR)/xlib
+	$(OCAMLDOC) -html -d $(HTML_DIR)/xlib $(xlib_INCLUDES) $(xlib_PP) $(xlib_MLS)
+	$(OCAMLDOC) -man -d $(MAN_DIR) $(xlib_INCLUDES) $(xlib_PP) $(xlib_MLS)
+xlib.doc:: $(HTML_DIR)/xlib/index.html
+doc:: xlib.doc
+byte:: xlib.byte
+xlib.byte::
+opt:: xlib.opt
+xlib.opt::
+clean:: xlib.clean
+xlib.clean::
+distclean:: xlib.clean xlib.distclean
+xlib.distclean:: xlib.clean
+install:: xlib.install
+xlib.install::
+
+
+#####################################
+# Project wxlib
+# From: ./05_wxlib
+
+wxlib_CONF=  ./05_wxlib/ocamlconf.ocf
+Makefile: $(wxlib_CONF)
+
+wxlib_FILES= 05_wxlib/wX_types.ml 05_wxlib/wX_adjust.ml 05_wxlib/wX_display.ml 05_wxlib/wX_screen.ml 05_wxlib/wX_base.ml 05_wxlib/wX_object.ml 05_wxlib/wX_root.ml 05_wxlib/wX_top.ml 05_wxlib/wX_dummy.ml 05_wxlib/wX_bar.ml 05_wxlib/wX_table.ml 05_wxlib/wX_scrollbar.ml 05_wxlib/wX_label.ml 05_wxlib/wX_pixmap.ml 05_wxlib/wX_viewport.ml 05_wxlib/wX_text.ml 05_wxlib/wX_button.ml 05_wxlib/wX_popup.ml 05_wxlib/wX_selector.ml 05_wxlib/wX_deleg.ml 05_wxlib/wX_port.ml 05_wxlib/wX_wmtop.ml 05_wxlib/wX_appli.ml 05_wxlib/wX_dialog.ml 05_wxlib/wX_panel.ml 05_wxlib/wX_scale.ml 05_wxlib/wX_ledit.ml 05_wxlib/wX_radiobutton.ml 05_wxlib/wX_Graphics.ml 05_wxlib/wX_xterm.ml 05_wxlib/wX_filesel.ml 05_wxlib/wX_tree.ml 05_wxlib/wX_swap.ml 05_wxlib/wX_notebook.ml 05_wxlib/wX_parent.ml
+wxlib_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) 
+wxlib_INCLUDES= -I ./05_wxlib -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./05_wxlib/wX_types.cmi: ./05_wxlib/wX_types.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_types.mli
+./05_wxlib/wX_types.cmo: ./05_wxlib/wX_types.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_types.ml
+./05_wxlib/wX_types.cmx: ./05_wxlib/wX_types.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_types.ml
+./05_wxlib/wX_adjust.cmi: ./05_wxlib/wX_adjust.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_adjust.mli
+./05_wxlib/wX_adjust.cmo: ./05_wxlib/wX_adjust.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_adjust.ml
+./05_wxlib/wX_adjust.cmx: ./05_wxlib/wX_adjust.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_adjust.ml
+./05_wxlib/wX_display.cmi: ./05_wxlib/wX_display.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_display.mli
+./05_wxlib/wX_display.cmo: ./05_wxlib/wX_display.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_display.ml
+./05_wxlib/wX_display.cmx: ./05_wxlib/wX_display.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_display.ml
+./05_wxlib/wX_screen.cmi: ./05_wxlib/wX_screen.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_screen.mli
+./05_wxlib/wX_screen.cmo: ./05_wxlib/wX_screen.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_screen.ml
+./05_wxlib/wX_screen.cmx: ./05_wxlib/wX_screen.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_screen.ml
+./05_wxlib/wX_base.cmi: ./05_wxlib/wX_base.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_base.mli
+./05_wxlib/wX_base.cmo: ./05_wxlib/wX_base.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_base.ml
+./05_wxlib/wX_base.cmx: ./05_wxlib/wX_base.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_base.ml
+./05_wxlib/wX_object.cmi: ./05_wxlib/wX_object.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_object.mli
+./05_wxlib/wX_object.cmo: ./05_wxlib/wX_object.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_object.ml
+./05_wxlib/wX_object.cmx: ./05_wxlib/wX_object.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_object.ml
+./05_wxlib/wX_root.cmi: ./05_wxlib/wX_root.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_root.mli
+./05_wxlib/wX_root.cmo: ./05_wxlib/wX_root.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_root.ml
+./05_wxlib/wX_root.cmx: ./05_wxlib/wX_root.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_root.ml
+./05_wxlib/wX_top.cmi: ./05_wxlib/wX_top.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_top.mli
+./05_wxlib/wX_top.cmo: ./05_wxlib/wX_top.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_top.ml
+./05_wxlib/wX_top.cmx: ./05_wxlib/wX_top.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_top.ml
+./05_wxlib/wX_dummy.cmi: ./05_wxlib/wX_dummy.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_dummy.mli
+./05_wxlib/wX_dummy.cmo: ./05_wxlib/wX_dummy.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_dummy.ml
+./05_wxlib/wX_dummy.cmx: ./05_wxlib/wX_dummy.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_dummy.ml
+./05_wxlib/wX_bar.cmi: ./05_wxlib/wX_bar.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_bar.mli
+./05_wxlib/wX_bar.cmo: ./05_wxlib/wX_bar.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_bar.ml
+./05_wxlib/wX_bar.cmx: ./05_wxlib/wX_bar.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_bar.ml
+./05_wxlib/wX_table.cmi: ./05_wxlib/wX_table.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_table.mli
+./05_wxlib/wX_table.cmo: ./05_wxlib/wX_table.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_table.ml
+./05_wxlib/wX_table.cmx: ./05_wxlib/wX_table.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_table.ml
+./05_wxlib/wX_scrollbar.cmi: ./05_wxlib/wX_scrollbar.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_scrollbar.mli
+./05_wxlib/wX_scrollbar.cmo: ./05_wxlib/wX_scrollbar.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_scrollbar.ml
+./05_wxlib/wX_scrollbar.cmx: ./05_wxlib/wX_scrollbar.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_scrollbar.ml
+./05_wxlib/wX_label.cmi: ./05_wxlib/wX_label.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_label.mli
+./05_wxlib/wX_label.cmo: ./05_wxlib/wX_label.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_label.ml
+./05_wxlib/wX_label.cmx: ./05_wxlib/wX_label.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_label.ml
+./05_wxlib/wX_pixmap.cmi: ./05_wxlib/wX_pixmap.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_pixmap.mli
+./05_wxlib/wX_pixmap.cmo: ./05_wxlib/wX_pixmap.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_pixmap.ml
+./05_wxlib/wX_pixmap.cmx: ./05_wxlib/wX_pixmap.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_pixmap.ml
+./05_wxlib/wX_viewport.cmi: ./05_wxlib/wX_viewport.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_viewport.mli
+./05_wxlib/wX_viewport.cmo: ./05_wxlib/wX_viewport.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_viewport.ml
+./05_wxlib/wX_viewport.cmx: ./05_wxlib/wX_viewport.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_viewport.ml
+./05_wxlib/wX_text.cmi: ./05_wxlib/wX_text.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_text.mli
+./05_wxlib/wX_text.cmo: ./05_wxlib/wX_text.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_text.ml
+./05_wxlib/wX_text.cmx: ./05_wxlib/wX_text.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_text.ml
+./05_wxlib/wX_button.cmi: ./05_wxlib/wX_button.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_button.mli
+./05_wxlib/wX_button.cmo: ./05_wxlib/wX_button.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_button.ml
+./05_wxlib/wX_button.cmx: ./05_wxlib/wX_button.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_button.ml
+./05_wxlib/wX_popup.cmi: ./05_wxlib/wX_popup.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_popup.mli
+./05_wxlib/wX_popup.cmo: ./05_wxlib/wX_popup.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_popup.ml
+./05_wxlib/wX_popup.cmx: ./05_wxlib/wX_popup.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_popup.ml
+./05_wxlib/wX_selector.cmi: ./05_wxlib/wX_selector.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_selector.mli
+./05_wxlib/wX_selector.cmo: ./05_wxlib/wX_selector.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_selector.ml
+./05_wxlib/wX_selector.cmx: ./05_wxlib/wX_selector.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_selector.ml
+./05_wxlib/wX_deleg.cmi: ./05_wxlib/wX_deleg.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_deleg.mli
+./05_wxlib/wX_deleg.cmo: ./05_wxlib/wX_deleg.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_deleg.ml
+./05_wxlib/wX_deleg.cmx: ./05_wxlib/wX_deleg.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_deleg.ml
+./05_wxlib/wX_port.cmi: ./05_wxlib/wX_port.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_port.mli
+./05_wxlib/wX_port.cmo: ./05_wxlib/wX_port.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_port.ml
+./05_wxlib/wX_port.cmx: ./05_wxlib/wX_port.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_port.ml
+./05_wxlib/wX_wmtop.cmi: ./05_wxlib/wX_wmtop.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_wmtop.mli
+./05_wxlib/wX_wmtop.cmo: ./05_wxlib/wX_wmtop.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_wmtop.ml
+./05_wxlib/wX_wmtop.cmx: ./05_wxlib/wX_wmtop.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_wmtop.ml
+./05_wxlib/wX_appli.cmi: ./05_wxlib/wX_appli.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_appli.mli
+./05_wxlib/wX_appli.cmo: ./05_wxlib/wX_appli.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_appli.ml
+./05_wxlib/wX_appli.cmx: ./05_wxlib/wX_appli.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_appli.ml
+./05_wxlib/wX_dialog.cmi: ./05_wxlib/wX_dialog.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_dialog.mli
+./05_wxlib/wX_dialog.cmo: ./05_wxlib/wX_dialog.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_dialog.ml
+./05_wxlib/wX_dialog.cmx: ./05_wxlib/wX_dialog.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_dialog.ml
+./05_wxlib/wX_panel.cmi: ./05_wxlib/wX_panel.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_panel.mli
+./05_wxlib/wX_panel.cmo: ./05_wxlib/wX_panel.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_panel.ml
+./05_wxlib/wX_panel.cmx: ./05_wxlib/wX_panel.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_panel.ml
+./05_wxlib/wX_scale.cmi: ./05_wxlib/wX_scale.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_scale.mli
+./05_wxlib/wX_scale.cmo: ./05_wxlib/wX_scale.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_scale.ml
+./05_wxlib/wX_scale.cmx: ./05_wxlib/wX_scale.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_scale.ml
+./05_wxlib/wX_ledit.cmi: ./05_wxlib/wX_ledit.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_ledit.mli
+./05_wxlib/wX_ledit.cmo: ./05_wxlib/wX_ledit.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_ledit.ml
+./05_wxlib/wX_ledit.cmx: ./05_wxlib/wX_ledit.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_ledit.ml
+./05_wxlib/wX_radiobutton.cmi: ./05_wxlib/wX_radiobutton.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_radiobutton.mli
+./05_wxlib/wX_radiobutton.cmo: ./05_wxlib/wX_radiobutton.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_radiobutton.ml
+./05_wxlib/wX_radiobutton.cmx: ./05_wxlib/wX_radiobutton.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_radiobutton.ml
+./05_wxlib/wX_Graphics.cmi: ./05_wxlib/wX_Graphics.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_Graphics.mli
+./05_wxlib/wX_Graphics.cmo: ./05_wxlib/wX_Graphics.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_Graphics.ml
+./05_wxlib/wX_Graphics.cmx: ./05_wxlib/wX_Graphics.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_Graphics.ml
+./05_wxlib/wX_xterm.cmi: ./05_wxlib/wX_xterm.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_xterm.mli
+./05_wxlib/wX_xterm.cmo: ./05_wxlib/wX_xterm.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_xterm.ml
+./05_wxlib/wX_xterm.cmx: ./05_wxlib/wX_xterm.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_xterm.ml
+./05_wxlib/wX_filesel.cmi: ./05_wxlib/wX_filesel.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_filesel.mli
+./05_wxlib/wX_filesel.cmo: ./05_wxlib/wX_filesel.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_filesel.ml
+./05_wxlib/wX_filesel.cmx: ./05_wxlib/wX_filesel.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_filesel.ml
+./05_wxlib/wX_tree.cmi: ./05_wxlib/wX_tree.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_tree.mli
+./05_wxlib/wX_tree.cmo: ./05_wxlib/wX_tree.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_tree.ml
+./05_wxlib/wX_tree.cmx: ./05_wxlib/wX_tree.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_tree.ml
+./05_wxlib/wX_swap.cmi: ./05_wxlib/wX_swap.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_swap.mli
+./05_wxlib/wX_swap.cmo: ./05_wxlib/wX_swap.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_swap.ml
+./05_wxlib/wX_swap.cmx: ./05_wxlib/wX_swap.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_swap.ml
+./05_wxlib/wX_notebook.cmi: ./05_wxlib/wX_notebook.mli $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_notebook.mli
+./05_wxlib/wX_notebook.cmo: ./05_wxlib/wX_notebook.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_notebook.ml
+./05_wxlib/wX_notebook.cmx: ./05_wxlib/wX_notebook.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_notebook.ml
+./05_wxlib/wX_parent.cmo: ./05_wxlib/wX_parent.ml $(wxlib_PPDEP)
+	$(OCAMLC) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_parent.ml
+./05_wxlib/wX_parent.cmx: ./05_wxlib/wX_parent.ml $(wxlib_PPDEP)
+	$(OCAMLOPT) $(wxlib_INCLUDES) -c $(wxlib_PP) ./05_wxlib/wX_parent.ml
+wxlib_DIR = ./05_wxlib
+wxlib_CMOS = ./05_wxlib/wX_types.cmo ./05_wxlib/wX_adjust.cmo ./05_wxlib/wX_display.cmo ./05_wxlib/wX_screen.cmo ./05_wxlib/wX_base.cmo ./05_wxlib/wX_object.cmo ./05_wxlib/wX_root.cmo ./05_wxlib/wX_top.cmo ./05_wxlib/wX_dummy.cmo ./05_wxlib/wX_bar.cmo ./05_wxlib/wX_table.cmo ./05_wxlib/wX_scrollbar.cmo ./05_wxlib/wX_label.cmo ./05_wxlib/wX_pixmap.cmo ./05_wxlib/wX_viewport.cmo ./05_wxlib/wX_text.cmo ./05_wxlib/wX_button.cmo ./05_wxlib/wX_popup.cmo ./05_wxlib/wX_selector.cmo ./05_wxlib/wX_deleg.cmo ./05_wxlib/wX_port.cmo ./05_wxlib/wX_wmtop.cmo ./05_wxlib/wX_appli.cmo ./05_wxlib/wX_dialog.cmo ./05_wxlib/wX_panel.cmo ./05_wxlib/wX_scale.cmo ./05_wxlib/wX_ledit.cmo ./05_wxlib/wX_radiobutton.cmo ./05_wxlib/wX_Graphics.cmo ./05_wxlib/wX_xterm.cmo ./05_wxlib/wX_filesel.cmo ./05_wxlib/wX_tree.cmo ./05_wxlib/wX_swap.cmo ./05_wxlib/wX_notebook.cmo ./05_wxlib/wX_parent.cmo
+wxlib_CMXS = ./05_wxlib/wX_types.cmx ./05_wxlib/wX_adjust.cmx ./05_wxlib/wX_display.cmx ./05_wxlib/wX_screen.cmx ./05_wxlib/wX_base.cmx ./05_wxlib/wX_object.cmx ./05_wxlib/wX_root.cmx ./05_wxlib/wX_top.cmx ./05_wxlib/wX_dummy.cmx ./05_wxlib/wX_bar.cmx ./05_wxlib/wX_table.cmx ./05_wxlib/wX_scrollbar.cmx ./05_wxlib/wX_label.cmx ./05_wxlib/wX_pixmap.cmx ./05_wxlib/wX_viewport.cmx ./05_wxlib/wX_text.cmx ./05_wxlib/wX_button.cmx ./05_wxlib/wX_popup.cmx ./05_wxlib/wX_selector.cmx ./05_wxlib/wX_deleg.cmx ./05_wxlib/wX_port.cmx ./05_wxlib/wX_wmtop.cmx ./05_wxlib/wX_appli.cmx ./05_wxlib/wX_dialog.cmx ./05_wxlib/wX_panel.cmx ./05_wxlib/wX_scale.cmx ./05_wxlib/wX_ledit.cmx ./05_wxlib/wX_radiobutton.cmx ./05_wxlib/wX_Graphics.cmx ./05_wxlib/wX_xterm.cmx ./05_wxlib/wX_filesel.cmx ./05_wxlib/wX_tree.cmx ./05_wxlib/wX_swap.cmx ./05_wxlib/wX_notebook.cmx ./05_wxlib/wX_parent.cmx
+wxlib_MLS = ./05_wxlib/wX_types.ml ./05_wxlib/wX_adjust.ml ./05_wxlib/wX_display.ml ./05_wxlib/wX_screen.ml ./05_wxlib/wX_base.ml ./05_wxlib/wX_object.ml ./05_wxlib/wX_root.ml ./05_wxlib/wX_top.ml ./05_wxlib/wX_dummy.ml ./05_wxlib/wX_bar.ml ./05_wxlib/wX_table.ml ./05_wxlib/wX_scrollbar.ml ./05_wxlib/wX_label.ml ./05_wxlib/wX_pixmap.ml ./05_wxlib/wX_viewport.ml ./05_wxlib/wX_text.ml ./05_wxlib/wX_button.ml ./05_wxlib/wX_popup.ml ./05_wxlib/wX_selector.ml ./05_wxlib/wX_deleg.ml ./05_wxlib/wX_port.ml ./05_wxlib/wX_wmtop.ml ./05_wxlib/wX_appli.ml ./05_wxlib/wX_dialog.ml ./05_wxlib/wX_panel.ml ./05_wxlib/wX_scale.ml ./05_wxlib/wX_ledit.ml ./05_wxlib/wX_radiobutton.ml ./05_wxlib/wX_Graphics.ml ./05_wxlib/wX_xterm.ml ./05_wxlib/wX_filesel.ml ./05_wxlib/wX_tree.ml ./05_wxlib/wX_swap.ml ./05_wxlib/wX_notebook.ml ./05_wxlib/wX_parent.ml
+wxlib_ANNOTS = ./05_wxlib/wX_types.annot ./05_wxlib/wX_adjust.annot ./05_wxlib/wX_display.annot ./05_wxlib/wX_screen.annot ./05_wxlib/wX_base.annot ./05_wxlib/wX_object.annot ./05_wxlib/wX_root.annot ./05_wxlib/wX_top.annot ./05_wxlib/wX_dummy.annot ./05_wxlib/wX_bar.annot ./05_wxlib/wX_table.annot ./05_wxlib/wX_scrollbar.annot ./05_wxlib/wX_label.annot ./05_wxlib/wX_pixmap.annot ./05_wxlib/wX_viewport.annot ./05_wxlib/wX_text.annot ./05_wxlib/wX_button.annot ./05_wxlib/wX_popup.annot ./05_wxlib/wX_selector.annot ./05_wxlib/wX_deleg.annot ./05_wxlib/wX_port.annot ./05_wxlib/wX_wmtop.annot ./05_wxlib/wX_appli.annot ./05_wxlib/wX_dialog.annot ./05_wxlib/wX_panel.annot ./05_wxlib/wX_scale.annot ./05_wxlib/wX_ledit.annot ./05_wxlib/wX_radiobutton.annot ./05_wxlib/wX_Graphics.annot ./05_wxlib/wX_xterm.annot ./05_wxlib/wX_filesel.annot ./05_wxlib/wX_tree.annot ./05_wxlib/wX_swap.annot ./05_wxlib/wX_notebook.annot ./05_wxlib/wX_parent.annot
+wxlib_MLIS = ./05_wxlib/wX_types.mli ./05_wxlib/wX_adjust.mli ./05_wxlib/wX_display.mli ./05_wxlib/wX_screen.mli ./05_wxlib/wX_base.mli ./05_wxlib/wX_object.mli ./05_wxlib/wX_root.mli ./05_wxlib/wX_top.mli ./05_wxlib/wX_dummy.mli ./05_wxlib/wX_bar.mli ./05_wxlib/wX_table.mli ./05_wxlib/wX_scrollbar.mli ./05_wxlib/wX_label.mli ./05_wxlib/wX_pixmap.mli ./05_wxlib/wX_viewport.mli ./05_wxlib/wX_text.mli ./05_wxlib/wX_button.mli ./05_wxlib/wX_popup.mli ./05_wxlib/wX_selector.mli ./05_wxlib/wX_deleg.mli ./05_wxlib/wX_port.mli ./05_wxlib/wX_wmtop.mli ./05_wxlib/wX_appli.mli ./05_wxlib/wX_dialog.mli ./05_wxlib/wX_panel.mli ./05_wxlib/wX_scale.mli ./05_wxlib/wX_ledit.mli ./05_wxlib/wX_radiobutton.mli ./05_wxlib/wX_Graphics.mli ./05_wxlib/wX_xterm.mli ./05_wxlib/wX_filesel.mli ./05_wxlib/wX_tree.mli ./05_wxlib/wX_swap.mli ./05_wxlib/wX_notebook.mli
+wxlib_CMIS = ./05_wxlib/wX_types.cmi ./05_wxlib/wX_adjust.cmi ./05_wxlib/wX_display.cmi ./05_wxlib/wX_screen.cmi ./05_wxlib/wX_base.cmi ./05_wxlib/wX_object.cmi ./05_wxlib/wX_root.cmi ./05_wxlib/wX_top.cmi ./05_wxlib/wX_dummy.cmi ./05_wxlib/wX_bar.cmi ./05_wxlib/wX_table.cmi ./05_wxlib/wX_scrollbar.cmi ./05_wxlib/wX_label.cmi ./05_wxlib/wX_pixmap.cmi ./05_wxlib/wX_viewport.cmi ./05_wxlib/wX_text.cmi ./05_wxlib/wX_button.cmi ./05_wxlib/wX_popup.cmi ./05_wxlib/wX_selector.cmi ./05_wxlib/wX_deleg.cmi ./05_wxlib/wX_port.cmi ./05_wxlib/wX_wmtop.cmi ./05_wxlib/wX_appli.cmi ./05_wxlib/wX_dialog.cmi ./05_wxlib/wX_panel.cmi ./05_wxlib/wX_scale.cmi ./05_wxlib/wX_ledit.cmi ./05_wxlib/wX_radiobutton.cmi ./05_wxlib/wX_Graphics.cmi ./05_wxlib/wX_xterm.cmi ./05_wxlib/wX_filesel.cmi ./05_wxlib/wX_tree.cmi ./05_wxlib/wX_swap.cmi ./05_wxlib/wX_notebook.cmi ./05_wxlib/wX_parent.cmi
+wxlib_TMPS = ./05_wxlib/wX_types.cmo ./05_wxlib/wX_types.cmx ./05_wxlib/wX_types.cmi ./05_wxlib/wX_types.o ./05_wxlib/wX_adjust.cmo ./05_wxlib/wX_adjust.cmx ./05_wxlib/wX_adjust.cmi ./05_wxlib/wX_adjust.o ./05_wxlib/wX_display.cmo ./05_wxlib/wX_display.cmx ./05_wxlib/wX_display.cmi ./05_wxlib/wX_display.o ./05_wxlib/wX_screen.cmo ./05_wxlib/wX_screen.cmx ./05_wxlib/wX_screen.cmi ./05_wxlib/wX_screen.o ./05_wxlib/wX_base.cmo ./05_wxlib/wX_base.cmx ./05_wxlib/wX_base.cmi ./05_wxlib/wX_base.o ./05_wxlib/wX_object.cmo ./05_wxlib/wX_object.cmx ./05_wxlib/wX_object.cmi ./05_wxlib/wX_object.o ./05_wxlib/wX_root.cmo ./05_wxlib/wX_root.cmx ./05_wxlib/wX_root.cmi ./05_wxlib/wX_root.o ./05_wxlib/wX_top.cmo ./05_wxlib/wX_top.cmx ./05_wxlib/wX_top.cmi ./05_wxlib/wX_top.o ./05_wxlib/wX_dummy.cmo ./05_wxlib/wX_dummy.cmx ./05_wxlib/wX_dummy.cmi ./05_wxlib/wX_dummy.o ./05_wxlib/wX_bar.cmo ./05_wxlib/wX_bar.cmx ./05_wxlib/wX_bar.cmi ./05_wxlib/wX_bar.o ./05_wxlib/wX_table.cmo ./05_wxlib/wX_table.cmx ./05_wxlib/wX_table.cmi ./05_wxlib/wX_table.o ./05_wxlib/wX_scrollbar.cmo ./05_wxlib/wX_scrollbar.cmx ./05_wxlib/wX_scrollbar.cmi ./05_wxlib/wX_scrollbar.o ./05_wxlib/wX_label.cmo ./05_wxlib/wX_label.cmx ./05_wxlib/wX_label.cmi ./05_wxlib/wX_label.o ./05_wxlib/wX_pixmap.cmo ./05_wxlib/wX_pixmap.cmx ./05_wxlib/wX_pixmap.cmi ./05_wxlib/wX_pixmap.o ./05_wxlib/wX_viewport.cmo ./05_wxlib/wX_viewport.cmx ./05_wxlib/wX_viewport.cmi ./05_wxlib/wX_viewport.o ./05_wxlib/wX_text.cmo ./05_wxlib/wX_text.cmx ./05_wxlib/wX_text.cmi ./05_wxlib/wX_text.o ./05_wxlib/wX_button.cmo ./05_wxlib/wX_button.cmx ./05_wxlib/wX_button.cmi ./05_wxlib/wX_button.o ./05_wxlib/wX_popup.cmo ./05_wxlib/wX_popup.cmx ./05_wxlib/wX_popup.cmi ./05_wxlib/wX_popup.o ./05_wxlib/wX_selector.cmo ./05_wxlib/wX_selector.cmx ./05_wxlib/wX_selector.cmi ./05_wxlib/wX_selector.o ./05_wxlib/wX_deleg.cmo ./05_wxlib/wX_deleg.cmx ./05_wxlib/wX_deleg.cmi ./05_wxlib/wX_deleg.o ./05_wxlib/wX_port.cmo ./05_wxlib/wX_port.cmx ./05_wxlib/wX_port.cmi ./05_wxlib/wX_port.o ./05_wxlib/wX_wmtop.cmo ./05_wxlib/wX_wmtop.cmx ./05_wxlib/wX_wmtop.cmi ./05_wxlib/wX_wmtop.o ./05_wxlib/wX_appli.cmo ./05_wxlib/wX_appli.cmx ./05_wxlib/wX_appli.cmi ./05_wxlib/wX_appli.o ./05_wxlib/wX_dialog.cmo ./05_wxlib/wX_dialog.cmx ./05_wxlib/wX_dialog.cmi ./05_wxlib/wX_dialog.o ./05_wxlib/wX_panel.cmo ./05_wxlib/wX_panel.cmx ./05_wxlib/wX_panel.cmi ./05_wxlib/wX_panel.o ./05_wxlib/wX_scale.cmo ./05_wxlib/wX_scale.cmx ./05_wxlib/wX_scale.cmi ./05_wxlib/wX_scale.o ./05_wxlib/wX_ledit.cmo ./05_wxlib/wX_ledit.cmx ./05_wxlib/wX_ledit.cmi ./05_wxlib/wX_ledit.o ./05_wxlib/wX_radiobutton.cmo ./05_wxlib/wX_radiobutton.cmx ./05_wxlib/wX_radiobutton.cmi ./05_wxlib/wX_radiobutton.o ./05_wxlib/wX_Graphics.cmo ./05_wxlib/wX_Graphics.cmx ./05_wxlib/wX_Graphics.cmi ./05_wxlib/wX_Graphics.o ./05_wxlib/wX_xterm.cmo ./05_wxlib/wX_xterm.cmx ./05_wxlib/wX_xterm.cmi ./05_wxlib/wX_xterm.o ./05_wxlib/wX_filesel.cmo ./05_wxlib/wX_filesel.cmx ./05_wxlib/wX_filesel.cmi ./05_wxlib/wX_filesel.o ./05_wxlib/wX_tree.cmo ./05_wxlib/wX_tree.cmx ./05_wxlib/wX_tree.cmi ./05_wxlib/wX_tree.o ./05_wxlib/wX_swap.cmo ./05_wxlib/wX_swap.cmx ./05_wxlib/wX_swap.cmi ./05_wxlib/wX_swap.o ./05_wxlib/wX_notebook.cmo ./05_wxlib/wX_notebook.cmx ./05_wxlib/wX_notebook.cmi ./05_wxlib/wX_notebook.o ./05_wxlib/wX_parent.cmo ./05_wxlib/wX_parent.cmx ./05_wxlib/wX_parent.cmi ./05_wxlib/wX_parent.o
+wxlib_GENS =
+wxlib.depend:: Makefile
+	mv -f .wxlib_depend .wxlib_depend_old
+	$(MAKE) -f Makefile.rules .wxlib_depend || echo OK
+.wxlib_depend: $(wxlib_GENS) $(wxlib_PPDEP) $(wxlib_CONF) $(wxlib_CONFDEP)
+	$(OCAMLDEP) $(wxlib_PP) $(wxlib_INCLUDES) $(wxlib_MLS) $(wxlib_MLIS) > .wxlib_depend_new
+	cmp .wxlib_depend_new .wxlib_depend_old || (rm -f .wxlib_depend_old; mv .wxlib_depend_new .wxlib_depend_old)
+	mv .wxlib_depend_old .wxlib_depend
+depend:: wxlib.depend
+wxlib.distclean::
+	rm -f .wxlib_depend $(wxlib_GENS)
+wxlib_CMXADEP= $(wxlib_DIR)/wxlib.cmxa
+wxlib_CMXA= wxlib.cmxa
+wxlib_CMADEP= $(wxlib_DIR)/wxlib.cma
+wxlib_CMA= wxlib.cma
+$(wxlib_DIR)/wxlib.cma: .wxlib_depend $(wxlib_CMOS) $(wxlib_CONF)
+	$(OCAMLC) -a $(wxlib_CCLIB) -o $(wxlib_DIR)/wxlib.cma $(wxlib_CMOS)
+$(wxlib_DIR)/wxlib.cmxa: .wxlib_depend $(wxlib_CMXS) $(wxlib_CONF)
+	$(OCAMLOPT) -a $(wxlib_CCLIB) -o $(wxlib_DIR)/wxlib.cmxa $(wxlib_CMXS)
+wxlib.opt:: $(wxlib_DIR)/wxlib.cmxa
+wxlib.byte:: $(wxlib_DIR)/wxlib.cma
+wxlib.install::
+	$(CP) $(wxlib_DIR)/wxlib.cma $(wxlib_DIR)/wxlib.cmxa $(wxlib_DIR)/wxlib.a $(ALTLIB)
+	echo "installed = true" > $(ALTLIB)/wxlib.ocf
+	cat $(wxlib_CONF) >> $(ALTLIB)/wxlib.ocf
+	$(CP) $(wxlib_CMXS) $(ALTLIB)
+	$(CP) $(wxlib_CMIS) $(ALTLIB)
+wxlib.clean::
+	rm -f $(wxlib_DIR)/wxlib.cma $(wxlib_DIR)/wxlib.cmxa $(wxlib_DIR)/wxlib.a
+	rm -f $(wxlib_OS) $(wxlib_TMPS) $(wxlib_ANNOTS)
+$(HTML_DIR)/wxlib/index.html: $(wxlib_MLS)
+	mkdir -p $(HTML_DIR)/wxlib
+	$(OCAMLDOC) -html -d $(HTML_DIR)/wxlib $(wxlib_INCLUDES) $(wxlib_PP) $(wxlib_MLS)
+	$(OCAMLDOC) -man -d $(MAN_DIR) $(wxlib_INCLUDES) $(wxlib_PP) $(wxlib_MLS)
+wxlib.doc:: $(HTML_DIR)/wxlib/index.html
+doc:: wxlib.doc
+byte:: wxlib.byte
+wxlib.byte::
+opt:: wxlib.opt
+wxlib.opt::
+clean:: wxlib.clean
+wxlib.clean::
+distclean:: wxlib.clean wxlib.distclean
+wxlib.distclean:: wxlib.clean
+install:: wxlib.install
+wxlib.install::
+
+
+#####################################
+# Project imlib
+# From: ./11_gwml
+
+imlib_CONF=  ./11_gwml/ocamlconf.ocf
+Makefile: $(imlib_CONF)
+
+imlib_FILES= 11_gwml/imlib_stubs.c 11_gwml/imager.ml
+imlib_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) $(wxlib_CONF) 
+imlib_PP = -pp camlp4o.opt
+imlib_INCLUDES= -I ./11_gwml -I ./05_wxlib -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./11_gwml/imager.cmi: ./11_gwml/imager.mli $(imlib_PPDEP)
+	$(OCAMLC) $(imlib_INCLUDES) -c $(imlib_PP) ./11_gwml/imager.mli
+./11_gwml/imager.cmo: ./11_gwml/imager.ml $(imlib_PPDEP)
+	$(OCAMLC) $(imlib_INCLUDES) -c $(imlib_PP) ./11_gwml/imager.ml
+./11_gwml/imager.cmx: ./11_gwml/imager.ml $(imlib_PPDEP)
+	$(OCAMLOPT) $(imlib_INCLUDES) -c $(imlib_PP) ./11_gwml/imager.ml
+./11_gwml/imager.mlt: ./11_gwml/imager.ml $(imlib_PPDEP)
+	$(imlib_PPDEP) -ml ./11_gwml/imager.ml > ./11_gwml/imager.mlt
+imlib_DIR = ./11_gwml
+imlib_CMOS = ./11_gwml/imager.cmo
+imlib_CMXS = ./11_gwml/imager.cmx
+imlib_MLS = ./11_gwml/imager.ml
+imlib_ANNOTS = ./11_gwml/imager.annot
+imlib_MLIS = ./11_gwml/imager.mli
+imlib_CMIS = ./11_gwml/imager.cmi
+imlib_TMPS = ./11_gwml/imager.cmo ./11_gwml/imager.cmx ./11_gwml/imager.cmi ./11_gwml/imager.o
+imlib_GENS =
+imlib_CCLIB = -cclib " -L/usr/lib -lImlib -ljpeg -ltiff -lungif -lpng -lz -lm -lXext -L/usr/X11R6/lib -lSM -lICE -lXext -lX11 -L$(imlib_DIR) -lmlimlib  -L$(imlib_DIR)"
+imlib_OS = ./11_gwml/imlib_stubs.o
+imlib_CFLAGS= 
+./11_gwml/imlib_stubs.o: ./11_gwml/imlib_stubs.c
+	$(CC) $(imlib_INCLUDES) -I $(OCAMLDIR) $(imlib_CFLAGS) -o ./11_gwml/imlib_stubs.o -c ./11_gwml/imlib_stubs.c
+imlib.depend:: Makefile
+	mv -f .imlib_depend .imlib_depend_old
+	$(MAKE) -f Makefile.rules .imlib_depend || echo OK
+.imlib_depend: $(imlib_GENS) $(imlib_PPDEP) $(imlib_CONF) $(imlib_CONFDEP)
+	$(OCAMLDEP) $(imlib_PP) $(imlib_INCLUDES) $(imlib_MLS) $(imlib_MLIS) > .imlib_depend_new
+	cmp .imlib_depend_new .imlib_depend_old || (rm -f .imlib_depend_old; mv .imlib_depend_new .imlib_depend_old)
+	mv .imlib_depend_old .imlib_depend
+depend:: imlib.depend
+imlib.distclean::
+	rm -f .imlib_depend $(imlib_GENS)
+imlib_CMXADEP= $(imlib_DIR)/imlib.cmxa
+imlib_CMXA= imlib.cmxa
+imlib_CMADEP= $(imlib_DIR)/imlib.cma
+imlib_CMA= imlib.cma
+$(imlib_DIR)/imlib.cma: .imlib_depend $(imlib_CMOS) $(imlib_CONF)
+	$(OCAMLC) -a $(imlib_CCLIB) -o $(imlib_DIR)/imlib.cma $(imlib_CMOS)
+$(imlib_DIR)/imlib.cmxa: .imlib_depend $(imlib_CMXS) $(imlib_CONF)
+	$(OCAMLOPT) -a $(imlib_CCLIB) -o $(imlib_DIR)/imlib.cmxa $(imlib_CMXS)
+imlib.opt:: $(imlib_DIR)/imlib.cmxa
+imlib.byte:: $(imlib_DIR)/imlib.cma
+imlib.install::
+	$(CP) $(imlib_DIR)/imlib.cma $(imlib_DIR)/imlib.cmxa $(imlib_DIR)/imlib.a $(ALTLIB)
+	echo "installed = true" > $(ALTLIB)/imlib.ocf
+	cat $(imlib_CONF) >> $(ALTLIB)/imlib.ocf
+	$(CP) $(imlib_CMXS) $(ALTLIB)
+	$(CP) $(imlib_CMIS) $(ALTLIB)
+imlib.clean::
+	rm -f $(imlib_DIR)/imlib.cma $(imlib_DIR)/imlib.cmxa $(imlib_DIR)/imlib.a
+	rm -f $(imlib_OS) $(imlib_TMPS) $(imlib_ANNOTS)
+$(HTML_DIR)/imlib/index.html: $(imlib_MLS)
+	mkdir -p $(HTML_DIR)/imlib
+	$(OCAMLDOC) -html -d $(HTML_DIR)/imlib $(imlib_INCLUDES) $(imlib_PP) $(imlib_MLS)
+	$(OCAMLDOC) -man -d $(MAN_DIR) $(imlib_INCLUDES) $(imlib_PP) $(imlib_MLS)
+imlib.doc:: $(HTML_DIR)/imlib/index.html
+doc:: imlib.doc
+imlib.byte:: $(imlib_DIR)/libmlimlib.a
+imlib.opt:: $(imlib_DIR)/libmlimlib.a
+$(imlib_DIR)/imlib.cma: $(imlib_DIR)/libmlimlib.a
+$(imlib_DIR)/imlib.cmxa: $(imlib_DIR)/libmlimlib.a
+imlib.clean::
+	rm -f $(imlib_DIR)/libmlimlib.a
+imlib.install::
+	$(CP) $(imlib_DIR)/libmlimlib.a $(ALTLIB)
+$(imlib_DIR)/libmlimlib.a: $(imlib_OS) $(imlib_CONF)
+	$(AR) $(imlib_DIR)/libmlimlib.a $(imlib_OS)
+	$(RANLIB) $(imlib_DIR)/libmlimlib.a
+byte:: imlib.byte
+imlib.byte::
+opt:: imlib.opt
+imlib.opt::
+clean:: imlib.clean
+imlib.clean::
+distclean:: imlib.clean imlib.distclean
+imlib.distclean:: imlib.clean
+install:: imlib.install
+imlib.install::
+
+
+#####################################
+# Project esd
+# From: ./11_gwml
+
+esd_CONF=  ./11_gwml/ocamlconf.ocf
+Makefile: $(esd_CONF)
+
+esd_FILES= 11_gwml/esd_stubs.c 11_gwml/sound.ml
+esd_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) $(wxlib_CONF) 
+esd_PP = -pp camlp4o.opt
+esd_INCLUDES= -I ./11_gwml -I ./05_wxlib -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./11_gwml/sound.cmi: ./11_gwml/sound.mli $(esd_PPDEP)
+	$(OCAMLC) $(esd_INCLUDES) -c $(esd_PP) ./11_gwml/sound.mli
+./11_gwml/sound.cmo: ./11_gwml/sound.ml $(esd_PPDEP)
+	$(OCAMLC) $(esd_INCLUDES) -c $(esd_PP) ./11_gwml/sound.ml
+./11_gwml/sound.cmx: ./11_gwml/sound.ml $(esd_PPDEP)
+	$(OCAMLOPT) $(esd_INCLUDES) -c $(esd_PP) ./11_gwml/sound.ml
+./11_gwml/sound.mlt: ./11_gwml/sound.ml $(esd_PPDEP)
+	$(esd_PPDEP) -ml ./11_gwml/sound.ml > ./11_gwml/sound.mlt
+esd_DIR = ./11_gwml
+esd_CMOS = ./11_gwml/sound.cmo
+esd_CMXS = ./11_gwml/sound.cmx
+esd_MLS = ./11_gwml/sound.ml
+esd_ANNOTS = ./11_gwml/sound.annot
+esd_MLIS = ./11_gwml/sound.mli
+esd_CMIS = ./11_gwml/sound.cmi
+esd_TMPS = ./11_gwml/sound.cmo ./11_gwml/sound.cmx ./11_gwml/sound.cmi ./11_gwml/sound.o
+esd_GENS =
+esd_CCLIB = -cclib " -L/usr/lib -lesd -laudiofile -lm -lasound -L$(esd_DIR) -lmlesd  -L$(esd_DIR)"
+esd_OS = ./11_gwml/esd_stubs.o
+esd_CFLAGS= 
+./11_gwml/esd_stubs.o: ./11_gwml/esd_stubs.c
+	$(CC) $(esd_INCLUDES) -I $(OCAMLDIR) $(esd_CFLAGS) -o ./11_gwml/esd_stubs.o -c ./11_gwml/esd_stubs.c
+esd.depend:: Makefile
+	mv -f .esd_depend .esd_depend_old
+	$(MAKE) -f Makefile.rules .esd_depend || echo OK
+.esd_depend: $(esd_GENS) $(esd_PPDEP) $(esd_CONF) $(esd_CONFDEP)
+	$(OCAMLDEP) $(esd_PP) $(esd_INCLUDES) $(esd_MLS) $(esd_MLIS) > .esd_depend_new
+	cmp .esd_depend_new .esd_depend_old || (rm -f .esd_depend_old; mv .esd_depend_new .esd_depend_old)
+	mv .esd_depend_old .esd_depend
+depend:: esd.depend
+esd.distclean::
+	rm -f .esd_depend $(esd_GENS)
+esd_CMXADEP= $(esd_DIR)/esd.cmxa
+esd_CMXA= esd.cmxa
+esd_CMADEP= $(esd_DIR)/esd.cma
+esd_CMA= esd.cma
+$(esd_DIR)/esd.cma: .esd_depend $(esd_CMOS) $(esd_CONF)
+	$(OCAMLC) -a $(esd_CCLIB) -o $(esd_DIR)/esd.cma $(esd_CMOS)
+$(esd_DIR)/esd.cmxa: .esd_depend $(esd_CMXS) $(esd_CONF)
+	$(OCAMLOPT) -a $(esd_CCLIB) -o $(esd_DIR)/esd.cmxa $(esd_CMXS)
+esd.opt:: $(esd_DIR)/esd.cmxa
+esd.byte:: $(esd_DIR)/esd.cma
+esd.install::
+	$(CP) $(esd_DIR)/esd.cma $(esd_DIR)/esd.cmxa $(esd_DIR)/esd.a $(ALTLIB)
+	echo "installed = true" > $(ALTLIB)/esd.ocf
+	cat $(esd_CONF) >> $(ALTLIB)/esd.ocf
+	$(CP) $(esd_CMXS) $(ALTLIB)
+	$(CP) $(esd_CMIS) $(ALTLIB)
+esd.clean::
+	rm -f $(esd_DIR)/esd.cma $(esd_DIR)/esd.cmxa $(esd_DIR)/esd.a
+	rm -f $(esd_OS) $(esd_TMPS) $(esd_ANNOTS)
+$(HTML_DIR)/esd/index.html: $(esd_MLS)
+	mkdir -p $(HTML_DIR)/esd
+	$(OCAMLDOC) -html -d $(HTML_DIR)/esd $(esd_INCLUDES) $(esd_PP) $(esd_MLS)
+	$(OCAMLDOC) -man -d $(MAN_DIR) $(esd_INCLUDES) $(esd_PP) $(esd_MLS)
+esd.doc:: $(HTML_DIR)/esd/index.html
+doc:: esd.doc
+esd.byte:: $(esd_DIR)/libmlesd.a
+esd.opt:: $(esd_DIR)/libmlesd.a
+$(esd_DIR)/esd.cma: $(esd_DIR)/libmlesd.a
+$(esd_DIR)/esd.cmxa: $(esd_DIR)/libmlesd.a
+esd.clean::
+	rm -f $(esd_DIR)/libmlesd.a
+esd.install::
+	$(CP) $(esd_DIR)/libmlesd.a $(ALTLIB)
+$(esd_DIR)/libmlesd.a: $(esd_OS) $(esd_CONF)
+	$(AR) $(esd_DIR)/libmlesd.a $(esd_OS)
+	$(RANLIB) $(esd_DIR)/libmlesd.a
+byte:: esd.byte
+esd.byte::
+opt:: esd.opt
+esd.opt::
+clean:: esd.clean
+esd.clean::
+distclean:: esd.clean esd.distclean
+esd.distclean:: esd.clean
+install:: esd.install
+esd.install::
+
+
+#####################################
+# Project extlib_pack
+# From: 
+
+extlib_pack_CONF=  
+Makefile: $(extlib_pack_CONF)
+
+extlib_pack_FILES= extlib
+extlib_pack_CONFDEP = 
+extlib_pack.install:: extlib.install
+extlib_pack.byte:: extlib.byte
+extlib_pack.opt::  extlib.opt
+extlib_pack.clean:: extlib.clean
+extlib_pack.distclean:: extlib.distclean
+byte:: extlib_pack.byte
+extlib_pack.byte::
+opt:: extlib_pack.opt
+extlib_pack.opt::
+clean:: extlib_pack.clean
+extlib_pack.clean::
+distclean:: extlib_pack.clean extlib_pack.distclean
+extlib_pack.distclean:: extlib_pack.clean
+install:: extlib_pack.install
+extlib_pack.install::
+
+
+#####################################
+# Project unix2_pack
+# From: 
+
+unix2_pack_CONF=  
+Makefile: $(unix2_pack_CONF)
+
+unix2_pack_FILES= unix2
+unix2_pack_CONFDEP = 
+unix2_pack.install:: unix2.install
+unix2_pack.byte:: unix2.byte
+unix2_pack.opt::  unix2.opt
+unix2_pack.clean:: unix2.clean
+unix2_pack.distclean:: unix2.distclean
+byte:: unix2_pack.byte
+unix2_pack.byte::
+opt:: unix2_pack.opt
+unix2_pack.opt::
+clean:: unix2_pack.clean
+unix2_pack.clean::
+distclean:: unix2_pack.clean unix2_pack.distclean
+unix2_pack.distclean:: unix2_pack.clean
+install:: unix2_pack.install
+unix2_pack.install::
+
+
+#####################################
+# Project sqmove
+# From: ./04_xlib/examples
+
+sqmove_CONF=  ./04_xlib/examples/ocamlconf.ocf
+Makefile: $(sqmove_CONF)
+
+sqmove_FILES= 04_xlib/examples/sqmove.ml
+sqmove_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) 
+sqmove_INCLUDES= -I ./04_xlib/examples -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./04_xlib/examples/sqmove.cmo: ./04_xlib/examples/sqmove.ml $(sqmove_PPDEP)
+	$(OCAMLC) $(sqmove_INCLUDES) -c $(sqmove_PP) ./04_xlib/examples/sqmove.ml
+./04_xlib/examples/sqmove.cmx: ./04_xlib/examples/sqmove.ml $(sqmove_PPDEP)
+	$(OCAMLOPT) $(sqmove_INCLUDES) -c $(sqmove_PP) ./04_xlib/examples/sqmove.ml
+sqmove_DIR = ./04_xlib/examples
+sqmove_CMOS = ./04_xlib/examples/sqmove.cmo
+sqmove_CMXS = ./04_xlib/examples/sqmove.cmx
+sqmove_MLS = ./04_xlib/examples/sqmove.ml
+sqmove_ANNOTS = ./04_xlib/examples/sqmove.annot
+sqmove_MLIS =
+sqmove_CMIS = ./04_xlib/examples/sqmove.cmi
+sqmove_TMPS = ./04_xlib/examples/sqmove.cmo ./04_xlib/examples/sqmove.cmx ./04_xlib/examples/sqmove.cmi ./04_xlib/examples/sqmove.o
+sqmove_GENS =
+sqmove.depend:: Makefile
+	mv -f .sqmove_depend .sqmove_depend_old
+	$(MAKE) -f Makefile.rules .sqmove_depend || echo OK
+.sqmove_depend: $(sqmove_GENS) $(sqmove_PPDEP) $(sqmove_CONF) $(sqmove_CONFDEP)
+	$(OCAMLDEP) $(sqmove_PP) $(sqmove_INCLUDES) $(sqmove_MLS) $(sqmove_MLIS) > .sqmove_depend_new
+	cmp .sqmove_depend_new .sqmove_depend_old || (rm -f .sqmove_depend_old; mv .sqmove_depend_new .sqmove_depend_old)
+	mv .sqmove_depend_old .sqmove_depend
+depend:: sqmove.depend
+sqmove.distclean::
+	rm -f .sqmove_depend $(sqmove_GENS)
+sqmove_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) 
+sqmove_CMAS = unix.cma $(sqmove_CMASDEP)
+sqmove_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) 
+sqmove_CMXAS = unix.cmxa $(sqmove_CMXASDEP)
+$(sqmove_DIR)/sqmove_byte: .sqmove_depend $(sqmove_CMOS) $(sqmove_CMASDEP) $(sqmove_CONF)
+	$(OCAMLC) -custom  $(sqmove_INCLUDES) -o $(sqmove_DIR)/sqmove_byte  $(sqmove_CCLIB) $(sqmove_CMAS) $(sqmove_CMOS)
+$(sqmove_DIR)/sqmove: .sqmove_depend $(sqmove_CMXS) $(sqmove_CMXASDEP) $(sqmove_CONF)
+	$(OCAMLOPT) -o $(sqmove_DIR)/sqmove $(sqmove_INCLUDES) $(sqmove_CCLIB) $(sqmove_CMXAS) $(sqmove_CMXS)
+sqmove.clean::
+	rm -f $(sqmove_DIR)/sqmove_byte $(sqmove_DIR)/sqmove
+	rm -f $(sqmove_OS) $(sqmove_TMPS)
+sqmove.byte:: $(sqmove_DIR)/sqmove_byte
+sqmove.opt:: $(sqmove_DIR)/sqmove
+byte:: sqmove.byte
+opt:: sqmove.opt
+clean:: sqmove.clean
+sqmove.doc:: $(sqmove_HTMLS)
+doc:: sqmove.doc
+byte:: sqmove.byte
+sqmove.byte::
+opt:: sqmove.opt
+sqmove.opt::
+clean:: sqmove.clean
+sqmove.clean::
+distclean:: sqmove.clean sqmove.distclean
+sqmove.distclean:: sqmove.clean
+install:: sqmove.install
+sqmove.install::
+
+
+#####################################
+# Project xprop
+# From: ./04_xlib/examples
+
+xprop_CONF=  ./04_xlib/examples/ocamlconf.ocf
+Makefile: $(xprop_CONF)
+
+xprop_FILES= 04_xlib/examples/xprop.ml
+xprop_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) 
+xprop_INCLUDES= -I ./04_xlib/examples -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./04_xlib/examples/xprop.cmo: ./04_xlib/examples/xprop.ml $(xprop_PPDEP)
+	$(OCAMLC) $(xprop_INCLUDES) -c $(xprop_PP) ./04_xlib/examples/xprop.ml
+./04_xlib/examples/xprop.cmx: ./04_xlib/examples/xprop.ml $(xprop_PPDEP)
+	$(OCAMLOPT) $(xprop_INCLUDES) -c $(xprop_PP) ./04_xlib/examples/xprop.ml
+xprop_DIR = ./04_xlib/examples
+xprop_CMOS = ./04_xlib/examples/xprop.cmo
+xprop_CMXS = ./04_xlib/examples/xprop.cmx
+xprop_MLS = ./04_xlib/examples/xprop.ml
+xprop_ANNOTS = ./04_xlib/examples/xprop.annot
+xprop_MLIS =
+xprop_CMIS = ./04_xlib/examples/xprop.cmi
+xprop_TMPS = ./04_xlib/examples/xprop.cmo ./04_xlib/examples/xprop.cmx ./04_xlib/examples/xprop.cmi ./04_xlib/examples/xprop.o
+xprop_GENS =
+xprop.depend:: Makefile
+	mv -f .xprop_depend .xprop_depend_old
+	$(MAKE) -f Makefile.rules .xprop_depend || echo OK
+.xprop_depend: $(xprop_GENS) $(xprop_PPDEP) $(xprop_CONF) $(xprop_CONFDEP)
+	$(OCAMLDEP) $(xprop_PP) $(xprop_INCLUDES) $(xprop_MLS) $(xprop_MLIS) > .xprop_depend_new
+	cmp .xprop_depend_new .xprop_depend_old || (rm -f .xprop_depend_old; mv .xprop_depend_new .xprop_depend_old)
+	mv .xprop_depend_old .xprop_depend
+depend:: xprop.depend
+xprop.distclean::
+	rm -f .xprop_depend $(xprop_GENS)
+xprop_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) 
+xprop_CMAS = unix.cma $(xprop_CMASDEP)
+xprop_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) 
+xprop_CMXAS = unix.cmxa $(xprop_CMXASDEP)
+$(xprop_DIR)/xprop_byte: .xprop_depend $(xprop_CMOS) $(xprop_CMASDEP) $(xprop_CONF)
+	$(OCAMLC) -custom  $(xprop_INCLUDES) -o $(xprop_DIR)/xprop_byte  $(xprop_CCLIB) $(xprop_CMAS) $(xprop_CMOS)
+$(xprop_DIR)/xprop: .xprop_depend $(xprop_CMXS) $(xprop_CMXASDEP) $(xprop_CONF)
+	$(OCAMLOPT) -o $(xprop_DIR)/xprop $(xprop_INCLUDES) $(xprop_CCLIB) $(xprop_CMXAS) $(xprop_CMXS)
+xprop.clean::
+	rm -f $(xprop_DIR)/xprop_byte $(xprop_DIR)/xprop
+	rm -f $(xprop_OS) $(xprop_TMPS)
+xprop.byte:: $(xprop_DIR)/xprop_byte
+xprop.opt:: $(xprop_DIR)/xprop
+byte:: xprop.byte
+opt:: xprop.opt
+clean:: xprop.clean
+xprop.doc:: $(xprop_HTMLS)
+doc:: xprop.doc
+byte:: xprop.byte
+xprop.byte::
+opt:: xprop.opt
+xprop.opt::
+clean:: xprop.clean
+xprop.clean::
+distclean:: xprop.clean xprop.distclean
+xprop.distclean:: xprop.clean
+install:: xprop.install
+xprop.install::
+
+
+#####################################
+# Project xpmroot
+# From: ./04_xlib/examples
+
+xpmroot_CONF=  ./04_xlib/examples/ocamlconf.ocf
+Makefile: $(xpmroot_CONF)
+
+xpmroot_FILES= 04_xlib/examples/xpmroot.ml
+xpmroot_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) 
+xpmroot_INCLUDES= -I ./04_xlib/examples -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./04_xlib/examples/xpmroot.cmo: ./04_xlib/examples/xpmroot.ml $(xpmroot_PPDEP)
+	$(OCAMLC) $(xpmroot_INCLUDES) -c $(xpmroot_PP) ./04_xlib/examples/xpmroot.ml
+./04_xlib/examples/xpmroot.cmx: ./04_xlib/examples/xpmroot.ml $(xpmroot_PPDEP)
+	$(OCAMLOPT) $(xpmroot_INCLUDES) -c $(xpmroot_PP) ./04_xlib/examples/xpmroot.ml
+xpmroot_DIR = ./04_xlib/examples
+xpmroot_CMOS = ./04_xlib/examples/xpmroot.cmo
+xpmroot_CMXS = ./04_xlib/examples/xpmroot.cmx
+xpmroot_MLS = ./04_xlib/examples/xpmroot.ml
+xpmroot_ANNOTS = ./04_xlib/examples/xpmroot.annot
+xpmroot_MLIS =
+xpmroot_CMIS = ./04_xlib/examples/xpmroot.cmi
+xpmroot_TMPS = ./04_xlib/examples/xpmroot.cmo ./04_xlib/examples/xpmroot.cmx ./04_xlib/examples/xpmroot.cmi ./04_xlib/examples/xpmroot.o
+xpmroot_GENS =
+xpmroot.depend:: Makefile
+	mv -f .xpmroot_depend .xpmroot_depend_old
+	$(MAKE) -f Makefile.rules .xpmroot_depend || echo OK
+.xpmroot_depend: $(xpmroot_GENS) $(xpmroot_PPDEP) $(xpmroot_CONF) $(xpmroot_CONFDEP)
+	$(OCAMLDEP) $(xpmroot_PP) $(xpmroot_INCLUDES) $(xpmroot_MLS) $(xpmroot_MLIS) > .xpmroot_depend_new
+	cmp .xpmroot_depend_new .xpmroot_depend_old || (rm -f .xpmroot_depend_old; mv .xpmroot_depend_new .xpmroot_depend_old)
+	mv .xpmroot_depend_old .xpmroot_depend
+depend:: xpmroot.depend
+xpmroot.distclean::
+	rm -f .xpmroot_depend $(xpmroot_GENS)
+xpmroot_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) 
+xpmroot_CMAS = unix.cma $(xpmroot_CMASDEP)
+xpmroot_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) 
+xpmroot_CMXAS = unix.cmxa $(xpmroot_CMXASDEP)
+$(xpmroot_DIR)/xpmroot_byte: .xpmroot_depend $(xpmroot_CMOS) $(xpmroot_CMASDEP) $(xpmroot_CONF)
+	$(OCAMLC) -custom  $(xpmroot_INCLUDES) -o $(xpmroot_DIR)/xpmroot_byte  $(xpmroot_CCLIB) $(xpmroot_CMAS) $(xpmroot_CMOS)
+$(xpmroot_DIR)/xpmroot: .xpmroot_depend $(xpmroot_CMXS) $(xpmroot_CMXASDEP) $(xpmroot_CONF)
+	$(OCAMLOPT) -o $(xpmroot_DIR)/xpmroot $(xpmroot_INCLUDES) $(xpmroot_CCLIB) $(xpmroot_CMXAS) $(xpmroot_CMXS)
+xpmroot.clean::
+	rm -f $(xpmroot_DIR)/xpmroot_byte $(xpmroot_DIR)/xpmroot
+	rm -f $(xpmroot_OS) $(xpmroot_TMPS)
+xpmroot.byte:: $(xpmroot_DIR)/xpmroot_byte
+xpmroot.opt:: $(xpmroot_DIR)/xpmroot
+byte:: xpmroot.byte
+opt:: xpmroot.opt
+clean:: xpmroot.clean
+xpmroot.doc:: $(xpmroot_HTMLS)
+doc:: xpmroot.doc
+byte:: xpmroot.byte
+xpmroot.byte::
+opt:: xpmroot.opt
+xpmroot.opt::
+clean:: xpmroot.clean
+xpmroot.clean::
+distclean:: xpmroot.clean xpmroot.distclean
+xpmroot.distclean:: xpmroot.clean
+install:: xpmroot.install
+xpmroot.install::
+
+
+#####################################
+# Project gwml
+# From: ./11_gwml
+
+gwml_CONF=  ./11_gwml/ocamlconf.ocf
+Makefile: $(gwml_CONF)
+
+gwml_FILES= 11_gwml/gwml_version.ml 11_gwml/gwml_args.ml 11_gwml/locale.ml 11_gwml/wobenv.ml 11_gwml/sound.ml 11_gwml/gwml.ml 11_gwml/gradients.ml 11_gwml/wob.ml 11_gwml/plug.ml 11_gwml/top.ml 11_gwml/client.ml 11_gwml/screen.ml 11_gwml/null.ml 11_gwml/label.ml 11_gwml/ledit.ml 11_gwml/pixmap.ml 11_gwml/bar.ml 11_gwml/text.ml 11_gwml/cpp.mll 11_gwml/sendEvent.ml 11_gwml/image.ml 11_gwml/opttable.ml 11_gwml/stdconfig.ml 11_gwml/animate.ml 11_gwml/stdvirtual.ml 11_gwml/user.ml 11_gwml/appMgr.ml 11_gwml/stdmenus.ml 11_gwml/stdicon.ml 11_gwml/stdplacement.ml 11_gwml/themes.ml 11_gwml/stddeco.ml 11_gwml/modules.ml 11_gwml/fvwm.mll 11_gwml/wmaker.mll 11_gwml/afterstep.mll 11_gwml/twm_t.ml 11_gwml/twm_l.mll 11_gwml/twm_p.mly 11_gwml/twm.ml 11_gwml/group.ml 11_gwml/gnome.ml 11_gwml/undo.ml 11_gwml/dvroom.ml 11_gwml/stdgwmlrc.ml 11_gwml/gwmlrc.ml 11_gwml/main.ml
+gwml_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) $(wxlib_CONF) $(esd_CONF) $(imlib_CONF) 
+gwml_PP = -pp camlp4o.opt
+gwml_INCLUDES= -I ./11_gwml -I ./11_gwml -I ./05_wxlib -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./11_gwml/gwml_version.cmo: ./11_gwml/gwml_version.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gwml_version.ml
+./11_gwml/gwml_version.cmx: ./11_gwml/gwml_version.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gwml_version.ml
+./11_gwml/gwml_version.mlt: ./11_gwml/gwml_version.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/gwml_version.ml > ./11_gwml/gwml_version.mlt
+./11_gwml/gwml_args.cmo: ./11_gwml/gwml_args.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gwml_args.ml
+./11_gwml/gwml_args.cmx: ./11_gwml/gwml_args.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gwml_args.ml
+./11_gwml/gwml_args.mlt: ./11_gwml/gwml_args.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/gwml_args.ml > ./11_gwml/gwml_args.mlt
+./11_gwml/locale.cmo: ./11_gwml/locale.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/locale.ml
+./11_gwml/locale.cmx: ./11_gwml/locale.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/locale.ml
+./11_gwml/locale.mlt: ./11_gwml/locale.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/locale.ml > ./11_gwml/locale.mlt
+./11_gwml/wobenv.cmi: ./11_gwml/wobenv.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/wobenv.mli
+./11_gwml/wobenv.cmo: ./11_gwml/wobenv.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/wobenv.ml
+./11_gwml/wobenv.cmx: ./11_gwml/wobenv.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/wobenv.ml
+./11_gwml/wobenv.mlt: ./11_gwml/wobenv.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/wobenv.ml > ./11_gwml/wobenv.mlt
+./11_gwml/gwml.cmi: ./11_gwml/gwml.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gwml.mli
+./11_gwml/gwml.cmo: ./11_gwml/gwml.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gwml.ml
+./11_gwml/gwml.cmx: ./11_gwml/gwml.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gwml.ml
+./11_gwml/gwml.mlt: ./11_gwml/gwml.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/gwml.ml > ./11_gwml/gwml.mlt
+./11_gwml/gradients.cmi: ./11_gwml/gradients.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gradients.mli
+./11_gwml/gradients.cmo: ./11_gwml/gradients.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gradients.ml
+./11_gwml/gradients.cmx: ./11_gwml/gradients.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gradients.ml
+./11_gwml/gradients.mlt: ./11_gwml/gradients.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/gradients.ml > ./11_gwml/gradients.mlt
+./11_gwml/wob.cmi: ./11_gwml/wob.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/wob.mli
+./11_gwml/wob.cmo: ./11_gwml/wob.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/wob.ml
+./11_gwml/wob.cmx: ./11_gwml/wob.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/wob.ml
+./11_gwml/wob.mlt: ./11_gwml/wob.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/wob.ml > ./11_gwml/wob.mlt
+./11_gwml/plug.cmo: ./11_gwml/plug.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/plug.ml
+./11_gwml/plug.cmx: ./11_gwml/plug.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/plug.ml
+./11_gwml/plug.mlt: ./11_gwml/plug.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/plug.ml > ./11_gwml/plug.mlt
+./11_gwml/top.cmi: ./11_gwml/top.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/top.mli
+./11_gwml/top.cmo: ./11_gwml/top.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/top.ml
+./11_gwml/top.cmx: ./11_gwml/top.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/top.ml
+./11_gwml/top.mlt: ./11_gwml/top.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/top.ml > ./11_gwml/top.mlt
+./11_gwml/client.cmi: ./11_gwml/client.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/client.mli
+./11_gwml/client.cmo: ./11_gwml/client.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/client.ml
+./11_gwml/client.cmx: ./11_gwml/client.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/client.ml
+./11_gwml/client.mlt: ./11_gwml/client.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/client.ml > ./11_gwml/client.mlt
+./11_gwml/screen.cmo: ./11_gwml/screen.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/screen.ml
+./11_gwml/screen.cmx: ./11_gwml/screen.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/screen.ml
+./11_gwml/screen.mlt: ./11_gwml/screen.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/screen.ml > ./11_gwml/screen.mlt
+./11_gwml/null.cmi: ./11_gwml/null.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/null.mli
+./11_gwml/null.cmo: ./11_gwml/null.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/null.ml
+./11_gwml/null.cmx: ./11_gwml/null.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/null.ml
+./11_gwml/null.mlt: ./11_gwml/null.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/null.ml > ./11_gwml/null.mlt
+./11_gwml/label.cmi: ./11_gwml/label.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/label.mli
+./11_gwml/label.cmo: ./11_gwml/label.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/label.ml
+./11_gwml/label.cmx: ./11_gwml/label.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/label.ml
+./11_gwml/label.mlt: ./11_gwml/label.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/label.ml > ./11_gwml/label.mlt
+./11_gwml/ledit.cmi: ./11_gwml/ledit.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/ledit.mli
+./11_gwml/ledit.cmo: ./11_gwml/ledit.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/ledit.ml
+./11_gwml/ledit.cmx: ./11_gwml/ledit.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/ledit.ml
+./11_gwml/ledit.mlt: ./11_gwml/ledit.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/ledit.ml > ./11_gwml/ledit.mlt
+./11_gwml/pixmap.cmi: ./11_gwml/pixmap.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/pixmap.mli
+./11_gwml/pixmap.cmo: ./11_gwml/pixmap.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/pixmap.ml
+./11_gwml/pixmap.cmx: ./11_gwml/pixmap.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/pixmap.ml
+./11_gwml/pixmap.mlt: ./11_gwml/pixmap.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/pixmap.ml > ./11_gwml/pixmap.mlt
+./11_gwml/bar.cmi: ./11_gwml/bar.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/bar.mli
+./11_gwml/bar.cmo: ./11_gwml/bar.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/bar.ml
+./11_gwml/bar.cmx: ./11_gwml/bar.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/bar.ml
+./11_gwml/bar.mlt: ./11_gwml/bar.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/bar.ml > ./11_gwml/bar.mlt
+./11_gwml/text.cmi: ./11_gwml/text.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/text.mli
+./11_gwml/text.cmo: ./11_gwml/text.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/text.ml
+./11_gwml/text.cmx: ./11_gwml/text.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/text.ml
+./11_gwml/text.mlt: ./11_gwml/text.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/text.ml > ./11_gwml/text.mlt
+./11_gwml/cpp.cmi: ./11_gwml/cpp.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/cpp.mli
+./11_gwml/cpp.cmo: ./11_gwml/cpp.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/cpp.ml
+./11_gwml/cpp.cmx: ./11_gwml/cpp.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/cpp.ml
+./11_gwml/cpp.mlt: ./11_gwml/cpp.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/cpp.ml > ./11_gwml/cpp.mlt
+./11_gwml/sendEvent.cmo: ./11_gwml/sendEvent.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/sendEvent.ml
+./11_gwml/sendEvent.cmx: ./11_gwml/sendEvent.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/sendEvent.ml
+./11_gwml/sendEvent.mlt: ./11_gwml/sendEvent.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/sendEvent.ml > ./11_gwml/sendEvent.mlt
+./11_gwml/image.cmo: ./11_gwml/image.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/image.ml
+./11_gwml/image.cmx: ./11_gwml/image.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/image.ml
+./11_gwml/image.mlt: ./11_gwml/image.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/image.ml > ./11_gwml/image.mlt
+./11_gwml/opttable.cmi: ./11_gwml/opttable.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/opttable.mli
+./11_gwml/opttable.cmo: ./11_gwml/opttable.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/opttable.ml
+./11_gwml/opttable.cmx: ./11_gwml/opttable.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/opttable.ml
+./11_gwml/opttable.mlt: ./11_gwml/opttable.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/opttable.ml > ./11_gwml/opttable.mlt
+./11_gwml/stdconfig.cmi: ./11_gwml/stdconfig.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdconfig.mli
+./11_gwml/stdconfig.cmo: ./11_gwml/stdconfig.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdconfig.ml
+./11_gwml/stdconfig.cmx: ./11_gwml/stdconfig.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdconfig.ml
+./11_gwml/stdconfig.mlt: ./11_gwml/stdconfig.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/stdconfig.ml > ./11_gwml/stdconfig.mlt
+./11_gwml/animate.cmi: ./11_gwml/animate.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/animate.mli
+./11_gwml/animate.cmo: ./11_gwml/animate.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/animate.ml
+./11_gwml/animate.cmx: ./11_gwml/animate.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/animate.ml
+./11_gwml/animate.mlt: ./11_gwml/animate.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/animate.ml > ./11_gwml/animate.mlt
+./11_gwml/stdvirtual.cmo: ./11_gwml/stdvirtual.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdvirtual.ml
+./11_gwml/stdvirtual.cmx: ./11_gwml/stdvirtual.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdvirtual.ml
+./11_gwml/stdvirtual.mlt: ./11_gwml/stdvirtual.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/stdvirtual.ml > ./11_gwml/stdvirtual.mlt
+./11_gwml/user.cmi: ./11_gwml/user.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/user.mli
+./11_gwml/user.cmo: ./11_gwml/user.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/user.ml
+./11_gwml/user.cmx: ./11_gwml/user.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/user.ml
+./11_gwml/user.mlt: ./11_gwml/user.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/user.ml > ./11_gwml/user.mlt
+./11_gwml/appMgr.cmi: ./11_gwml/appMgr.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/appMgr.mli
+./11_gwml/appMgr.cmo: ./11_gwml/appMgr.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/appMgr.ml
+./11_gwml/appMgr.cmx: ./11_gwml/appMgr.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/appMgr.ml
+./11_gwml/appMgr.mlt: ./11_gwml/appMgr.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/appMgr.ml > ./11_gwml/appMgr.mlt
+./11_gwml/stdmenus.cmi: ./11_gwml/stdmenus.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdmenus.mli
+./11_gwml/stdmenus.cmo: ./11_gwml/stdmenus.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdmenus.ml
+./11_gwml/stdmenus.cmx: ./11_gwml/stdmenus.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdmenus.ml
+./11_gwml/stdmenus.mlt: ./11_gwml/stdmenus.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/stdmenus.ml > ./11_gwml/stdmenus.mlt
+./11_gwml/stdicon.cmo: ./11_gwml/stdicon.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdicon.ml
+./11_gwml/stdicon.cmx: ./11_gwml/stdicon.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdicon.ml
+./11_gwml/stdicon.mlt: ./11_gwml/stdicon.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/stdicon.ml > ./11_gwml/stdicon.mlt
+./11_gwml/stdplacement.cmo: ./11_gwml/stdplacement.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdplacement.ml
+./11_gwml/stdplacement.cmx: ./11_gwml/stdplacement.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdplacement.ml
+./11_gwml/stdplacement.mlt: ./11_gwml/stdplacement.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/stdplacement.ml > ./11_gwml/stdplacement.mlt
+./11_gwml/themes.cmo: ./11_gwml/themes.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/themes.ml
+./11_gwml/themes.cmx: ./11_gwml/themes.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/themes.ml
+./11_gwml/themes.mlt: ./11_gwml/themes.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/themes.ml > ./11_gwml/themes.mlt
+./11_gwml/stddeco.cmi: ./11_gwml/stddeco.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stddeco.mli
+./11_gwml/stddeco.cmo: ./11_gwml/stddeco.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stddeco.ml
+./11_gwml/stddeco.cmx: ./11_gwml/stddeco.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stddeco.ml
+./11_gwml/stddeco.mlt: ./11_gwml/stddeco.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/stddeco.ml > ./11_gwml/stddeco.mlt
+./11_gwml/modules.cmo: ./11_gwml/modules.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/modules.ml
+./11_gwml/modules.cmx: ./11_gwml/modules.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/modules.ml
+./11_gwml/modules.mlt: ./11_gwml/modules.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/modules.ml > ./11_gwml/modules.mlt
+./11_gwml/fvwm.cmi: ./11_gwml/fvwm.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/fvwm.mli
+./11_gwml/fvwm.cmo: ./11_gwml/fvwm.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/fvwm.ml
+./11_gwml/fvwm.cmx: ./11_gwml/fvwm.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/fvwm.ml
+./11_gwml/fvwm.mlt: ./11_gwml/fvwm.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/fvwm.ml > ./11_gwml/fvwm.mlt
+./11_gwml/wmaker.cmi: ./11_gwml/wmaker.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/wmaker.mli
+./11_gwml/wmaker.cmo: ./11_gwml/wmaker.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/wmaker.ml
+./11_gwml/wmaker.cmx: ./11_gwml/wmaker.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/wmaker.ml
+./11_gwml/wmaker.mlt: ./11_gwml/wmaker.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/wmaker.ml > ./11_gwml/wmaker.mlt
+./11_gwml/afterstep.cmi: ./11_gwml/afterstep.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/afterstep.mli
+./11_gwml/afterstep.cmo: ./11_gwml/afterstep.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/afterstep.ml
+./11_gwml/afterstep.cmx: ./11_gwml/afterstep.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/afterstep.ml
+./11_gwml/afterstep.mlt: ./11_gwml/afterstep.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/afterstep.ml > ./11_gwml/afterstep.mlt
+./11_gwml/twm_t.cmo: ./11_gwml/twm_t.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/twm_t.ml
+./11_gwml/twm_t.cmx: ./11_gwml/twm_t.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/twm_t.ml
+./11_gwml/twm_t.mlt: ./11_gwml/twm_t.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/twm_t.ml > ./11_gwml/twm_t.mlt
+./11_gwml/twm_l.cmi: ./11_gwml/twm_l.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/twm_l.mli
+./11_gwml/twm_l.cmo: ./11_gwml/twm_l.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/twm_l.ml
+./11_gwml/twm_l.cmx: ./11_gwml/twm_l.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/twm_l.ml
+./11_gwml/twm_l.mlt: ./11_gwml/twm_l.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/twm_l.ml > ./11_gwml/twm_l.mlt
+./11_gwml/twm_p.cmi: ./11_gwml/twm_p.mli $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/twm_p.mli
+./11_gwml/twm_p.cmo: ./11_gwml/twm_p.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/twm_p.ml
+./11_gwml/twm_p.cmx: ./11_gwml/twm_p.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/twm_p.ml
+./11_gwml/twm_p.mlt: ./11_gwml/twm_p.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/twm_p.ml > ./11_gwml/twm_p.mlt
+./11_gwml/twm.cmo: ./11_gwml/twm.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/twm.ml
+./11_gwml/twm.cmx: ./11_gwml/twm.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/twm.ml
+./11_gwml/twm.mlt: ./11_gwml/twm.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/twm.ml > ./11_gwml/twm.mlt
+./11_gwml/group.cmo: ./11_gwml/group.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/group.ml
+./11_gwml/group.cmx: ./11_gwml/group.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/group.ml
+./11_gwml/group.mlt: ./11_gwml/group.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/group.ml > ./11_gwml/group.mlt
+./11_gwml/gnome.cmo: ./11_gwml/gnome.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gnome.ml
+./11_gwml/gnome.cmx: ./11_gwml/gnome.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gnome.ml
+./11_gwml/gnome.mlt: ./11_gwml/gnome.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/gnome.ml > ./11_gwml/gnome.mlt
+./11_gwml/undo.cmo: ./11_gwml/undo.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/undo.ml
+./11_gwml/undo.cmx: ./11_gwml/undo.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/undo.ml
+./11_gwml/undo.mlt: ./11_gwml/undo.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/undo.ml > ./11_gwml/undo.mlt
+./11_gwml/dvroom.cmo: ./11_gwml/dvroom.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/dvroom.ml
+./11_gwml/dvroom.cmx: ./11_gwml/dvroom.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/dvroom.ml
+./11_gwml/dvroom.mlt: ./11_gwml/dvroom.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/dvroom.ml > ./11_gwml/dvroom.mlt
+./11_gwml/stdgwmlrc.cmo: ./11_gwml/stdgwmlrc.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdgwmlrc.ml
+./11_gwml/stdgwmlrc.cmx: ./11_gwml/stdgwmlrc.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/stdgwmlrc.ml
+./11_gwml/stdgwmlrc.mlt: ./11_gwml/stdgwmlrc.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/stdgwmlrc.ml > ./11_gwml/stdgwmlrc.mlt
+./11_gwml/gwmlrc.cmo: ./11_gwml/gwmlrc.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gwmlrc.ml
+./11_gwml/gwmlrc.cmx: ./11_gwml/gwmlrc.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/gwmlrc.ml
+./11_gwml/gwmlrc.mlt: ./11_gwml/gwmlrc.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/gwmlrc.ml > ./11_gwml/gwmlrc.mlt
+./11_gwml/main.cmo: ./11_gwml/main.ml $(gwml_PPDEP)
+	$(OCAMLC) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/main.ml
+./11_gwml/main.cmx: ./11_gwml/main.ml $(gwml_PPDEP)
+	$(OCAMLOPT) $(gwml_INCLUDES) -c $(gwml_PP) ./11_gwml/main.ml
+./11_gwml/main.mlt: ./11_gwml/main.ml $(gwml_PPDEP)
+	$(gwml_PPDEP) -ml ./11_gwml/main.ml > ./11_gwml/main.mlt
+gwml_DIR = ./11_gwml
+gwml_CMOS = ./11_gwml/gwml_version.cmo ./11_gwml/gwml_args.cmo ./11_gwml/locale.cmo ./11_gwml/wobenv.cmo ./11_gwml/sound.cmo ./11_gwml/gwml.cmo ./11_gwml/gradients.cmo ./11_gwml/wob.cmo ./11_gwml/plug.cmo ./11_gwml/top.cmo ./11_gwml/client.cmo ./11_gwml/screen.cmo ./11_gwml/null.cmo ./11_gwml/label.cmo ./11_gwml/ledit.cmo ./11_gwml/pixmap.cmo ./11_gwml/bar.cmo ./11_gwml/text.cmo ./11_gwml/cpp.cmo ./11_gwml/sendEvent.cmo ./11_gwml/image.cmo ./11_gwml/opttable.cmo ./11_gwml/stdconfig.cmo ./11_gwml/animate.cmo ./11_gwml/stdvirtual.cmo ./11_gwml/user.cmo ./11_gwml/appMgr.cmo ./11_gwml/stdmenus.cmo ./11_gwml/stdicon.cmo ./11_gwml/stdplacement.cmo ./11_gwml/themes.cmo ./11_gwml/stddeco.cmo ./11_gwml/modules.cmo ./11_gwml/fvwm.cmo ./11_gwml/wmaker.cmo ./11_gwml/afterstep.cmo ./11_gwml/twm_t.cmo ./11_gwml/twm_l.cmo ./11_gwml/twm_p.cmo ./11_gwml/twm.cmo ./11_gwml/group.cmo ./11_gwml/gnome.cmo ./11_gwml/undo.cmo ./11_gwml/dvroom.cmo ./11_gwml/stdgwmlrc.cmo ./11_gwml/gwmlrc.cmo ./11_gwml/main.cmo
+gwml_CMXS = ./11_gwml/gwml_version.cmx ./11_gwml/gwml_args.cmx ./11_gwml/locale.cmx ./11_gwml/wobenv.cmx ./11_gwml/sound.cmx ./11_gwml/gwml.cmx ./11_gwml/gradients.cmx ./11_gwml/wob.cmx ./11_gwml/plug.cmx ./11_gwml/top.cmx ./11_gwml/client.cmx ./11_gwml/screen.cmx ./11_gwml/null.cmx ./11_gwml/label.cmx ./11_gwml/ledit.cmx ./11_gwml/pixmap.cmx ./11_gwml/bar.cmx ./11_gwml/text.cmx ./11_gwml/cpp.cmx ./11_gwml/sendEvent.cmx ./11_gwml/image.cmx ./11_gwml/opttable.cmx ./11_gwml/stdconfig.cmx ./11_gwml/animate.cmx ./11_gwml/stdvirtual.cmx ./11_gwml/user.cmx ./11_gwml/appMgr.cmx ./11_gwml/stdmenus.cmx ./11_gwml/stdicon.cmx ./11_gwml/stdplacement.cmx ./11_gwml/themes.cmx ./11_gwml/stddeco.cmx ./11_gwml/modules.cmx ./11_gwml/fvwm.cmx ./11_gwml/wmaker.cmx ./11_gwml/afterstep.cmx ./11_gwml/twm_t.cmx ./11_gwml/twm_l.cmx ./11_gwml/twm_p.cmx ./11_gwml/twm.cmx ./11_gwml/group.cmx ./11_gwml/gnome.cmx ./11_gwml/undo.cmx ./11_gwml/dvroom.cmx ./11_gwml/stdgwmlrc.cmx ./11_gwml/gwmlrc.cmx ./11_gwml/main.cmx
+gwml_MLS = ./11_gwml/gwml_version.ml ./11_gwml/gwml_args.ml ./11_gwml/locale.ml ./11_gwml/wobenv.ml ./11_gwml/sound.ml ./11_gwml/gwml.ml ./11_gwml/gradients.ml ./11_gwml/wob.ml ./11_gwml/plug.ml ./11_gwml/top.ml ./11_gwml/client.ml ./11_gwml/screen.ml ./11_gwml/null.ml ./11_gwml/label.ml ./11_gwml/ledit.ml ./11_gwml/pixmap.ml ./11_gwml/bar.ml ./11_gwml/text.ml ./11_gwml/cpp.ml ./11_gwml/sendEvent.ml ./11_gwml/image.ml ./11_gwml/opttable.ml ./11_gwml/stdconfig.ml ./11_gwml/animate.ml ./11_gwml/stdvirtual.ml ./11_gwml/user.ml ./11_gwml/appMgr.ml ./11_gwml/stdmenus.ml ./11_gwml/stdicon.ml ./11_gwml/stdplacement.ml ./11_gwml/themes.ml ./11_gwml/stddeco.ml ./11_gwml/modules.ml ./11_gwml/fvwm.ml ./11_gwml/wmaker.ml ./11_gwml/afterstep.ml ./11_gwml/twm_t.ml ./11_gwml/twm_l.ml ./11_gwml/twm_p.ml ./11_gwml/twm.ml ./11_gwml/group.ml ./11_gwml/gnome.ml ./11_gwml/undo.ml ./11_gwml/dvroom.ml ./11_gwml/stdgwmlrc.ml ./11_gwml/gwmlrc.ml ./11_gwml/main.ml
+gwml_ANNOTS = ./11_gwml/gwml_version.annot ./11_gwml/gwml_args.annot ./11_gwml/locale.annot ./11_gwml/wobenv.annot ./11_gwml/sound.annot ./11_gwml/gwml.annot ./11_gwml/gradients.annot ./11_gwml/wob.annot ./11_gwml/plug.annot ./11_gwml/top.annot ./11_gwml/client.annot ./11_gwml/screen.annot ./11_gwml/null.annot ./11_gwml/label.annot ./11_gwml/ledit.annot ./11_gwml/pixmap.annot ./11_gwml/bar.annot ./11_gwml/text.annot ./11_gwml/cpp.annot ./11_gwml/sendEvent.annot ./11_gwml/image.annot ./11_gwml/opttable.annot ./11_gwml/stdconfig.annot ./11_gwml/animate.annot ./11_gwml/stdvirtual.annot ./11_gwml/user.annot ./11_gwml/appMgr.annot ./11_gwml/stdmenus.annot ./11_gwml/stdicon.annot ./11_gwml/stdplacement.annot ./11_gwml/themes.annot ./11_gwml/stddeco.annot ./11_gwml/modules.annot ./11_gwml/fvwm.annot ./11_gwml/wmaker.annot ./11_gwml/afterstep.annot ./11_gwml/twm_t.annot ./11_gwml/twm_l.annot ./11_gwml/twm_p.annot ./11_gwml/twm.annot ./11_gwml/group.annot ./11_gwml/gnome.annot ./11_gwml/undo.annot ./11_gwml/dvroom.annot ./11_gwml/stdgwmlrc.annot ./11_gwml/gwmlrc.annot ./11_gwml/main.annot
+gwml_MLIS = ./11_gwml/wobenv.mli ./11_gwml/sound.mli ./11_gwml/gwml.mli ./11_gwml/gradients.mli ./11_gwml/wob.mli ./11_gwml/top.mli ./11_gwml/client.mli ./11_gwml/null.mli ./11_gwml/label.mli ./11_gwml/ledit.mli ./11_gwml/pixmap.mli ./11_gwml/bar.mli ./11_gwml/text.mli ./11_gwml/cpp.mli ./11_gwml/opttable.mli ./11_gwml/stdconfig.mli ./11_gwml/animate.mli ./11_gwml/user.mli ./11_gwml/appMgr.mli ./11_gwml/stdmenus.mli ./11_gwml/stddeco.mli ./11_gwml/fvwm.mli ./11_gwml/wmaker.mli ./11_gwml/afterstep.mli ./11_gwml/twm_l.mli ./11_gwml/twm_p.mli
+gwml_CMIS = ./11_gwml/gwml_version.cmi ./11_gwml/gwml_args.cmi ./11_gwml/locale.cmi ./11_gwml/wobenv.cmi ./11_gwml/sound.cmi ./11_gwml/gwml.cmi ./11_gwml/gradients.cmi ./11_gwml/wob.cmi ./11_gwml/plug.cmi ./11_gwml/top.cmi ./11_gwml/client.cmi ./11_gwml/screen.cmi ./11_gwml/null.cmi ./11_gwml/label.cmi ./11_gwml/ledit.cmi ./11_gwml/pixmap.cmi ./11_gwml/bar.cmi ./11_gwml/text.cmi ./11_gwml/cpp.cmi ./11_gwml/sendEvent.cmi ./11_gwml/image.cmi ./11_gwml/opttable.cmi ./11_gwml/stdconfig.cmi ./11_gwml/animate.cmi ./11_gwml/stdvirtual.cmi ./11_gwml/user.cmi ./11_gwml/appMgr.cmi ./11_gwml/stdmenus.cmi ./11_gwml/stdicon.cmi ./11_gwml/stdplacement.cmi ./11_gwml/themes.cmi ./11_gwml/stddeco.cmi ./11_gwml/modules.cmi ./11_gwml/fvwm.cmi ./11_gwml/wmaker.cmi ./11_gwml/afterstep.cmi ./11_gwml/twm_t.cmi ./11_gwml/twm_l.cmi ./11_gwml/twm_p.cmi ./11_gwml/twm.cmi ./11_gwml/group.cmi ./11_gwml/gnome.cmi ./11_gwml/undo.cmi ./11_gwml/dvroom.cmi ./11_gwml/stdgwmlrc.cmi ./11_gwml/gwmlrc.cmi ./11_gwml/main.cmi
+gwml_TMPS = ./11_gwml/gwml_version.cmo ./11_gwml/gwml_version.cmx ./11_gwml/gwml_version.cmi ./11_gwml/gwml_version.o ./11_gwml/gwml_args.cmo ./11_gwml/gwml_args.cmx ./11_gwml/gwml_args.cmi ./11_gwml/gwml_args.o ./11_gwml/locale.cmo ./11_gwml/locale.cmx ./11_gwml/locale.cmi ./11_gwml/locale.o ./11_gwml/wobenv.cmo ./11_gwml/wobenv.cmx ./11_gwml/wobenv.cmi ./11_gwml/wobenv.o ./11_gwml/sound.cmo ./11_gwml/sound.cmx ./11_gwml/sound.cmi ./11_gwml/sound.o ./11_gwml/gwml.cmo ./11_gwml/gwml.cmx ./11_gwml/gwml.cmi ./11_gwml/gwml.o ./11_gwml/gradients.cmo ./11_gwml/gradients.cmx ./11_gwml/gradients.cmi ./11_gwml/gradients.o ./11_gwml/wob.cmo ./11_gwml/wob.cmx ./11_gwml/wob.cmi ./11_gwml/wob.o ./11_gwml/plug.cmo ./11_gwml/plug.cmx ./11_gwml/plug.cmi ./11_gwml/plug.o ./11_gwml/top.cmo ./11_gwml/top.cmx ./11_gwml/top.cmi ./11_gwml/top.o ./11_gwml/client.cmo ./11_gwml/client.cmx ./11_gwml/client.cmi ./11_gwml/client.o ./11_gwml/screen.cmo ./11_gwml/screen.cmx ./11_gwml/screen.cmi ./11_gwml/screen.o ./11_gwml/null.cmo ./11_gwml/null.cmx ./11_gwml/null.cmi ./11_gwml/null.o ./11_gwml/label.cmo ./11_gwml/label.cmx ./11_gwml/label.cmi ./11_gwml/label.o ./11_gwml/ledit.cmo ./11_gwml/ledit.cmx ./11_gwml/ledit.cmi ./11_gwml/ledit.o ./11_gwml/pixmap.cmo ./11_gwml/pixmap.cmx ./11_gwml/pixmap.cmi ./11_gwml/pixmap.o ./11_gwml/bar.cmo ./11_gwml/bar.cmx ./11_gwml/bar.cmi ./11_gwml/bar.o ./11_gwml/text.cmo ./11_gwml/text.cmx ./11_gwml/text.cmi ./11_gwml/text.o ./11_gwml/cpp.cmo ./11_gwml/cpp.cmx ./11_gwml/cpp.cmi ./11_gwml/cpp.o ./11_gwml/sendEvent.cmo ./11_gwml/sendEvent.cmx ./11_gwml/sendEvent.cmi ./11_gwml/sendEvent.o ./11_gwml/image.cmo ./11_gwml/image.cmx ./11_gwml/image.cmi ./11_gwml/image.o ./11_gwml/opttable.cmo ./11_gwml/opttable.cmx ./11_gwml/opttable.cmi ./11_gwml/opttable.o ./11_gwml/stdconfig.cmo ./11_gwml/stdconfig.cmx ./11_gwml/stdconfig.cmi ./11_gwml/stdconfig.o ./11_gwml/animate.cmo ./11_gwml/animate.cmx ./11_gwml/animate.cmi ./11_gwml/animate.o ./11_gwml/stdvirtual.cmo ./11_gwml/stdvirtual.cmx ./11_gwml/stdvirtual.cmi ./11_gwml/stdvirtual.o ./11_gwml/user.cmo ./11_gwml/user.cmx ./11_gwml/user.cmi ./11_gwml/user.o ./11_gwml/appMgr.cmo ./11_gwml/appMgr.cmx ./11_gwml/appMgr.cmi ./11_gwml/appMgr.o ./11_gwml/stdmenus.cmo ./11_gwml/stdmenus.cmx ./11_gwml/stdmenus.cmi ./11_gwml/stdmenus.o ./11_gwml/stdicon.cmo ./11_gwml/stdicon.cmx ./11_gwml/stdicon.cmi ./11_gwml/stdicon.o ./11_gwml/stdplacement.cmo ./11_gwml/stdplacement.cmx ./11_gwml/stdplacement.cmi ./11_gwml/stdplacement.o ./11_gwml/themes.cmo ./11_gwml/themes.cmx ./11_gwml/themes.cmi ./11_gwml/themes.o ./11_gwml/stddeco.cmo ./11_gwml/stddeco.cmx ./11_gwml/stddeco.cmi ./11_gwml/stddeco.o ./11_gwml/modules.cmo ./11_gwml/modules.cmx ./11_gwml/modules.cmi ./11_gwml/modules.o ./11_gwml/fvwm.cmo ./11_gwml/fvwm.cmx ./11_gwml/fvwm.cmi ./11_gwml/fvwm.o ./11_gwml/wmaker.cmo ./11_gwml/wmaker.cmx ./11_gwml/wmaker.cmi ./11_gwml/wmaker.o ./11_gwml/afterstep.cmo ./11_gwml/afterstep.cmx ./11_gwml/afterstep.cmi ./11_gwml/afterstep.o ./11_gwml/twm_t.cmo ./11_gwml/twm_t.cmx ./11_gwml/twm_t.cmi ./11_gwml/twm_t.o ./11_gwml/twm_l.cmo ./11_gwml/twm_l.cmx ./11_gwml/twm_l.cmi ./11_gwml/twm_l.o ./11_gwml/twm_p.cmo ./11_gwml/twm_p.cmx ./11_gwml/twm_p.cmi ./11_gwml/twm_p.o ./11_gwml/twm.cmo ./11_gwml/twm.cmx ./11_gwml/twm.cmi ./11_gwml/twm.o ./11_gwml/group.cmo ./11_gwml/group.cmx ./11_gwml/group.cmi ./11_gwml/group.o ./11_gwml/gnome.cmo ./11_gwml/gnome.cmx ./11_gwml/gnome.cmi ./11_gwml/gnome.o ./11_gwml/undo.cmo ./11_gwml/undo.cmx ./11_gwml/undo.cmi ./11_gwml/undo.o ./11_gwml/dvroom.cmo ./11_gwml/dvroom.cmx ./11_gwml/dvroom.cmi ./11_gwml/dvroom.o ./11_gwml/stdgwmlrc.cmo ./11_gwml/stdgwmlrc.cmx ./11_gwml/stdgwmlrc.cmi ./11_gwml/stdgwmlrc.o ./11_gwml/gwmlrc.cmo ./11_gwml/gwmlrc.cmx ./11_gwml/gwmlrc.cmi ./11_gwml/gwmlrc.o ./11_gwml/main.cmo ./11_gwml/main.cmx ./11_gwml/main.cmi ./11_gwml/main.o
+gwml_GENS = ./11_gwml/cpp.ml ./11_gwml/fvwm.ml ./11_gwml/wmaker.ml ./11_gwml/afterstep.ml ./11_gwml/twm_l.ml ./11_gwml/twm_p.mli ./11_gwml/twm_p.ml
+gwml.depend:: Makefile
+	mv -f .gwml_depend .gwml_depend_old
+	$(MAKE) -f Makefile.rules .gwml_depend || echo OK
+.gwml_depend: $(gwml_GENS) $(gwml_PPDEP) $(gwml_CONF) $(gwml_CONFDEP)
+	$(OCAMLDEP) $(gwml_PP) $(gwml_INCLUDES) $(gwml_MLS) $(gwml_MLIS) > .gwml_depend_new
+	cmp .gwml_depend_new .gwml_depend_old || (rm -f .gwml_depend_old; mv .gwml_depend_new .gwml_depend_old)
+	mv .gwml_depend_old .gwml_depend
+depend:: gwml.depend
+gwml.distclean::
+	rm -f .gwml_depend $(gwml_GENS)
+gwml_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) $(wxlib_CMADEP) $(esd_CMADEP) $(imlib_CMADEP) 
+gwml_CMAS = unix.cma str.cma $(gwml_CMASDEP)
+gwml_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) $(wxlib_CMXADEP) $(esd_CMXADEP) $(imlib_CMXADEP) 
+gwml_CMXAS = unix.cmxa str.cmxa $(gwml_CMXASDEP)
+$(gwml_DIR)/gwml_byte: .gwml_depend $(gwml_CMOS) $(gwml_CMASDEP) $(gwml_CONF)
+	$(OCAMLC) -custom  $(gwml_INCLUDES) -o $(gwml_DIR)/gwml_byte  $(gwml_CCLIB) $(gwml_CMAS) $(gwml_CMOS)
+$(gwml_DIR)/gwml: .gwml_depend $(gwml_CMXS) $(gwml_CMXASDEP) $(gwml_CONF)
+	$(OCAMLOPT) -o $(gwml_DIR)/gwml $(gwml_INCLUDES) $(gwml_CCLIB) $(gwml_CMXAS) $(gwml_CMXS)
+gwml.clean::
+	rm -f $(gwml_DIR)/gwml_byte $(gwml_DIR)/gwml
+	rm -f $(gwml_OS) $(gwml_TMPS)
+gwml.byte:: $(gwml_DIR)/gwml_byte
+gwml.opt:: $(gwml_DIR)/gwml
+byte:: gwml.byte
+opt:: gwml.opt
+clean:: gwml.clean
+gwml.doc:: $(gwml_HTMLS)
+doc:: gwml.doc
+byte:: gwml.byte
+gwml.byte::
+opt:: gwml.opt
+gwml.opt::
+clean:: gwml.clean
+gwml.clean::
+distclean:: gwml.clean gwml.distclean
+gwml.distclean:: gwml.clean
+install:: gwml.install
+gwml.install::
+
+
+#####################################
+# Project pacman
+# From: ./04_xlib/examples
+
+pacman_CONF=  ./04_xlib/examples/ocamlconf.ocf
+Makefile: $(pacman_CONF)
+
+pacman_FILES= 04_xlib/examples/pacman.ml
+pacman_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) 
+pacman_INCLUDES= -I ./04_xlib/examples -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./04_xlib/examples/pacman.cmo: ./04_xlib/examples/pacman.ml $(pacman_PPDEP)
+	$(OCAMLC) $(pacman_INCLUDES) -c $(pacman_PP) ./04_xlib/examples/pacman.ml
+./04_xlib/examples/pacman.cmx: ./04_xlib/examples/pacman.ml $(pacman_PPDEP)
+	$(OCAMLOPT) $(pacman_INCLUDES) -c $(pacman_PP) ./04_xlib/examples/pacman.ml
+pacman_DIR = ./04_xlib/examples
+pacman_CMOS = ./04_xlib/examples/pacman.cmo
+pacman_CMXS = ./04_xlib/examples/pacman.cmx
+pacman_MLS = ./04_xlib/examples/pacman.ml
+pacman_ANNOTS = ./04_xlib/examples/pacman.annot
+pacman_MLIS =
+pacman_CMIS = ./04_xlib/examples/pacman.cmi
+pacman_TMPS = ./04_xlib/examples/pacman.cmo ./04_xlib/examples/pacman.cmx ./04_xlib/examples/pacman.cmi ./04_xlib/examples/pacman.o
+pacman_GENS =
+pacman.depend:: Makefile
+	mv -f .pacman_depend .pacman_depend_old
+	$(MAKE) -f Makefile.rules .pacman_depend || echo OK
+.pacman_depend: $(pacman_GENS) $(pacman_PPDEP) $(pacman_CONF) $(pacman_CONFDEP)
+	$(OCAMLDEP) $(pacman_PP) $(pacman_INCLUDES) $(pacman_MLS) $(pacman_MLIS) > .pacman_depend_new
+	cmp .pacman_depend_new .pacman_depend_old || (rm -f .pacman_depend_old; mv .pacman_depend_new .pacman_depend_old)
+	mv .pacman_depend_old .pacman_depend
+depend:: pacman.depend
+pacman.distclean::
+	rm -f .pacman_depend $(pacman_GENS)
+pacman_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) 
+pacman_CMAS = unix.cma $(pacman_CMASDEP)
+pacman_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) 
+pacman_CMXAS = unix.cmxa $(pacman_CMXASDEP)
+$(pacman_DIR)/pacman_byte: .pacman_depend $(pacman_CMOS) $(pacman_CMASDEP) $(pacman_CONF)
+	$(OCAMLC) -custom  $(pacman_INCLUDES) -o $(pacman_DIR)/pacman_byte  $(pacman_CCLIB) $(pacman_CMAS) $(pacman_CMOS)
+$(pacman_DIR)/pacman: .pacman_depend $(pacman_CMXS) $(pacman_CMXASDEP) $(pacman_CONF)
+	$(OCAMLOPT) -o $(pacman_DIR)/pacman $(pacman_INCLUDES) $(pacman_CCLIB) $(pacman_CMXAS) $(pacman_CMXS)
+pacman.clean::
+	rm -f $(pacman_DIR)/pacman_byte $(pacman_DIR)/pacman
+	rm -f $(pacman_OS) $(pacman_TMPS)
+pacman.byte:: $(pacman_DIR)/pacman_byte
+pacman.opt:: $(pacman_DIR)/pacman
+byte:: pacman.byte
+opt:: pacman.opt
+clean:: pacman.clean
+pacman.doc:: $(pacman_HTMLS)
+doc:: pacman.doc
+byte:: pacman.byte
+pacman.byte::
+opt:: pacman.opt
+pacman.opt::
+clean:: pacman.clean
+pacman.clean::
+distclean:: pacman.clean pacman.distclean
+pacman.distclean:: pacman.clean
+install:: pacman.install
+pacman.install::
+
+
+#####################################
+# Project sendKey
+# From: ./04_xlib/examples
+
+sendKey_CONF=  ./04_xlib/examples/ocamlconf.ocf
+Makefile: $(sendKey_CONF)
+
+sendKey_FILES= 04_xlib/examples/sendKey.ml
+sendKey_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) 
+sendKey_INCLUDES= -I ./04_xlib/examples -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./04_xlib/examples/sendKey.cmo: ./04_xlib/examples/sendKey.ml $(sendKey_PPDEP)
+	$(OCAMLC) $(sendKey_INCLUDES) -c $(sendKey_PP) ./04_xlib/examples/sendKey.ml
+./04_xlib/examples/sendKey.cmx: ./04_xlib/examples/sendKey.ml $(sendKey_PPDEP)
+	$(OCAMLOPT) $(sendKey_INCLUDES) -c $(sendKey_PP) ./04_xlib/examples/sendKey.ml
+sendKey_DIR = ./04_xlib/examples
+sendKey_CMOS = ./04_xlib/examples/sendKey.cmo
+sendKey_CMXS = ./04_xlib/examples/sendKey.cmx
+sendKey_MLS = ./04_xlib/examples/sendKey.ml
+sendKey_ANNOTS = ./04_xlib/examples/sendKey.annot
+sendKey_MLIS =
+sendKey_CMIS = ./04_xlib/examples/sendKey.cmi
+sendKey_TMPS = ./04_xlib/examples/sendKey.cmo ./04_xlib/examples/sendKey.cmx ./04_xlib/examples/sendKey.cmi ./04_xlib/examples/sendKey.o
+sendKey_GENS =
+sendKey.depend:: Makefile
+	mv -f .sendKey_depend .sendKey_depend_old
+	$(MAKE) -f Makefile.rules .sendKey_depend || echo OK
+.sendKey_depend: $(sendKey_GENS) $(sendKey_PPDEP) $(sendKey_CONF) $(sendKey_CONFDEP)
+	$(OCAMLDEP) $(sendKey_PP) $(sendKey_INCLUDES) $(sendKey_MLS) $(sendKey_MLIS) > .sendKey_depend_new
+	cmp .sendKey_depend_new .sendKey_depend_old || (rm -f .sendKey_depend_old; mv .sendKey_depend_new .sendKey_depend_old)
+	mv .sendKey_depend_old .sendKey_depend
+depend:: sendKey.depend
+sendKey.distclean::
+	rm -f .sendKey_depend $(sendKey_GENS)
+sendKey_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) 
+sendKey_CMAS = unix.cma str.cma $(sendKey_CMASDEP)
+sendKey_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) 
+sendKey_CMXAS = unix.cmxa str.cmxa $(sendKey_CMXASDEP)
+$(sendKey_DIR)/sendKey_byte: .sendKey_depend $(sendKey_CMOS) $(sendKey_CMASDEP) $(sendKey_CONF)
+	$(OCAMLC) -custom  $(sendKey_INCLUDES) -o $(sendKey_DIR)/sendKey_byte  $(sendKey_CCLIB) $(sendKey_CMAS) $(sendKey_CMOS)
+$(sendKey_DIR)/sendKey: .sendKey_depend $(sendKey_CMXS) $(sendKey_CMXASDEP) $(sendKey_CONF)
+	$(OCAMLOPT) -o $(sendKey_DIR)/sendKey $(sendKey_INCLUDES) $(sendKey_CCLIB) $(sendKey_CMXAS) $(sendKey_CMXS)
+sendKey.clean::
+	rm -f $(sendKey_DIR)/sendKey_byte $(sendKey_DIR)/sendKey
+	rm -f $(sendKey_OS) $(sendKey_TMPS)
+sendKey.byte:: $(sendKey_DIR)/sendKey_byte
+sendKey.opt:: $(sendKey_DIR)/sendKey
+byte:: sendKey.byte
+opt:: sendKey.opt
+clean:: sendKey.clean
+sendKey.doc:: $(sendKey_HTMLS)
+doc:: sendKey.doc
+byte:: sendKey.byte
+sendKey.byte::
+opt:: sendKey.opt
+sendKey.opt::
+clean:: sendKey.clean
+sendKey.clean::
+distclean:: sendKey.clean sendKey.distclean
+sendKey.distclean:: sendKey.clean
+install:: sendKey.install
+sendKey.install::
+
+
+#####################################
+# Project efuns
+# From: ./10_efuns
+
+efuns_CONF=  ./10_efuns/ocamlconf.ocf
+Makefile: $(efuns_CONF)
+
+efuns_FILES= 10_efuns/interface.mli 10_efuns/efuns_version.ml 10_efuns/local.ml 10_efuns/efuns.ml 10_efuns/text.ml 10_efuns/keymap.ml 10_efuns/ebuffer.ml 10_efuns/window.ml 10_efuns/frame.ml 10_efuns/top_window.ml 10_efuns/simple.ml 10_efuns/minibuffer.ml 10_efuns/multi_frames.ml 10_efuns/select.ml 10_efuns/search.ml 10_efuns/system.ml 10_efuns/abbrevs.ml 10_efuns/complex.ml 10_efuns/compil.ml 10_efuns/eval.ml 10_efuns/interactive.ml 10_efuns/server.ml 10_efuns/accents_mode.ml 10_efuns/paren_mode.ml 10_efuns/abbrevs_mode.ml 10_efuns/fill_mode.ml 10_efuns/tab_mode.ml 10_efuns/compat_comp.ml 10_efuns/ocaml_mode.mll 10_efuns/ocaml_toplevel.ml 10_efuns/makefile_mode.ml 10_efuns/tex_mode.mll 10_efuns/c_mode.mll 10_efuns/lisp_mode.mll 10_efuns/html_mode.mll 10_efuns/dired.ml 10_efuns/std_efunsrc.ml 10_efuns/main.ml
+efuns_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) $(wxlib_CONF) 
+efuns_INCLUDES= -I ./10_efuns -I ./05_wxlib -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./10_efuns/interface.cmi: ./10_efuns/interface.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/interface.mli
+./10_efuns/efuns_version.cmo: ./10_efuns/efuns_version.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/efuns_version.ml
+./10_efuns/efuns_version.cmx: ./10_efuns/efuns_version.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/efuns_version.ml
+./10_efuns/local.cmi: ./10_efuns/local.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/local.mli
+./10_efuns/local.cmo: ./10_efuns/local.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/local.ml
+./10_efuns/local.cmx: ./10_efuns/local.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/local.ml
+./10_efuns/efuns.cmi: ./10_efuns/efuns.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/efuns.mli
+./10_efuns/efuns.cmo: ./10_efuns/efuns.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/efuns.ml
+./10_efuns/efuns.cmx: ./10_efuns/efuns.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/efuns.ml
+./10_efuns/text.cmi: ./10_efuns/text.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/text.mli
+./10_efuns/text.cmo: ./10_efuns/text.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/text.ml
+./10_efuns/text.cmx: ./10_efuns/text.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/text.ml
+./10_efuns/keymap.cmo: ./10_efuns/keymap.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/keymap.ml
+./10_efuns/keymap.cmx: ./10_efuns/keymap.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/keymap.ml
+./10_efuns/ebuffer.cmi: ./10_efuns/ebuffer.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/ebuffer.mli
+./10_efuns/ebuffer.cmo: ./10_efuns/ebuffer.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/ebuffer.ml
+./10_efuns/ebuffer.cmx: ./10_efuns/ebuffer.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/ebuffer.ml
+./10_efuns/window.cmo: ./10_efuns/window.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/window.ml
+./10_efuns/window.cmx: ./10_efuns/window.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/window.ml
+./10_efuns/frame.cmi: ./10_efuns/frame.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/frame.mli
+./10_efuns/frame.cmo: ./10_efuns/frame.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/frame.ml
+./10_efuns/frame.cmx: ./10_efuns/frame.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/frame.ml
+./10_efuns/top_window.cmo: ./10_efuns/top_window.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/top_window.ml
+./10_efuns/top_window.cmx: ./10_efuns/top_window.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/top_window.ml
+./10_efuns/simple.cmi: ./10_efuns/simple.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/simple.mli
+./10_efuns/simple.cmo: ./10_efuns/simple.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/simple.ml
+./10_efuns/simple.cmx: ./10_efuns/simple.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/simple.ml
+./10_efuns/minibuffer.cmo: ./10_efuns/minibuffer.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/minibuffer.ml
+./10_efuns/minibuffer.cmx: ./10_efuns/minibuffer.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/minibuffer.ml
+./10_efuns/multi_frames.cmo: ./10_efuns/multi_frames.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/multi_frames.ml
+./10_efuns/multi_frames.cmx: ./10_efuns/multi_frames.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/multi_frames.ml
+./10_efuns/select.cmi: ./10_efuns/select.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/select.mli
+./10_efuns/select.cmo: ./10_efuns/select.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/select.ml
+./10_efuns/select.cmx: ./10_efuns/select.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/select.ml
+./10_efuns/search.cmi: ./10_efuns/search.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/search.mli
+./10_efuns/search.cmo: ./10_efuns/search.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/search.ml
+./10_efuns/search.cmx: ./10_efuns/search.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/search.ml
+./10_efuns/system.cmo: ./10_efuns/system.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/system.ml
+./10_efuns/system.cmx: ./10_efuns/system.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/system.ml
+./10_efuns/abbrevs.cmo: ./10_efuns/abbrevs.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/abbrevs.ml
+./10_efuns/abbrevs.cmx: ./10_efuns/abbrevs.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/abbrevs.ml
+./10_efuns/complex.cmo: ./10_efuns/complex.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/complex.ml
+./10_efuns/complex.cmx: ./10_efuns/complex.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/complex.ml
+./10_efuns/compil.cmo: ./10_efuns/compil.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/compil.ml
+./10_efuns/compil.cmx: ./10_efuns/compil.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/compil.ml
+./10_efuns/eval.cmo: ./10_efuns/eval.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/eval.ml
+./10_efuns/eval.cmx: ./10_efuns/eval.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/eval.ml
+./10_efuns/interactive.cmo: ./10_efuns/interactive.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/interactive.ml
+./10_efuns/interactive.cmx: ./10_efuns/interactive.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/interactive.ml
+./10_efuns/server.cmo: ./10_efuns/server.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/server.ml
+./10_efuns/server.cmx: ./10_efuns/server.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/server.ml
+./10_efuns/accents_mode.cmo: ./10_efuns/accents_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/accents_mode.ml
+./10_efuns/accents_mode.cmx: ./10_efuns/accents_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/accents_mode.ml
+./10_efuns/paren_mode.cmo: ./10_efuns/paren_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/paren_mode.ml
+./10_efuns/paren_mode.cmx: ./10_efuns/paren_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/paren_mode.ml
+./10_efuns/abbrevs_mode.cmo: ./10_efuns/abbrevs_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/abbrevs_mode.ml
+./10_efuns/abbrevs_mode.cmx: ./10_efuns/abbrevs_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/abbrevs_mode.ml
+./10_efuns/fill_mode.cmo: ./10_efuns/fill_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/fill_mode.ml
+./10_efuns/fill_mode.cmx: ./10_efuns/fill_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/fill_mode.ml
+./10_efuns/tab_mode.cmo: ./10_efuns/tab_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/tab_mode.ml
+./10_efuns/tab_mode.cmx: ./10_efuns/tab_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/tab_mode.ml
+./10_efuns/compat_comp.cmo: ./10_efuns/compat_comp.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/compat_comp.ml
+./10_efuns/compat_comp.cmx: ./10_efuns/compat_comp.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/compat_comp.ml
+./10_efuns/ocaml_mode.cmi: ./10_efuns/ocaml_mode.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/ocaml_mode.mli
+./10_efuns/ocaml_mode.cmo: ./10_efuns/ocaml_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/ocaml_mode.ml
+./10_efuns/ocaml_mode.cmx: ./10_efuns/ocaml_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/ocaml_mode.ml
+./10_efuns/ocaml_toplevel.cmo: ./10_efuns/ocaml_toplevel.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/ocaml_toplevel.ml
+./10_efuns/ocaml_toplevel.cmx: ./10_efuns/ocaml_toplevel.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/ocaml_toplevel.ml
+./10_efuns/makefile_mode.cmo: ./10_efuns/makefile_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/makefile_mode.ml
+./10_efuns/makefile_mode.cmx: ./10_efuns/makefile_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/makefile_mode.ml
+./10_efuns/tex_mode.cmi: ./10_efuns/tex_mode.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/tex_mode.mli
+./10_efuns/tex_mode.cmo: ./10_efuns/tex_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/tex_mode.ml
+./10_efuns/tex_mode.cmx: ./10_efuns/tex_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/tex_mode.ml
+./10_efuns/c_mode.cmi: ./10_efuns/c_mode.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/c_mode.mli
+./10_efuns/c_mode.cmo: ./10_efuns/c_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/c_mode.ml
+./10_efuns/c_mode.cmx: ./10_efuns/c_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/c_mode.ml
+./10_efuns/lisp_mode.cmi: ./10_efuns/lisp_mode.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/lisp_mode.mli
+./10_efuns/lisp_mode.cmo: ./10_efuns/lisp_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/lisp_mode.ml
+./10_efuns/lisp_mode.cmx: ./10_efuns/lisp_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/lisp_mode.ml
+./10_efuns/html_mode.cmi: ./10_efuns/html_mode.mli $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/html_mode.mli
+./10_efuns/html_mode.cmo: ./10_efuns/html_mode.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/html_mode.ml
+./10_efuns/html_mode.cmx: ./10_efuns/html_mode.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/html_mode.ml
+./10_efuns/dired.cmo: ./10_efuns/dired.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/dired.ml
+./10_efuns/dired.cmx: ./10_efuns/dired.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/dired.ml
+./10_efuns/std_efunsrc.cmo: ./10_efuns/std_efunsrc.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/std_efunsrc.ml
+./10_efuns/std_efunsrc.cmx: ./10_efuns/std_efunsrc.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/std_efunsrc.ml
+./10_efuns/main.cmo: ./10_efuns/main.ml $(efuns_PPDEP)
+	$(OCAMLC) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/main.ml
+./10_efuns/main.cmx: ./10_efuns/main.ml $(efuns_PPDEP)
+	$(OCAMLOPT) $(efuns_INCLUDES) -c $(efuns_PP) ./10_efuns/main.ml
+efuns_DIR = ./10_efuns
+efuns_CMOS = ./10_efuns/efuns_version.cmo ./10_efuns/local.cmo ./10_efuns/efuns.cmo ./10_efuns/text.cmo ./10_efuns/keymap.cmo ./10_efuns/ebuffer.cmo ./10_efuns/window.cmo ./10_efuns/frame.cmo ./10_efuns/top_window.cmo ./10_efuns/simple.cmo ./10_efuns/minibuffer.cmo ./10_efuns/multi_frames.cmo ./10_efuns/select.cmo ./10_efuns/search.cmo ./10_efuns/system.cmo ./10_efuns/abbrevs.cmo ./10_efuns/complex.cmo ./10_efuns/compil.cmo ./10_efuns/eval.cmo ./10_efuns/interactive.cmo ./10_efuns/server.cmo ./10_efuns/accents_mode.cmo ./10_efuns/paren_mode.cmo ./10_efuns/abbrevs_mode.cmo ./10_efuns/fill_mode.cmo ./10_efuns/tab_mode.cmo ./10_efuns/compat_comp.cmo ./10_efuns/ocaml_mode.cmo ./10_efuns/ocaml_toplevel.cmo ./10_efuns/makefile_mode.cmo ./10_efuns/tex_mode.cmo ./10_efuns/c_mode.cmo ./10_efuns/lisp_mode.cmo ./10_efuns/html_mode.cmo ./10_efuns/dired.cmo ./10_efuns/std_efunsrc.cmo ./10_efuns/main.cmo
+efuns_CMXS = ./10_efuns/efuns_version.cmx ./10_efuns/local.cmx ./10_efuns/efuns.cmx ./10_efuns/text.cmx ./10_efuns/keymap.cmx ./10_efuns/ebuffer.cmx ./10_efuns/window.cmx ./10_efuns/frame.cmx ./10_efuns/top_window.cmx ./10_efuns/simple.cmx ./10_efuns/minibuffer.cmx ./10_efuns/multi_frames.cmx ./10_efuns/select.cmx ./10_efuns/search.cmx ./10_efuns/system.cmx ./10_efuns/abbrevs.cmx ./10_efuns/complex.cmx ./10_efuns/compil.cmx ./10_efuns/eval.cmx ./10_efuns/interactive.cmx ./10_efuns/server.cmx ./10_efuns/accents_mode.cmx ./10_efuns/paren_mode.cmx ./10_efuns/abbrevs_mode.cmx ./10_efuns/fill_mode.cmx ./10_efuns/tab_mode.cmx ./10_efuns/compat_comp.cmx ./10_efuns/ocaml_mode.cmx ./10_efuns/ocaml_toplevel.cmx ./10_efuns/makefile_mode.cmx ./10_efuns/tex_mode.cmx ./10_efuns/c_mode.cmx ./10_efuns/lisp_mode.cmx ./10_efuns/html_mode.cmx ./10_efuns/dired.cmx ./10_efuns/std_efunsrc.cmx ./10_efuns/main.cmx
+efuns_MLS = ./10_efuns/efuns_version.ml ./10_efuns/local.ml ./10_efuns/efuns.ml ./10_efuns/text.ml ./10_efuns/keymap.ml ./10_efuns/ebuffer.ml ./10_efuns/window.ml ./10_efuns/frame.ml ./10_efuns/top_window.ml ./10_efuns/simple.ml ./10_efuns/minibuffer.ml ./10_efuns/multi_frames.ml ./10_efuns/select.ml ./10_efuns/search.ml ./10_efuns/system.ml ./10_efuns/abbrevs.ml ./10_efuns/complex.ml ./10_efuns/compil.ml ./10_efuns/eval.ml ./10_efuns/interactive.ml ./10_efuns/server.ml ./10_efuns/accents_mode.ml ./10_efuns/paren_mode.ml ./10_efuns/abbrevs_mode.ml ./10_efuns/fill_mode.ml ./10_efuns/tab_mode.ml ./10_efuns/compat_comp.ml ./10_efuns/ocaml_mode.ml ./10_efuns/ocaml_toplevel.ml ./10_efuns/makefile_mode.ml ./10_efuns/tex_mode.ml ./10_efuns/c_mode.ml ./10_efuns/lisp_mode.ml ./10_efuns/html_mode.ml ./10_efuns/dired.ml ./10_efuns/std_efunsrc.ml ./10_efuns/main.ml
+efuns_ANNOTS = ./10_efuns/efuns_version.annot ./10_efuns/local.annot ./10_efuns/efuns.annot ./10_efuns/text.annot ./10_efuns/keymap.annot ./10_efuns/ebuffer.annot ./10_efuns/window.annot ./10_efuns/frame.annot ./10_efuns/top_window.annot ./10_efuns/simple.annot ./10_efuns/minibuffer.annot ./10_efuns/multi_frames.annot ./10_efuns/select.annot ./10_efuns/search.annot ./10_efuns/system.annot ./10_efuns/abbrevs.annot ./10_efuns/complex.annot ./10_efuns/compil.annot ./10_efuns/eval.annot ./10_efuns/interactive.annot ./10_efuns/server.annot ./10_efuns/accents_mode.annot ./10_efuns/paren_mode.annot ./10_efuns/abbrevs_mode.annot ./10_efuns/fill_mode.annot ./10_efuns/tab_mode.annot ./10_efuns/compat_comp.annot ./10_efuns/ocaml_mode.annot ./10_efuns/ocaml_toplevel.annot ./10_efuns/makefile_mode.annot ./10_efuns/tex_mode.annot ./10_efuns/c_mode.annot ./10_efuns/lisp_mode.annot ./10_efuns/html_mode.annot ./10_efuns/dired.annot ./10_efuns/std_efunsrc.annot ./10_efuns/main.annot
+efuns_MLIS = ./10_efuns/interface.mli ./10_efuns/local.mli ./10_efuns/efuns.mli ./10_efuns/text.mli ./10_efuns/ebuffer.mli ./10_efuns/frame.mli ./10_efuns/simple.mli ./10_efuns/select.mli ./10_efuns/search.mli ./10_efuns/ocaml_mode.mli ./10_efuns/tex_mode.mli ./10_efuns/c_mode.mli ./10_efuns/lisp_mode.mli ./10_efuns/html_mode.mli
+efuns_CMIS = ./10_efuns/efuns_version.cmi ./10_efuns/local.cmi ./10_efuns/efuns.cmi ./10_efuns/text.cmi ./10_efuns/keymap.cmi ./10_efuns/ebuffer.cmi ./10_efuns/window.cmi ./10_efuns/frame.cmi ./10_efuns/top_window.cmi ./10_efuns/simple.cmi ./10_efuns/minibuffer.cmi ./10_efuns/multi_frames.cmi ./10_efuns/select.cmi ./10_efuns/search.cmi ./10_efuns/system.cmi ./10_efuns/abbrevs.cmi ./10_efuns/complex.cmi ./10_efuns/compil.cmi ./10_efuns/eval.cmi ./10_efuns/interactive.cmi ./10_efuns/server.cmi ./10_efuns/accents_mode.cmi ./10_efuns/paren_mode.cmi ./10_efuns/abbrevs_mode.cmi ./10_efuns/fill_mode.cmi ./10_efuns/tab_mode.cmi ./10_efuns/compat_comp.cmi ./10_efuns/ocaml_mode.cmi ./10_efuns/ocaml_toplevel.cmi ./10_efuns/makefile_mode.cmi ./10_efuns/tex_mode.cmi ./10_efuns/c_mode.cmi ./10_efuns/lisp_mode.cmi ./10_efuns/html_mode.cmi ./10_efuns/dired.cmi ./10_efuns/std_efunsrc.cmi ./10_efuns/main.cmi
+efuns_TMPS = ./10_efuns/efuns_version.cmo ./10_efuns/efuns_version.cmx ./10_efuns/efuns_version.cmi ./10_efuns/efuns_version.o ./10_efuns/local.cmo ./10_efuns/local.cmx ./10_efuns/local.cmi ./10_efuns/local.o ./10_efuns/efuns.cmo ./10_efuns/efuns.cmx ./10_efuns/efuns.cmi ./10_efuns/efuns.o ./10_efuns/text.cmo ./10_efuns/text.cmx ./10_efuns/text.cmi ./10_efuns/text.o ./10_efuns/keymap.cmo ./10_efuns/keymap.cmx ./10_efuns/keymap.cmi ./10_efuns/keymap.o ./10_efuns/ebuffer.cmo ./10_efuns/ebuffer.cmx ./10_efuns/ebuffer.cmi ./10_efuns/ebuffer.o ./10_efuns/window.cmo ./10_efuns/window.cmx ./10_efuns/window.cmi ./10_efuns/window.o ./10_efuns/frame.cmo ./10_efuns/frame.cmx ./10_efuns/frame.cmi ./10_efuns/frame.o ./10_efuns/top_window.cmo ./10_efuns/top_window.cmx ./10_efuns/top_window.cmi ./10_efuns/top_window.o ./10_efuns/simple.cmo ./10_efuns/simple.cmx ./10_efuns/simple.cmi ./10_efuns/simple.o ./10_efuns/minibuffer.cmo ./10_efuns/minibuffer.cmx ./10_efuns/minibuffer.cmi ./10_efuns/minibuffer.o ./10_efuns/multi_frames.cmo ./10_efuns/multi_frames.cmx ./10_efuns/multi_frames.cmi ./10_efuns/multi_frames.o ./10_efuns/select.cmo ./10_efuns/select.cmx ./10_efuns/select.cmi ./10_efuns/select.o ./10_efuns/search.cmo ./10_efuns/search.cmx ./10_efuns/search.cmi ./10_efuns/search.o ./10_efuns/system.cmo ./10_efuns/system.cmx ./10_efuns/system.cmi ./10_efuns/system.o ./10_efuns/abbrevs.cmo ./10_efuns/abbrevs.cmx ./10_efuns/abbrevs.cmi ./10_efuns/abbrevs.o ./10_efuns/complex.cmo ./10_efuns/complex.cmx ./10_efuns/complex.cmi ./10_efuns/complex.o ./10_efuns/compil.cmo ./10_efuns/compil.cmx ./10_efuns/compil.cmi ./10_efuns/compil.o ./10_efuns/eval.cmo ./10_efuns/eval.cmx ./10_efuns/eval.cmi ./10_efuns/eval.o ./10_efuns/interactive.cmo ./10_efuns/interactive.cmx ./10_efuns/interactive.cmi ./10_efuns/interactive.o ./10_efuns/server.cmo ./10_efuns/server.cmx ./10_efuns/server.cmi ./10_efuns/server.o ./10_efuns/accents_mode.cmo ./10_efuns/accents_mode.cmx ./10_efuns/accents_mode.cmi ./10_efuns/accents_mode.o ./10_efuns/paren_mode.cmo ./10_efuns/paren_mode.cmx ./10_efuns/paren_mode.cmi ./10_efuns/paren_mode.o ./10_efuns/abbrevs_mode.cmo ./10_efuns/abbrevs_mode.cmx ./10_efuns/abbrevs_mode.cmi ./10_efuns/abbrevs_mode.o ./10_efuns/fill_mode.cmo ./10_efuns/fill_mode.cmx ./10_efuns/fill_mode.cmi ./10_efuns/fill_mode.o ./10_efuns/tab_mode.cmo ./10_efuns/tab_mode.cmx ./10_efuns/tab_mode.cmi ./10_efuns/tab_mode.o ./10_efuns/compat_comp.cmo ./10_efuns/compat_comp.cmx ./10_efuns/compat_comp.cmi ./10_efuns/compat_comp.o ./10_efuns/ocaml_mode.cmo ./10_efuns/ocaml_mode.cmx ./10_efuns/ocaml_mode.cmi ./10_efuns/ocaml_mode.o ./10_efuns/ocaml_toplevel.cmo ./10_efuns/ocaml_toplevel.cmx ./10_efuns/ocaml_toplevel.cmi ./10_efuns/ocaml_toplevel.o ./10_efuns/makefile_mode.cmo ./10_efuns/makefile_mode.cmx ./10_efuns/makefile_mode.cmi ./10_efuns/makefile_mode.o ./10_efuns/tex_mode.cmo ./10_efuns/tex_mode.cmx ./10_efuns/tex_mode.cmi ./10_efuns/tex_mode.o ./10_efuns/c_mode.cmo ./10_efuns/c_mode.cmx ./10_efuns/c_mode.cmi ./10_efuns/c_mode.o ./10_efuns/lisp_mode.cmo ./10_efuns/lisp_mode.cmx ./10_efuns/lisp_mode.cmi ./10_efuns/lisp_mode.o ./10_efuns/html_mode.cmo ./10_efuns/html_mode.cmx ./10_efuns/html_mode.cmi ./10_efuns/html_mode.o ./10_efuns/dired.cmo ./10_efuns/dired.cmx ./10_efuns/dired.cmi ./10_efuns/dired.o ./10_efuns/std_efunsrc.cmo ./10_efuns/std_efunsrc.cmx ./10_efuns/std_efunsrc.cmi ./10_efuns/std_efunsrc.o ./10_efuns/main.cmo ./10_efuns/main.cmx ./10_efuns/main.cmi ./10_efuns/main.o
+efuns_GENS = ./10_efuns/ocaml_mode.ml ./10_efuns/tex_mode.ml ./10_efuns/c_mode.ml ./10_efuns/lisp_mode.ml ./10_efuns/html_mode.ml
+efuns.depend:: Makefile
+	mv -f .efuns_depend .efuns_depend_old
+	$(MAKE) -f Makefile.rules .efuns_depend || echo OK
+.efuns_depend: $(efuns_GENS) $(efuns_PPDEP) $(efuns_CONF) $(efuns_CONFDEP)
+	$(OCAMLDEP) $(efuns_PP) $(efuns_INCLUDES) $(efuns_MLS) $(efuns_MLIS) > .efuns_depend_new
+	cmp .efuns_depend_new .efuns_depend_old || (rm -f .efuns_depend_old; mv .efuns_depend_new .efuns_depend_old)
+	mv .efuns_depend_old .efuns_depend
+depend:: efuns.depend
+efuns.distclean::
+	rm -f .efuns_depend $(efuns_GENS)
+efuns_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) $(wxlib_CMADEP) 
+efuns_CMAS = unix.cma str.cma $(efuns_CMASDEP)
+efuns_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) $(wxlib_CMXADEP) 
+efuns_CMXAS = unix.cmxa str.cmxa $(efuns_CMXASDEP)
+$(efuns_DIR)/efuns_byte: .efuns_depend $(efuns_CMOS) $(efuns_CMASDEP) $(efuns_CONF)
+	$(OCAMLC) -custom  $(efuns_INCLUDES) -o $(efuns_DIR)/efuns_byte  $(efuns_CCLIB) $(efuns_CMAS) $(efuns_CMOS)
+$(efuns_DIR)/efuns: .efuns_depend $(efuns_CMXS) $(efuns_CMXASDEP) $(efuns_CONF)
+	$(OCAMLOPT) -o $(efuns_DIR)/efuns $(efuns_INCLUDES) $(efuns_CCLIB) $(efuns_CMXAS) $(efuns_CMXS)
+efuns.clean::
+	rm -f $(efuns_DIR)/efuns_byte $(efuns_DIR)/efuns
+	rm -f $(efuns_OS) $(efuns_TMPS)
+efuns.byte:: $(efuns_DIR)/efuns_byte
+efuns.opt:: $(efuns_DIR)/efuns
+byte:: efuns.byte
+opt:: efuns.opt
+clean:: efuns.clean
+efuns.doc:: $(efuns_HTMLS)
+doc:: efuns.doc
+byte:: efuns.byte
+efuns.byte::
+opt:: efuns.opt
+efuns.opt::
+clean:: efuns.clean
+efuns.clean::
+distclean:: efuns.clean efuns.distclean
+efuns.distclean:: efuns.clean
+install:: efuns.install
+efuns.install::
+
+
+#####################################
+# Project movePointer
+# From: ./04_xlib/examples
+
+movePointer_CONF=  ./04_xlib/examples/ocamlconf.ocf
+Makefile: $(movePointer_CONF)
+
+movePointer_FILES= 04_xlib/examples/movePointer.ml
+movePointer_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) 
+movePointer_INCLUDES= -I ./04_xlib/examples -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./04_xlib/examples/movePointer.cmo: ./04_xlib/examples/movePointer.ml $(movePointer_PPDEP)
+	$(OCAMLC) $(movePointer_INCLUDES) -c $(movePointer_PP) ./04_xlib/examples/movePointer.ml
+./04_xlib/examples/movePointer.cmx: ./04_xlib/examples/movePointer.ml $(movePointer_PPDEP)
+	$(OCAMLOPT) $(movePointer_INCLUDES) -c $(movePointer_PP) ./04_xlib/examples/movePointer.ml
+movePointer_DIR = ./04_xlib/examples
+movePointer_CMOS = ./04_xlib/examples/movePointer.cmo
+movePointer_CMXS = ./04_xlib/examples/movePointer.cmx
+movePointer_MLS = ./04_xlib/examples/movePointer.ml
+movePointer_ANNOTS = ./04_xlib/examples/movePointer.annot
+movePointer_MLIS =
+movePointer_CMIS = ./04_xlib/examples/movePointer.cmi
+movePointer_TMPS = ./04_xlib/examples/movePointer.cmo ./04_xlib/examples/movePointer.cmx ./04_xlib/examples/movePointer.cmi ./04_xlib/examples/movePointer.o
+movePointer_GENS =
+movePointer.depend:: Makefile
+	mv -f .movePointer_depend .movePointer_depend_old
+	$(MAKE) -f Makefile.rules .movePointer_depend || echo OK
+.movePointer_depend: $(movePointer_GENS) $(movePointer_PPDEP) $(movePointer_CONF) $(movePointer_CONFDEP)
+	$(OCAMLDEP) $(movePointer_PP) $(movePointer_INCLUDES) $(movePointer_MLS) $(movePointer_MLIS) > .movePointer_depend_new
+	cmp .movePointer_depend_new .movePointer_depend_old || (rm -f .movePointer_depend_old; mv .movePointer_depend_new .movePointer_depend_old)
+	mv .movePointer_depend_old .movePointer_depend
+depend:: movePointer.depend
+movePointer.distclean::
+	rm -f .movePointer_depend $(movePointer_GENS)
+movePointer_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) 
+movePointer_CMAS = unix.cma $(movePointer_CMASDEP)
+movePointer_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) 
+movePointer_CMXAS = unix.cmxa $(movePointer_CMXASDEP)
+$(movePointer_DIR)/movePointer_byte: .movePointer_depend $(movePointer_CMOS) $(movePointer_CMASDEP) $(movePointer_CONF)
+	$(OCAMLC) -custom  $(movePointer_INCLUDES) -o $(movePointer_DIR)/movePointer_byte  $(movePointer_CCLIB) $(movePointer_CMAS) $(movePointer_CMOS)
+$(movePointer_DIR)/movePointer: .movePointer_depend $(movePointer_CMXS) $(movePointer_CMXASDEP) $(movePointer_CONF)
+	$(OCAMLOPT) -o $(movePointer_DIR)/movePointer $(movePointer_INCLUDES) $(movePointer_CCLIB) $(movePointer_CMXAS) $(movePointer_CMXS)
+movePointer.clean::
+	rm -f $(movePointer_DIR)/movePointer_byte $(movePointer_DIR)/movePointer
+	rm -f $(movePointer_OS) $(movePointer_TMPS)
+movePointer.byte:: $(movePointer_DIR)/movePointer_byte
+movePointer.opt:: $(movePointer_DIR)/movePointer
+byte:: movePointer.byte
+opt:: movePointer.opt
+clean:: movePointer.clean
+movePointer.doc:: $(movePointer_HTMLS)
+doc:: movePointer.doc
+byte:: movePointer.byte
+movePointer.byte::
+opt:: movePointer.opt
+movePointer.opt::
+clean:: movePointer.clean
+movePointer.clean::
+distclean:: movePointer.clean movePointer.distclean
+movePointer.distclean:: movePointer.clean
+install:: movePointer.install
+movePointer.install::
+
+
+#####################################
+# Project chess
+# From: ./04_xlib/examples
+
+chess_CONF=  ./04_xlib/examples/ocamlconf.ocf
+Makefile: $(chess_CONF)
+
+chess_FILES= 04_xlib/examples/chess.ml
+chess_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) 
+chess_INCLUDES= -I ./04_xlib/examples -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./04_xlib/examples/chess.cmo: ./04_xlib/examples/chess.ml $(chess_PPDEP)
+	$(OCAMLC) $(chess_INCLUDES) -c $(chess_PP) ./04_xlib/examples/chess.ml
+./04_xlib/examples/chess.cmx: ./04_xlib/examples/chess.ml $(chess_PPDEP)
+	$(OCAMLOPT) $(chess_INCLUDES) -c $(chess_PP) ./04_xlib/examples/chess.ml
+chess_DIR = ./04_xlib/examples
+chess_CMOS = ./04_xlib/examples/chess.cmo
+chess_CMXS = ./04_xlib/examples/chess.cmx
+chess_MLS = ./04_xlib/examples/chess.ml
+chess_ANNOTS = ./04_xlib/examples/chess.annot
+chess_MLIS =
+chess_CMIS = ./04_xlib/examples/chess.cmi
+chess_TMPS = ./04_xlib/examples/chess.cmo ./04_xlib/examples/chess.cmx ./04_xlib/examples/chess.cmi ./04_xlib/examples/chess.o
+chess_GENS =
+chess.depend:: Makefile
+	mv -f .chess_depend .chess_depend_old
+	$(MAKE) -f Makefile.rules .chess_depend || echo OK
+.chess_depend: $(chess_GENS) $(chess_PPDEP) $(chess_CONF) $(chess_CONFDEP)
+	$(OCAMLDEP) $(chess_PP) $(chess_INCLUDES) $(chess_MLS) $(chess_MLIS) > .chess_depend_new
+	cmp .chess_depend_new .chess_depend_old || (rm -f .chess_depend_old; mv .chess_depend_new .chess_depend_old)
+	mv .chess_depend_old .chess_depend
+depend:: chess.depend
+chess.distclean::
+	rm -f .chess_depend $(chess_GENS)
+chess_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) 
+chess_CMAS = unix.cma $(chess_CMASDEP)
+chess_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) 
+chess_CMXAS = unix.cmxa $(chess_CMXASDEP)
+$(chess_DIR)/chess_byte: .chess_depend $(chess_CMOS) $(chess_CMASDEP) $(chess_CONF)
+	$(OCAMLC) -custom  $(chess_INCLUDES) -o $(chess_DIR)/chess_byte  $(chess_CCLIB) $(chess_CMAS) $(chess_CMOS)
+$(chess_DIR)/chess: .chess_depend $(chess_CMXS) $(chess_CMXASDEP) $(chess_CONF)
+	$(OCAMLOPT) -o $(chess_DIR)/chess $(chess_INCLUDES) $(chess_CCLIB) $(chess_CMXAS) $(chess_CMXS)
+chess.clean::
+	rm -f $(chess_DIR)/chess_byte $(chess_DIR)/chess
+	rm -f $(chess_OS) $(chess_TMPS)
+chess.byte:: $(chess_DIR)/chess_byte
+chess.opt:: $(chess_DIR)/chess
+byte:: chess.byte
+opt:: chess.opt
+clean:: chess.clean
+chess.doc:: $(chess_HTMLS)
+doc:: chess.doc
+byte:: chess.byte
+chess.byte::
+opt:: chess.opt
+chess.opt::
+clean:: chess.clean
+chess.clean::
+distclean:: chess.clean chess.distclean
+chess.distclean:: chess.clean
+install:: chess.install
+chess.install::
+
+
+#####################################
+# Project xpm2ml
+# From: ./04_xlib/examples
+
+xpm2ml_CONF=  ./04_xlib/examples/ocamlconf.ocf
+Makefile: $(xpm2ml_CONF)
+
+xpm2ml_FILES= 04_xlib/examples/xpm2ml.ml
+xpm2ml_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) 
+xpm2ml_INCLUDES= -I ./04_xlib/examples -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./04_xlib/examples/xpm2ml.cmo: ./04_xlib/examples/xpm2ml.ml $(xpm2ml_PPDEP)
+	$(OCAMLC) $(xpm2ml_INCLUDES) -c $(xpm2ml_PP) ./04_xlib/examples/xpm2ml.ml
+./04_xlib/examples/xpm2ml.cmx: ./04_xlib/examples/xpm2ml.ml $(xpm2ml_PPDEP)
+	$(OCAMLOPT) $(xpm2ml_INCLUDES) -c $(xpm2ml_PP) ./04_xlib/examples/xpm2ml.ml
+xpm2ml_DIR = ./04_xlib/examples
+xpm2ml_CMOS = ./04_xlib/examples/xpm2ml.cmo
+xpm2ml_CMXS = ./04_xlib/examples/xpm2ml.cmx
+xpm2ml_MLS = ./04_xlib/examples/xpm2ml.ml
+xpm2ml_ANNOTS = ./04_xlib/examples/xpm2ml.annot
+xpm2ml_MLIS =
+xpm2ml_CMIS = ./04_xlib/examples/xpm2ml.cmi
+xpm2ml_TMPS = ./04_xlib/examples/xpm2ml.cmo ./04_xlib/examples/xpm2ml.cmx ./04_xlib/examples/xpm2ml.cmi ./04_xlib/examples/xpm2ml.o
+xpm2ml_GENS =
+xpm2ml.depend:: Makefile
+	mv -f .xpm2ml_depend .xpm2ml_depend_old
+	$(MAKE) -f Makefile.rules .xpm2ml_depend || echo OK
+.xpm2ml_depend: $(xpm2ml_GENS) $(xpm2ml_PPDEP) $(xpm2ml_CONF) $(xpm2ml_CONFDEP)
+	$(OCAMLDEP) $(xpm2ml_PP) $(xpm2ml_INCLUDES) $(xpm2ml_MLS) $(xpm2ml_MLIS) > .xpm2ml_depend_new
+	cmp .xpm2ml_depend_new .xpm2ml_depend_old || (rm -f .xpm2ml_depend_old; mv .xpm2ml_depend_new .xpm2ml_depend_old)
+	mv .xpm2ml_depend_old .xpm2ml_depend
+depend:: xpm2ml.depend
+xpm2ml.distclean::
+	rm -f .xpm2ml_depend $(xpm2ml_GENS)
+xpm2ml_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) 
+xpm2ml_CMAS = unix.cma $(xpm2ml_CMASDEP)
+xpm2ml_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) 
+xpm2ml_CMXAS = unix.cmxa $(xpm2ml_CMXASDEP)
+$(xpm2ml_DIR)/xpm2ml_byte: .xpm2ml_depend $(xpm2ml_CMOS) $(xpm2ml_CMASDEP) $(xpm2ml_CONF)
+	$(OCAMLC) -custom  $(xpm2ml_INCLUDES) -o $(xpm2ml_DIR)/xpm2ml_byte  $(xpm2ml_CCLIB) $(xpm2ml_CMAS) $(xpm2ml_CMOS)
+$(xpm2ml_DIR)/xpm2ml: .xpm2ml_depend $(xpm2ml_CMXS) $(xpm2ml_CMXASDEP) $(xpm2ml_CONF)
+	$(OCAMLOPT) -o $(xpm2ml_DIR)/xpm2ml $(xpm2ml_INCLUDES) $(xpm2ml_CCLIB) $(xpm2ml_CMXAS) $(xpm2ml_CMXS)
+xpm2ml.clean::
+	rm -f $(xpm2ml_DIR)/xpm2ml_byte $(xpm2ml_DIR)/xpm2ml
+	rm -f $(xpm2ml_OS) $(xpm2ml_TMPS)
+xpm2ml.byte:: $(xpm2ml_DIR)/xpm2ml_byte
+xpm2ml.opt:: $(xpm2ml_DIR)/xpm2ml
+byte:: xpm2ml.byte
+opt:: xpm2ml.opt
+clean:: xpm2ml.clean
+xpm2ml.doc:: $(xpm2ml_HTMLS)
+doc:: xpm2ml.doc
+byte:: xpm2ml.byte
+xpm2ml.byte::
+opt:: xpm2ml.opt
+xpm2ml.opt::
+clean:: xpm2ml.clean
+xpm2ml.clean::
+distclean:: xpm2ml.clean xpm2ml.distclean
+xpm2ml.distclean:: xpm2ml.clean
+install:: xpm2ml.install
+xpm2ml.install::
+
+
+#####################################
+# Project xbanner
+# From: ./04_xlib/examples
+
+xbanner_CONF=  ./04_xlib/examples/ocamlconf.ocf
+Makefile: $(xbanner_CONF)
+
+xbanner_FILES= 04_xlib/examples/xbanner.ml
+xbanner_CONFDEP = $(extlib_CONF) $(unix2_CONF) $(xlib_CONF) 
+xbanner_INCLUDES= -I ./04_xlib/examples -I ./04_xlib -I ./03_unix2 -I ./02_extlib 
+./04_xlib/examples/xbanner.cmo: ./04_xlib/examples/xbanner.ml $(xbanner_PPDEP)
+	$(OCAMLC) $(xbanner_INCLUDES) -c $(xbanner_PP) ./04_xlib/examples/xbanner.ml
+./04_xlib/examples/xbanner.cmx: ./04_xlib/examples/xbanner.ml $(xbanner_PPDEP)
+	$(OCAMLOPT) $(xbanner_INCLUDES) -c $(xbanner_PP) ./04_xlib/examples/xbanner.ml
+xbanner_DIR = ./04_xlib/examples
+xbanner_CMOS = ./04_xlib/examples/xbanner.cmo
+xbanner_CMXS = ./04_xlib/examples/xbanner.cmx
+xbanner_MLS = ./04_xlib/examples/xbanner.ml
+xbanner_ANNOTS = ./04_xlib/examples/xbanner.annot
+xbanner_MLIS =
+xbanner_CMIS = ./04_xlib/examples/xbanner.cmi
+xbanner_TMPS = ./04_xlib/examples/xbanner.cmo ./04_xlib/examples/xbanner.cmx ./04_xlib/examples/xbanner.cmi ./04_xlib/examples/xbanner.o
+xbanner_GENS =
+xbanner.depend:: Makefile
+	mv -f .xbanner_depend .xbanner_depend_old
+	$(MAKE) -f Makefile.rules .xbanner_depend || echo OK
+.xbanner_depend: $(xbanner_GENS) $(xbanner_PPDEP) $(xbanner_CONF) $(xbanner_CONFDEP)
+	$(OCAMLDEP) $(xbanner_PP) $(xbanner_INCLUDES) $(xbanner_MLS) $(xbanner_MLIS) > .xbanner_depend_new
+	cmp .xbanner_depend_new .xbanner_depend_old || (rm -f .xbanner_depend_old; mv .xbanner_depend_new .xbanner_depend_old)
+	mv .xbanner_depend_old .xbanner_depend
+depend:: xbanner.depend
+xbanner.distclean::
+	rm -f .xbanner_depend $(xbanner_GENS)
+xbanner_CMASDEP = $(extlib_CMADEP) $(unix2_CMADEP) $(xlib_CMADEP) 
+xbanner_CMAS = unix.cma $(xbanner_CMASDEP)
+xbanner_CMXASDEP = $(extlib_CMXADEP) $(unix2_CMXADEP) $(xlib_CMXADEP) 
+xbanner_CMXAS = unix.cmxa $(xbanner_CMXASDEP)
+$(xbanner_DIR)/xbanner_byte: .xbanner_depend $(xbanner_CMOS) $(xbanner_CMASDEP) $(xbanner_CONF)
+	$(OCAMLC) -custom  $(xbanner_INCLUDES) -o $(xbanner_DIR)/xbanner_byte  $(xbanner_CCLIB) $(xbanner_CMAS) $(xbanner_CMOS)
+$(xbanner_DIR)/xbanner: .xbanner_depend $(xbanner_CMXS) $(xbanner_CMXASDEP) $(xbanner_CONF)
+	$(OCAMLOPT) -o $(xbanner_DIR)/xbanner $(xbanner_INCLUDES) $(xbanner_CCLIB) $(xbanner_CMXAS) $(xbanner_CMXS)
+xbanner.clean::
+	rm -f $(xbanner_DIR)/xbanner_byte $(xbanner_DIR)/xbanner
+	rm -f $(xbanner_OS) $(xbanner_TMPS)
+xbanner.byte:: $(xbanner_DIR)/xbanner_byte
+xbanner.opt:: $(xbanner_DIR)/xbanner
+byte:: xbanner.byte
+opt:: xbanner.opt
+clean:: xbanner.clean
+xbanner.doc:: $(xbanner_HTMLS)
+doc:: xbanner.doc
+byte:: xbanner.byte
+xbanner.byte::
+opt:: xbanner.opt
+xbanner.opt::
+clean:: xbanner.clean
+xbanner.clean::
+distclean:: xbanner.clean xbanner.distclean
+xbanner.distclean:: xbanner.clean
+install:: xbanner.install
+xbanner.install::
+
+Makefile:
+	$(OCAMLCONF)
+
+.SUFFIXES: .mli .mll .mly .ml .cc .mlii
+
+.ml.mlii :
+	rm -f $*.mli
+	$(OCAMLC) -i $(OFLAGS) $(INCLUDES) -c $< > $*.mlii
+	mv $*.mlii $*.mli
+.mll.ml :
+	$(OCAMLLEX) $<
+
+.mly.ml :
+	$(OCAMLYACC) $<
+
+.mly.mli:
+	$(OCAMLYACC) $<
